@@ -1,18 +1,19 @@
-import fragrance1 from '/contact_fragrance1.svg'
-import fragrance2 from '/fragrance-blue.svg'
-import fragrance3 from '/fragrance-red.svg'
-import '../components/styles/imagesection.css'
+import zorvanz from '/Zorvanz_1.svg'
 
-export default function ImagesSection() {
+export function NavBar() {
     return (
         <>
-            <section className='image__section'>
-                <img id='img' src={fragrance2} alt="fragrance blue" />
-                <div className='img__section2'>
-                    <img src={fragrance1} alt="fragrance red" />
-                    <img src={fragrance3} alt="fragrance red with flowers" />
+            <div className="navbar">
+                <div className="navbar__logo">
+                    <a href="/">
+                        <img className='logo' src={zorvanz} alt="zorvanz logo" />
+                    </a>
                 </div>
-            </section>
+                <div className='navbar__btns'>
+                    <a href='/login'>Entrar</a>
+                    <a href='/comprar'>Comprar</a>
+                </div>
+            </div>
         </>
     )
 }
