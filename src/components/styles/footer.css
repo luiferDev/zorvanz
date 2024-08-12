@@ -1,0 +1,11 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #701c1c68;
+    padding: 3rem ;
+}
+
+.footer__logo{
+    width: 100px;
+    height: auto;
+}
