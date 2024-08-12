@@ -38,7 +38,7 @@ select {
   font: inherit;
 }
 
-p {
+p, li, strong {
   text-wrap: pretty;
   font-family: 'Vanio', serif;
   font-style: italic;
