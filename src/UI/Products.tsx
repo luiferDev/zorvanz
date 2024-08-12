@@ -21,9 +21,9 @@ export function Products() {
                             <section key={f.id} className='card__container'>
                                 <img src={f.image} alt={f.product_name} />
                                 <div className='li'>
-                                    <li>{f.product_name}</li>
-                                    <li>${f.price}</li>
-                                    <li>{f.popularity}</li>
+                                    <li><h3>{f.product_name}</h3></li>
+                                    <li><strong>Precio: </strong>${f.price}</li>
+                                    <li><strong>Popularidad: </strong> {f.popularity}</li>
                                 </div>
                             </section>
                         ))}
