@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import zorvanz from '/Zorvanz_1.svg'
 
 export function NavBar() {
@@ -5,13 +6,13 @@ export function NavBar() {
         <>
             <div className="navbar">
                 <div className="navbar__logo">
-                    <a href="/">
+                    <Link to="/">
                         <img className='logo' src={zorvanz} alt="zorvanz logo" />
-                    </a>
+                    </Link>
                 </div>
                 <div className='navbar__btns'>
-                    <a href='/login'>Entrar</a>
-                    <a href='/comprar'>Comprar</a>
+                    <Link to='/login'>Entrar</Link>
+                    <Link to='/comprar'>Comprar</Link>
                 </div>
             </div>
         </>
