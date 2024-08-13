@@ -31,3 +31,9 @@
     aspect-ratio: 1/1;
     /* border-radius: 0 0 25px 0; */
 }
+
+@media(min-width:1024px){
+    .image__section{
+        padding: 4rem 10rem 0 0;
+    }
+}

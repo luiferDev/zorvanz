@@ -1,0 +1,9 @@
+@media (min-width:1024px) {
+    .contact__section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+}
