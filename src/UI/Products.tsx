@@ -17,11 +17,11 @@ export function Products() {
             {!loading && !error && (
                 <>
                     <ul className='container__list'>
-                        {fragrances.map(f => (
-                            <section key={f.id} className='card__container'>
-                                <img src={f.image} alt={f.product_name} />
+                        {fragrances.map((f, index) => (
+                            <section key={f.id || index} className='card__container'>
+                                <img src={f.imageUrl} alt={f.name} />
                                 <div className='li'>
-                                    <li><h3>{f.product_name}</h3></li>
+                                    <li><h3>{f.name}</h3></li>
                                     <li><strong>Precio: </strong>${f.price}</li>
                                     <li><strong>Popularidad: </strong> {f.popularity}</li>
                                 </div>
