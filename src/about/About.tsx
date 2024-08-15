@@ -1,11 +1,12 @@
 import { NavBar } from "../components/NavBar"
 import Footer from "../UI/Footer"
+import '../components/styles/about.css'
 
 export default function About() {
     return (
         <>
             <NavBar />
-            <section id="about-us">
+            <section id="about__us">
                 <header>
                     <h1>Nuestra Historia</h1>
                 </header>
