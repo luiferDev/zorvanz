@@ -64,7 +64,7 @@ menu{
 }
 
 .menu-options a {
-    color: black;
+    color: #e6e1dc;
     font-family: 'Ageo', sans-serif;
     font-style: normal;
     text-decoration: none;
@@ -119,5 +119,6 @@ menu{
     .menu-options a {
         margin: 0 0 5rem 0;
         font-size: 24px;
+        color: #000;
     }
 }
