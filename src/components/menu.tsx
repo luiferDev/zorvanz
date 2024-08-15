@@ -45,7 +45,7 @@ function Menu() {
                         initial={{ x: -100, opacity: 0 }}
                         animate={{ x: isOpen ? 0 : -100, opacity: isOpen ? 1 : 0 }}
                         transition={{ delay: 0.4, type: 'just' }}
-                    ><Link to="/catalog">Catálogo</Link></motion.li>
+                    ><Link to="/product-catalog">Catálogo</Link></motion.li>
                 </ul>
             </motion.div>
         </div>
