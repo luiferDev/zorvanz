@@ -19,7 +19,7 @@ export function Products() {
                 <>
                     <ul className='container__list'>
                         {fragrances.map(f => (
-                            <Link to={`/product-catalog/${f.id}`}>
+                            <Link className='link' to={`/product-catalog/${f.id}`}>
                                 <section key={f.id} className='card__container'>
                                     <img src={f.image} alt={f.product_name} />
                                     <div className='li'>

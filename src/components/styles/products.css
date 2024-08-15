@@ -1,5 +1,11 @@
 .text__container {
     padding: 5rem 0 5rem 4rem;
+    text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
 }
 
 .text__container h2 {
