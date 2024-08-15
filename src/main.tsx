@@ -6,6 +6,7 @@ import './index.css'
 import About from './about/About.tsx'
 import ErrorPage from './error-page.tsx'
 import ProductCatalog from './products/ProductCatalog.tsx'
+import ProductInfo from './products/ProductInfo.tsx'
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
   {
     path: '/product-catalog',
     element: <ProductCatalog />,
-  }
+  },
+  {
+    path: '/product-catalog/:id',
+    element: <ProductInfo />,
+  },
 ])
 
 createRoot(document.getElementById('root')!).render(
