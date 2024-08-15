@@ -1,12 +1,10 @@
 import CarouselBackground from '../components/Carrousel'
-import Menu from '../components/menu'
 import { NavBar } from '../components/NavBar'
 import '../components/styles/styles.css'
 
 export default function Hero() {
     return (
         <>
-            <Menu />
             <CarouselBackground >
                 <NavBar />
                 <div className="hero">
