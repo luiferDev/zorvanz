@@ -1,11 +1,9 @@
-import Menu from "../components/menu"
 import { NavBar } from "../components/NavBar"
 import Footer from "../UI/Footer"
 
 export default function About() {
     return (
         <>
-            <Menu />
             <NavBar />
             <section id="about-us">
                 <header>
