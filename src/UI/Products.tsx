@@ -29,7 +29,7 @@ export function Products() {
                         ))}
                     </ul>
                     <div className='container__btn'>
-                        <a href="#" className='more__btn'>ver más</a>
+                        <a href="/product-catalog" className='more__btn'>ver más</a>
                     </div>
                 </>
             )}
