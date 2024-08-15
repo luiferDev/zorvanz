@@ -11,10 +11,16 @@ interface Fragrance {
     description: string
     stock: number
     popularity: number
+    category: Category
 }
 
 interface ApiResponse {
-    content: Fragrance[];
+    content: Fragrance[]
+}
+
+interface Category {
+    categoryId: number
+    categoryName: string
 }
 
 // Define la interfaz para el estado del hook
