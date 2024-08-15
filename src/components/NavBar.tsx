@@ -8,7 +8,11 @@ export function NavBar() {
     // Hook para obtener el progreso del scroll
     const { scrollY } = useScroll();
     // Hook para transformar el scroll en una propiedad CSS (en este caso, el valor de 'y')
-    const y = useTransform(scrollY, [0, 300], [0, 0]);
+    const backgroundColor = useTransform(
+        scrollY,
+        [0, 200], // El rango del scroll donde cambiará el color
+        ['#00000000', 'rgba(112, 28, 28, 0.5)'],
+    )
 
     return (
         <>
@@ -17,9 +21,12 @@ export function NavBar() {
                 top: 0,
                 left: 0,
                 right: 0,
-                y: y, // Aplica la transformación al eje Y
+                backgroundColor: backgroundColor, // Aplica la transformación al eje Y
                 zIndex: 1,
-            }}>
+                padding: '0 0 2rem 0',
+                transition: 'background-color 0.3s ease-in-out'
+            }}
+            >
                 <Menu />
                 <div className="navbar">
                     <div className="navbar__logo">

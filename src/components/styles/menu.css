@@ -57,10 +57,12 @@ menu{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    font-family: 'Ageo', sans-serif;
 }
 
 .menu-options li {
     margin: 10px 0;
+    font-family: 'Ageo', sans-serif;
 }
 
 .menu-options a {
