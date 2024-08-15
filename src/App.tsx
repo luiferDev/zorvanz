@@ -1,4 +1,5 @@
 import './App.css'
+import { NavBar } from './components/NavBar'
 import { Texts } from './components/texts'
 import ContactSection from './UI/ContactSection'
 import { Features } from './UI/Features'
@@ -10,6 +11,7 @@ import { Section } from './UI/Section'
 function App() {
   return (
     <>
+      <NavBar />
       <Hero />
       <Features />
       <Section>

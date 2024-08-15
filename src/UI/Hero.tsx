@@ -1,12 +1,10 @@
 import CarouselBackground from '../components/Carrousel'
-import { NavBar } from '../components/NavBar'
 import '../components/styles/styles.css'
 
 export default function Hero() {
     return (
         <>
             <CarouselBackground >
-                <NavBar />
                 <div className="hero">
                     <div className='hero__text'>
                         <h1 className='hero__title'>Personaliza tu Aroma</h1>

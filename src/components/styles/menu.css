@@ -7,6 +7,7 @@
 
 menu{
     position: sticky;
+    z-index: 50;
 }
 
 .menu-container {
@@ -63,7 +64,7 @@ menu{
 }
 
 .menu-options a {
-    color: #e6e1dc;
+    color: black;
     font-family: 'Ageo', sans-serif;
     font-style: normal;
     text-decoration: none;
