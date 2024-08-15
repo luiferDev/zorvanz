@@ -5,7 +5,7 @@ url.searchParams.append('page', '1')
 url.searchParams.append('limit', '8')
 
 // Define la interfaz para el producto
-interface Fragrance {
+export interface Fragrance {
     id: string
     product_name: string
     image: string
@@ -16,7 +16,7 @@ interface Fragrance {
 }
 
 // Define la interfaz para el estado del hook
-interface UseFragrancesState {
+export interface UseFragrancesState {
     fragrances: Fragrance[]
     loading: boolean
     error: string | null
