@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './styles/menu.css'
 
 
@@ -35,17 +35,17 @@ function Menu() {
                         initial={{ x: -100, opacity: 0 }}
                         animate={{ x: isOpen ? 0 : -100, opacity: isOpen ? 1 : 0 }}
                         transition={{ delay: 0.2, type: 'just' }}
-                    ><Link to="/">Home</Link></motion.li>
+                    ><NavLink to="/">Home</NavLink></motion.li>
                     <motion.li
                         initial={{ x: -100, opacity: 0 }}
                         animate={{ x: isOpen ? 0 : -100, opacity: isOpen ? 1 : 0 }}
                         transition={{ delay: 0.3, type: 'just' }}
-                    ><Link to="/about">Quiénes Somos</Link></motion.li>
+                    ><NavLink to="/about">Quiénes Somos</NavLink></motion.li>
                     <motion.li
                         initial={{ x: -100, opacity: 0 }}
                         animate={{ x: isOpen ? 0 : -100, opacity: isOpen ? 1 : 0 }}
                         transition={{ delay: 0.4, type: 'just' }}
-                    ><Link to="/product-catalog">Catálogo</Link></motion.li>
+                    ><NavLink to="/product-catalog">Catálogo</NavLink></motion.li>
                 </ul>
             </motion.div>
         </div>
