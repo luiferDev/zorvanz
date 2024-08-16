@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const url = new URL('https://66a3994f44aa63704581d661.mockapi.io/api/products/fragrances')
-url.searchParams.append('page', '1')
-url.searchParams.append('limit', '8')
+const url = 'http://localhost:8080/api/products'
 
 // Define la interfaz para el producto
 export interface Fragrance {
@@ -11,8 +9,18 @@ export interface Fragrance {
     image: string
     price: string
     description: string
-    stock: boolean
+    stock: number
     popularity: number
+    category: Category
+}
+
+interface ApiResponse {
+    content: Fragrance[]
+}
+
+interface Category {
+    categoryId: number
+    categoryName: string
 }
 
 // Define la interfaz para el estado del hook
@@ -33,12 +41,16 @@ export const useFragrances = (): UseFragrancesState => {
 
         fetch(url,{
             method: 'GET',
-            headers: {'Content-Type': 'application/json'}
-        }).then(async res => {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(async res => {
             if (!res.ok) throw new Error('Error al obtener los datos')
             return await res.json()
-        }).then(res => {
-            setFragrances(res)
+        }).then((data:ApiResponse)  => {
+            setFragrances(data.content)
+            setLoading(false)
         }).catch(err => {
             setError(err.message)
         }).finally(() => {

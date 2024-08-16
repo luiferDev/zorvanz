@@ -19,16 +19,16 @@ export function Products() {
                 <>
                     <ul className='container__list'>
                         {fragrances.map(f => (
-                            <Link className='link' to={`/product-catalog/${f.id}`}>
-                                <section key={f.id} className='card__container'>
-                                    <img src={f.image} alt={f.product_name} />
-                                    <div className='li'>
-                                        <li><h3>{f.product_name}</h3></li>
-                                        <li><strong>Precio: </strong>${f.price}</li>
-                                        <li><strong>Popularidad: </strong> {f.popularity}</li>
-                                    </div>
-                                </section>
-                            </Link>
+                            <Link to={`/product/${f.id}`} key={f.id}>
+                            <section key={f.id} className='card__container'>
+                                <img src={f.image} alt={f.product_name} />
+                                <div className='li'>
+                                    <li><h3>{f.product_name}</h3></li>
+                                    <li><strong>Precio: </strong>${f.price}</li>
+                                    <li><strong>Popularidad: </strong> {f.popularity}</li>
+                                </div>
+                            </section>
+                        </Link>
                         ))}
                     </ul>
                     <div className='container__btn'>
