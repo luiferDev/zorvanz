@@ -58,7 +58,8 @@
 }
 
 .image img {
-    width: 100%;
+    width: 310px;
+    height: auto;
 }
 
 .image::before {

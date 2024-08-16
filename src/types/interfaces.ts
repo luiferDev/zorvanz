@@ -1,7 +1,7 @@
 export interface Fragrance {
     id: string
-    product_name: string
-    image: string
+    name: string
+    imageUrl: string
     price: string
     description: string
     stock: number
