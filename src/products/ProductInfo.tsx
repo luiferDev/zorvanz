@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
-import { Fragrance, useFragrances } from "../hooks/useFragrances"
+import { useFragrances } from "../hooks/useFragrances"
 import Footer from "../UI/Footer"
+import { Fragrance } from "../types/interfaces"
 
 
 export default function ProductInfo() {
@@ -19,12 +20,13 @@ export default function ProductInfo() {
             {!loading && !error && (
                 <div>
                     <div>
-                        <h1>{selectedProduct?.product_name}</h1>
-                        <img src={selectedProduct?.image} alt={selectedProduct?.product_name} />
+                        <h1>{selectedProduct?.name}</h1>
+                        <img src={selectedProduct?.imageUrl} alt={selectedProduct?.name} />
                         <p>{selectedProduct?.description}</p>
                         <p>Price: ${selectedProduct?.price}</p>
                         <p>Rating: {selectedProduct?.popularity}</p>
                         <p>Stock: {selectedProduct?.stock} 20 unidades</p>
+                        <p>Category: {selectedProduct?.category.categoryName}</p>
                     </div>
                 </div>
             )}
