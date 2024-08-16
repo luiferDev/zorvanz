@@ -1,34 +1,7 @@
 import { useEffect, useState } from 'react'
+import { ApiResponse, Fragrance, UseFragrancesState } from '../types/interfaces';
 
 const url = 'http://localhost:8080/api/products'
-
-// Define la interfaz para el producto
-export interface Fragrance {
-    id: string
-    product_name: string
-    image: string
-    price: string
-    description: string
-    stock: number
-    popularity: number
-    category: Category
-}
-
-export interface ApiResponse {
-    content: Fragrance[]
-}
-
-export interface Category {
-    categoryId: number
-    categoryName: string
-}
-
-// Define la interfaz para el estado del hook
-export interface UseFragrancesState {
-    fragrances: Fragrance[]
-    loading: boolean
-    error: string | null
-}
 
 export const useFragrances = (): UseFragrancesState => {
     const [fragrances, setFragrances] = useState<Fragrance[]>([])
