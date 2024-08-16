@@ -26,6 +26,7 @@ export function Products() {
                                     <li><h3>{f.product_name}</h3></li>
                                     <li><strong>Precio: </strong>${f.price}</li>
                                     <li><strong>Popularidad: </strong> {f.popularity}</li>
+                                    <li><strong>Categoria</strong>{f.category.categoryName}</li>
                                 </div>
                             </section>
                         </Link>
