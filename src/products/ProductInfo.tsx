@@ -14,7 +14,6 @@ export default function ProductInfo() {
     return (
         <>
             <NavBar />
-            {/* Aqui va el contenido de la pagina */}
             {loading && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {!loading && !error && (
@@ -25,7 +24,7 @@ export default function ProductInfo() {
                         <p>{selectedProduct?.description}</p>
                         <p>Price: ${selectedProduct?.price}</p>
                         <p>Rating: {selectedProduct?.popularity}</p>
-                        <p>Stock: {selectedProduct?.stock} 20 unidades</p>
+                        <p>Stock: {selectedProduct?.stock} unidades</p>
                         <p>Category: {selectedProduct?.category.categoryName}</p>
                     </div>
                 </div>
