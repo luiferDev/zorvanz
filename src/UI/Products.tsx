@@ -19,7 +19,7 @@ export function Products() {
                 <>
                     <ul className='container__list'>
                         {fragrances.map(f => (
-                            <Link className='link' to={`/product/${f.id}`} key={f.id}>
+                            <Link className='link' to={`/product-catalog/${f.id}`} key={f.id}>
                             <section key={f.id} className='card__container'>
                                 <img src={f.imageUrl} alt={f.name} />
                                 <div className='li'>
@@ -33,7 +33,7 @@ export function Products() {
                         ))}
                     </ul>
                     <div className='container__btn'>
-                        <a href="/product-catalog" className='more__btn'>ver más</a>
+                        <Link to="/product-catalog" className='more__btn'>ver más</Link>
                     </div>
                 </>
             )}

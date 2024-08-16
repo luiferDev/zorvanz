@@ -8,8 +8,11 @@ import { Fragrance } from "../types/interfaces"
 export default function ProductInfo() {
 
     const { id } = useParams()
+    const numericId = Number(id)
     const { fragrances, loading, error } = useFragrances()
-    const selectedProduct: Fragrance | undefined = fragrances.find(f => f.id === id)
+    const selectedProduct: Fragrance | undefined = fragrances.find(f => f.id === numericId)
+
+    console.log(selectedProduct?.id)
 
     return (
         <>
