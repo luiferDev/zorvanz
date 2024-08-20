@@ -20,14 +20,14 @@ export default function Cart() {
                             </div>
                             <footer>
                                 <small>
-                                    Cantidad: 1
+                                    Qty: 1
                                 </small>
                                 <button>+</button>
                             </footer>
                     </li>
                 </ul>
-                <button>
-                    <img src="/removeCart.webp" alt="" />
+                <button className="btn__img">
+                    <img src="/removeCart.webp" alt="imagen de remover del carrito" />
                 </button>
             </aside>
         </>
