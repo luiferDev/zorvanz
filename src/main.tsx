@@ -7,6 +7,7 @@ import About from './about/About.tsx'
 import ErrorPage from './error-page.tsx'
 import ProductCatalog from './products/ProductCatalog.tsx'
 import ProductInfo from './products/ProductInfo.tsx'
+import { CartProvider } from './context/cart.tsx'
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,10 @@ const router = createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
+  <CartProvider>
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
+  </CartProvider>
+
 )
