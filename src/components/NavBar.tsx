@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom'
 import zorvanz from '/Zorvanz_1.svg'
 import Menu from './menu'
+import Cart from './Cart';
 
 
 export function NavBar() {
@@ -36,7 +37,7 @@ export function NavBar() {
                     </div>
                     <div className='navbar__btns'>
                         <Link to='/login'><img src='/login.webp' alt="login image" width={20} height={20} /></Link>
-                        <Link to='/comprar'>Comprar</Link>
+                        <Cart />
                     </div>
                 </div>
             </motion.menu>
