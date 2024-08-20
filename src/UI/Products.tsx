@@ -23,11 +23,15 @@ export function Products() {
                             <section key={f.id} className='card__container'>
                                 <img src={f.imageUrl} alt={f.name} />
                                 <div className='li'>
-                                    <li><h3>{f.name}</h3></li>
-                                    <li><strong>Precio: </strong>${f.price}</li>
-                                    <li><strong>Popularidad: </strong> {f.popularity}</li>
-                                    <li><strong>Categoria: </strong>{f.category.categoryName}</li>
+                                    <h3>{f.name}</h3>
+                                    <p>{f.category.categoryName}</p>
                                 </div>
+                                <div className='card__footer'>
+                                    <p className='price'>${f.price}</p>
+                                        <button className='add__btn'><img src="/carrito.webp" alt="imagen de añadir al carrito de la compra" width={30} height={30} /></button>
+                                </div>
+                                
+                                
                             </section>
                         </Link>
                         ))}
