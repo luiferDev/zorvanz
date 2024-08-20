@@ -35,7 +35,7 @@ export function NavBar() {
                         </Link>
                     </div>
                     <div className='navbar__btns'>
-                        <Link to='/login'>Entrar</Link>
+                        <Link to='/login'><img src='/login.webp' alt="login image" width={20} height={20} /></Link>
                         <Link to='/comprar'>Comprar</Link>
                     </div>
                 </div>
