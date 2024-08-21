@@ -1,22 +1,7 @@
 import React, { createContext, useState } from "react"
-
-// Define the Product interface, including the quantity property
-export interface Product {
-    id: number
-    imageUrl: string
-    price: number
-    name: string
-    quantity?: number
-}
-
+import { CartContextType, Product } from "../types/interfaces";
 
 // 1. create context with proper typing
-interface CartContextType {
-    cart: Product[];
-    addToCart: (product: Product) => void
-    clearCart: () => void
-    removeFromCart: (product: Product) => void
-}
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
