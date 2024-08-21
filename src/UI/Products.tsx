@@ -4,10 +4,11 @@ import { useFragrances } from '../hooks/useFragrances'
 import { Link } from 'react-router-dom'
 import { useCart } from '../hooks/useCart'
 import { Product } from '../types/interfaces'
+import CartButton from '../components/CartButton'
 
 export function Products() {
 
-    const { addToCart, removeFromCart, cart } = useCart()
+    const { cart } = useCart()
     const { fragrances, loading, error } = useFragrances()
 
     const checkProductInCart = (product: Product) => {
@@ -38,20 +39,9 @@ export function Products() {
                                     </div>
                                     <div className='card__footer'>
                                         <p className='price'>${f.price}</p>
-                                        <button
-                                            style={{ backgroundColor
-                                                : isProductInCart ? '#701c1c' : '#1c2470' }}
-                                            onClick={() =>
-                                                isProductInCart
-                                                    ? removeFromCart(f)
-                                                    : addToCart(f)
-                                            } className='add__btn'>
-                                            {
-                                                isProductInCart
-                                                    ? <img src="/removeCart.webp" alt="imagen de remover al carrito de la compra" width={30} height={30} />
-                                                    : <img src="/carrito.webp" alt="imagen de añadir al carrito de la compra" width={30} height={30} />
-                                            }
-                                        </button>
+                                        <CartButton
+                                            isProductInCart={isProductInCart}
+                                            fragrance={f} />
                                     </div>
                                 </section>
                                 // </Link>
