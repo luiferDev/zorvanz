@@ -14,9 +14,9 @@ export default function ProductList({fragrance}: FragranceList) {
                 <article>
                     <img src={fragrance.imageUrl} alt={fragrance.name} />
                     <h3>{fragrance.name}</h3>
-                    <p>{fragrance.description}</p>
-                    <p>{fragrance.category.categoryName}</p>
-                    <p>{fragrance.price}</p>
+                    <p>Descripcion: {fragrance.description}</p>
+                    <p>Categoría: {fragrance.category.categoryName}</p>
+                    <p>Precio: ${fragrance.price}</p>
                 </article>
             </Link>
         </main>
