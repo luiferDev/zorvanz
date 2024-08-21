@@ -2,7 +2,7 @@ export interface Fragrance {
     id: number
     name: string
     imageUrl: string
-    price: string
+    price: number
     description: string
     stock: number
     popularity: number
