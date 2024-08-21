@@ -3,7 +3,7 @@ import '../components/styles/products.css'
 import { useFragrances } from '../hooks/useFragrances'
 import { Link } from 'react-router-dom'
 import { useCart } from '../hooks/useCart'
-import { Product } from '../context/cart'
+import { Product } from '../types/interfaces'
 
 export function Products() {
 
@@ -38,11 +38,14 @@ export function Products() {
                                     </div>
                                     <div className='card__footer'>
                                         <p className='price'>${f.price}</p>
-                                        <button onClick={() =>
-                                            isProductInCart
-                                                ? removeFromCart(f)
-                                                : addToCart(f)
-                                        } className='add__btn'>
+                                        <button
+                                            style={{ backgroundColor
+                                                : isProductInCart ? '#701c1c' : '#1c2470' }}
+                                            onClick={() =>
+                                                isProductInCart
+                                                    ? removeFromCart(f)
+                                                    : addToCart(f)
+                                            } className='add__btn'>
                                             {
                                                 isProductInCart
                                                     ? <img src="/removeCart.webp" alt="imagen de remover al carrito de la compra" width={30} height={30} />
