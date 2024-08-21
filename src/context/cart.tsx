@@ -1,18 +1,21 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState } from "react"
 
 // Define the Product interface, including the quantity property
 export interface Product {
-    id: string | number;
-    quantity?: number;
-    // Add other properties of the product object
+    id: number
+    imageUrl: string
+    price: number
+    name: string
+    quantity?: number
 }
+
 
 // 1. create context with proper typing
 interface CartContextType {
     cart: Product[];
-    addToCart: (product: Product) => void;
-    clearCart: () => void;
-    removeFromCart: (product: Product) => void;
+    addToCart: (product: Product) => void
+    clearCart: () => void
+    removeFromCart: (product: Product) => void
 }
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -54,8 +57,8 @@ export function CartProvider({ children }: React.PropsWithChildren) {
     };
 
     return (
-        <CartContext.Provider 
-        value={{ cart, addToCart, removeFromCart, clearCart }}>
+        <CartContext.Provider
+            value={{ cart, addToCart, removeFromCart, clearCart }}>
             {children}
         </CartContext.Provider>
     );
