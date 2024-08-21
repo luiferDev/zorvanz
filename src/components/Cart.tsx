@@ -1,8 +1,43 @@
 import { useId } from "react"
 import '../components/styles/cart.css'
+import { useCart } from "../hooks/useCart"
+import { Product } from "../context/cart"
+
+
+interface CartItemI {
+    id: number
+    imageUrl: string,
+    price: number,
+    name: string,
+    quantity: number
+    addToCart: () => void
+}
+
+
+function CartItem({ id, imageUrl, price, name, quantity, addToCart }: CartItemI) {
+
+    return (
+        <li key={id}>
+            <img src={imageUrl}
+                alt={name} />
+            <div>
+                <strong>{name}</strong> - ${price}
+            </div>
+            <footer>
+                <small>
+                    Qty: {quantity}
+                </small>
+                <button onClick={addToCart}>+</button>
+            </footer>
+        </li>
+    )
+}
 
 export default function Cart() {
+
     const cartCheckboxId = useId()
+    const { cart, clearCart, addToCart } = useCart()
+
     return (
         <>
             <label className="card__button" htmlFor={cartCheckboxId}>
@@ -12,21 +47,18 @@ export default function Cart() {
 
             <aside className="cart">
                 <ul>
-                    <li>
-                        <img src="https://i.postimg.cc/fL1YMvRz/th-12.webp"
-                            alt="fragrance" />
-                            <div>
-                                <strong>fragrance</strong> - $500
-                            </div>
-                            <footer>
-                                <small>
-                                    Qty: 1
-                                </small>
-                                <button>+</button>
-                            </footer>
-                    </li>
+                    {cart.map((product: Product) => (
+                        <CartItem
+                            id={product.id}
+                            addToCart={() => addToCart(product)}
+                            name={product.name}
+                            price={product.price}
+                            imageUrl={product.imageUrl}
+                            quantity={product.quantity || 1}
+                        />
+                    ))}
                 </ul>
-                <button className="btn__img">
+                <button onClick={clearCart} className="btn__img">
                     <img src="/removeCart.webp" alt="imagen de remover del carrito" />
                 </button>
             </aside>
