@@ -10,7 +10,7 @@ export function Products() {
     const { addToCart, removeFromCart, cart } = useCart()
     const { fragrances, loading, error } = useFragrances()
 
-    const checkProductInCart = (product:Product) => {
+    const checkProductInCart = (product: Product) => {
         return cart.some(item => item.id === product.id)
     }
 
@@ -58,12 +58,6 @@ export function Products() {
                     <div className='container__btn'>
                         <Link to="/product-catalog" className='more__btn'>ver más</Link>
                     </div>
-
-                    <footer>
-                        {
-                            JSON.stringify(cart, null, 2)
-                        }
-                    </footer>
                 </>
             )}
         </>
