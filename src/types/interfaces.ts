@@ -23,3 +23,19 @@ export interface UseFragrancesState {
     loading: boolean
     error: string | null
 }
+
+// Define the Product interface, including the quantity property
+export interface Product {
+    id: number
+    imageUrl: string
+    price: number
+    name: string
+    quantity?: number
+}
+
+export interface CartContextType {
+    cart: Product[];
+    addToCart: (product: Product) => void
+    clearCart: () => void
+    removeFromCart: (product: Product) => void
+}
