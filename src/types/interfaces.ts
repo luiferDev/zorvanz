@@ -30,7 +30,9 @@ export interface Product {
     imageUrl: string
     price: number
     name: string
-    quantity?: number
+    quantity?: number,
+    filter?: Fragrance
+    category?: Category
 }
 
 export interface CartContextType {
@@ -38,4 +40,9 @@ export interface CartContextType {
     addToCart: (product: Product) => void
     clearCart: () => void
     removeFromCart: (product: Product) => void
+}
+
+export interface Filters {
+    categoryName: string
+    price: number
 }
