@@ -1,15 +1,20 @@
 import { useCart } from "../hooks/useCart"
-import { Fragrance } from "../types/interfaces"
+import { Fragrance, Product } from "../types/interfaces"
 
 
 interface CartButtonProps {
-    isProductInCart: boolean
-    fragrance: Fragrance
+    product: Fragrance
 }
 
-export default function CartButton({ isProductInCart, fragrance }: CartButtonProps) {
+export default function CartButton({ product }: CartButtonProps) {
 
-    const { addToCart, removeFromCart } = useCart()
+    const { addToCart, removeFromCart, cart } = useCart()
+
+    const checkProductInCart = (product: Product) => {
+        return cart.some(item => item.id === product.id)
+    }
+
+    const isProductInCart = checkProductInCart(product)
 
     return (
         <div>
@@ -20,8 +25,8 @@ export default function CartButton({ isProductInCart, fragrance }: CartButtonPro
                 }}
                 onClick={() =>
                     isProductInCart
-                        ? removeFromCart(fragrance)
-                        : addToCart(fragrance)
+                        ? removeFromCart(product)
+                        : addToCart(product)
                 } className='add__btn'>
                 {
                     isProductInCart

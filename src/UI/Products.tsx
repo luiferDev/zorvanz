@@ -2,18 +2,11 @@ import { Texts } from '../components/texts'
 import '../components/styles/products.css'
 import { useFragrances } from '../hooks/useFragrances'
 import { Link } from 'react-router-dom'
-import { useCart } from '../hooks/useCart'
-import { Product } from '../types/interfaces'
 import CartButton from '../components/CartButton'
 
 export function Products() {
 
-    const { cart } = useCart()
     const { fragrances, loading, error } = useFragrances()
-
-    const checkProductInCart = (product: Product) => {
-        return cart.some(item => item.id === product.id)
-    }
 
     return (
         <>
@@ -27,21 +20,18 @@ export function Products() {
             {!loading && !error && (
                 <>
                     <ul className='container__list'>
-                        {fragrances.map(f => {
-                            const isProductInCart = checkProductInCart(f)
+                        {fragrances.map(product => {
                             return (
                                 //<Link className='link' to={`/product-catalog/${f.id}`} key={f.id}>
-                                <section key={f.id} className='card__container'>
-                                    <img src={f.imageUrl} alt={f.name} />
+                                <section key={product.id} className='card__container'>
+                                    <img src={product.imageUrl} alt={product.name} />
                                     <div className='li'>
-                                        <h3>{f.name}</h3>
-                                        <p>{f.category.categoryName}</p>
+                                        <h3>{product.name}</h3>
+                                        <p>{product.category.categoryName}</p>
                                     </div>
                                     <div className='card__footer'>
-                                        <p className='price'>${f.price}</p>
-                                        <CartButton
-                                            isProductInCart={isProductInCart}
-                                            fragrance={f} />
+                                        <p className='price'>${product.price}</p>
+                                        <CartButton product={product} />
                                     </div>
                                 </section>
                                 // </Link>

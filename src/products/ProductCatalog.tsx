@@ -1,19 +1,11 @@
 import { NavBar } from "../components/NavBar"
-import { useCart } from "../hooks/useCart"
 import { useFragrances } from "../hooks/useFragrances"
-import { Product } from "../types/interfaces"
 import Footer from "../UI/Footer"
 import ProductList from "../components/ProductList"
 import CartButton from "../components/CartButton"
 
 export default function ProductCatalog() {
-
-    const { cart } = useCart()
     const { fragrances, loading, error } = useFragrances()
-
-    const checkProductInCart = (product: Product) => {
-        return cart.some(item => item.id === product.id)
-    }
 
     return (
         <>
@@ -22,14 +14,12 @@ export default function ProductCatalog() {
             {loading && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {!loading && !error && fragrances &&
-                fragrances.map(fragrance => {
-                    const isProductInCart = checkProductInCart(fragrance)
+                fragrances.map(product => {
                     return (
                         <>
-                            <ProductList fragrance={fragrance} />
+                            <ProductList fragrance={product} />
                             <CartButton
-                                isProductInCart={isProductInCart}
-                                fragrance={fragrance} />
+                                product={product} />
                         </>
                     )
                 })}
