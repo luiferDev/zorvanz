@@ -1,6 +1,6 @@
 import { Texts } from '../components/texts'
 import '../styles/products.css'
-import { useFragrances } from '../hooks/useFragrances'
+import { useFragrances } from '../hooks/useFragrances-copy'
 import { Link } from 'react-router-dom'
 import CartButton from '../components/CartButton'
 

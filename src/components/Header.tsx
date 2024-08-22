@@ -1,11 +1,11 @@
 import Filters from "./Filters";
-
+import '../styles/filter-header.css'
 
 export default function Header() {
     return (
-        <header style={{marginTop:'100px'}}>
+        <header className="filter__header" >
             <h2>
-                Zorvanz
+                ZORVANZ
             </h2>
             <Filters />
         </header>
