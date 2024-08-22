@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
-import { useFragrances } from "../hooks/useFragrances"
+import { useFragrances } from "../hooks/useFragrances-copy"
 import Footer from "../UI/Footer"
 import { Fragrance } from "../types/interfaces"
 import CartButton from "../components/CartButton"

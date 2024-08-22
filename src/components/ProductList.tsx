@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useFragrances } from '../hooks/useFragrances'
+import { useFragrances } from '../hooks/useFragrances-copy'
 import CartButton from './CartButton'
 import { useFilters } from '../hooks/useFilters'
 import '../styles/productList.css'
@@ -25,18 +25,21 @@ export default function ProductList() {
                                     src={product.imageUrl} alt={product.name} />
                                 <div className='info__container'>
                                     <h3 className='product__title'>{product.name}</h3>
-                                    <p><strong>Descripcion: </strong>{product.description}</p>
-                                    <p><strong>Categoría: </strong>{product.category.categoryName}</p>
-                                    <p><strong>Precio: </strong>${product.price}</p>
+                                    <p>{product.description}</p>
+                                    <p>
+                                        {product.category.categoryName}
+                                    </p>
                                     {
-                                        product.stock === 0 && 
-                                        <strong className='no__stock'>Producto Agotado</strong> || 
-                                        <strong className='stock'>Disponible</strong>
+                                        product.stock === 0
+                                            ? <strong className='no__stock'>Producto Agotado</strong>
+                                            : <strong className='stock'>Disponible</strong>
                                     }
                                 </div>
                             </article>
                         </Link>
+                        <hr className='product__hr' />
                         <div className='add__cart__product'>
+                            <p>${product.price}</p>
                             <CartButton product={product} />
                         </div>
                     </div>
