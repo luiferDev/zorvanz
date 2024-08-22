@@ -1,5 +1,5 @@
 import { useCart } from "../hooks/useCart"
-import { Fragrance, Product } from "../types/interfaces"
+import { Fragrance } from "../types/interfaces"
 
 
 interface CartButtonProps {
@@ -10,7 +10,7 @@ export default function CartButton({ product }: CartButtonProps) {
 
     const { addToCart, removeFromCart, cart } = useCart()
 
-    const checkProductInCart = (product: Product) => {
+    const checkProductInCart = (product: Fragrance) => {
         return cart.some(item => item.id === product.id)
     }
 
