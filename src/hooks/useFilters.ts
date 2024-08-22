@@ -1,23 +1,22 @@
-import { useState } from "react"
-import { Filters, Fragrance } from "../types/interfaces"
+import { useContext } from "react"
+import { Fragrance } from "../types/interfaces"
+import { FiltersContext } from "../context/filterProducts"
 
 export function useFilters() {
-    const [filter, setFilter] = useState<Filters>({
-        categoryName: 'all',
-        price: 0
-    })
+
+    const { filters, setFilters } = useContext(FiltersContext)
 
     const filterProducts = (products: Fragrance[]): Fragrance[] => {
         return products.filter((product) => {
             return (
-                product.price >= filter.price &&
+                product.price >= filters.price &&
                 (
-                    filter.categoryName === 'all' ||
-                    product.category.categoryName === filter.categoryName
+                    filters.categoryName === 'all' ||
+                    product.category.categoryName === filters.categoryName
                 )
             )
         })
     }
 
-    return { filterProducts, setFilter }
+    return { filters, filterProducts, setFilters }
 }
