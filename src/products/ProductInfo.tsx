@@ -20,6 +20,9 @@ export default function ProductInfo() {
             <NavBar />
             {loading && <div>Loading...</div>}
             {error && <div>{error}</div>}
+            {!loading && !error && !selectedProduct && (
+                <div>Producto no encontrado</div>
+            )}
             {!loading && !error && selectedProduct && (
                 <div>
                     <div>
