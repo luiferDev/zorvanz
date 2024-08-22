@@ -24,6 +24,7 @@ export interface UseFragrancesState {
     error: string | null
 }
 
+// Define the Product interface, including the quantity property
 export interface Product {
     id: number
     imageUrl: string
@@ -37,6 +38,11 @@ export interface CartContextType {
     addToCart: (product: Product) => void
     clearCart: () => void
     removeFromCart: (product: Product) => void
+}
+
+export interface Filters {
+    categoryName: string
+    price: number
 }
 
 export interface FilterContextType {

@@ -1,7 +1,7 @@
 import { useId } from "react"
 import '../components/styles/cart.css'
 import { useCart } from "../hooks/useCart"
-import { Product } from "../context/cart"
+import { Product } from "../types/interfaces"
 
 
 interface CartItemI {
