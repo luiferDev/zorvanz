@@ -3,6 +3,7 @@ import { NavBar } from "../components/NavBar"
 import { useFragrances } from "../hooks/useFragrances"
 import Footer from "../UI/Footer"
 import { Fragrance } from "../types/interfaces"
+import CartButton from "../components/CartButton"
 
 
 export default function ProductInfo() {
@@ -10,7 +11,7 @@ export default function ProductInfo() {
     const { id } = useParams()
     const numericId = Number(id)
     const { fragrances, loading, error } = useFragrances()
-    const selectedProduct: Fragrance | undefined = fragrances.find(f => f.id === numericId)
+    const selectedProduct: Fragrance | undefined = fragrances?.find(f => f.id === numericId)
 
     console.log(selectedProduct?.id)
 
@@ -19,7 +20,7 @@ export default function ProductInfo() {
             <NavBar />
             {loading && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {!loading && !error && (
+            {!loading && !error && selectedProduct && (
                 <div>
                     <div>
                         <h1>{selectedProduct?.name}</h1>
@@ -30,6 +31,7 @@ export default function ProductInfo() {
                         <p>Stock: {selectedProduct?.stock} unidades</p>
                         <p>Category: {selectedProduct?.category.categoryName}</p>
                     </div>
+                    <CartButton product={selectedProduct} />
                 </div>
             )}
             <Footer />
