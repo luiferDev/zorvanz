@@ -1,5 +1,5 @@
 import { Texts } from '../components/texts'
-import '../components/styles/products.css'
+import '../styles/products.css'
 import { useFragrances } from '../hooks/useFragrances'
 import { Link } from 'react-router-dom'
 import CartButton from '../components/CartButton'

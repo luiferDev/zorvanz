@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './styles/menu.css'
+import '../styles/menu.css'
 
 
 function Menu() {

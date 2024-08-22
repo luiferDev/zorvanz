@@ -1,6 +1,6 @@
 import Zorvanz from "../components/ContactsFrom";
 import ImagesSection from "../components/ImagesSection";
-import '../components/styles/contacsection.css'
+import '../styles/contacsection.css'
 
 
 export default function ContactSection() {

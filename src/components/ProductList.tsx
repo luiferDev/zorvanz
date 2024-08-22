@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useFragrances } from '../hooks/useFragrances'
 import CartButton from './CartButton'
 import { useFilters } from '../hooks/useFilters'
+import '../styles/productList.css'
 
 export default function ProductList() {
 
@@ -26,9 +27,13 @@ export default function ProductList() {
                                 <p>Descripcion: {product.description}</p>
                                 <p>Categoría: {product.category.categoryName}</p>
                                 <p>Precio: ${product.price}</p>
+                                <p>Stock: {product.stock}</p>
                             </article>
                         </Link>
-                        <CartButton product={product} />
+                        <div className='add__cart__product'>
+                            <CartButton product={product} />
+                        </div>
+                        
                     </>
                 ))
             }

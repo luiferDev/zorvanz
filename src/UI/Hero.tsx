@@ -1,5 +1,5 @@
 import CarouselBackground from '../components/Carrousel'
-import '../components/styles/styles.css'
+import '../styles/styles.css'
 
 export default function Hero() {
     return (

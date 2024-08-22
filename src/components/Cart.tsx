@@ -1,5 +1,5 @@
 import { useId } from "react"
-import '../components/styles/cart.css'
+import '../styles/cart.css'
 import { useCart } from "../hooks/useCart"
 import { Product } from "../types/interfaces"
 

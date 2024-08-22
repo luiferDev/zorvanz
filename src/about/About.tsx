@@ -1,6 +1,6 @@
 import { NavBar } from "../components/NavBar"
 import Footer from "../UI/Footer"
-import '../components/styles/about.css'
+import '../styles/about.css'
 
 export default function About() {
     return (

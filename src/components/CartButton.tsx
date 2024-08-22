@@ -30,7 +30,7 @@ export default function CartButton({ product }: CartButtonProps) {
                 } className='add__btn'>
                 {
                     isProductInCart
-                        ? <img src="/removeCart.webp" alt="imagen de remover al carrito de la compra" width={30} height={30} />
+                        ? <img src="/removeCart.webp" alt="imagen de remover al carrito de la compra" width={25} height={25} />
                         : <img src="/carrito.webp" alt="imagen de añadir al carrito de la compra" width={30} height={30} />
                 }
             </button>

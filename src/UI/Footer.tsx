@@ -1,5 +1,5 @@
 import zorvanzLogo from '/ZorvanzZorvanz.svg'
-import '../components/styles/footer.css'
+import '../styles/footer.css'
 
 export default function Footer() {
     return (

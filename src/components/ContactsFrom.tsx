@@ -1,4 +1,4 @@
-import '../components/styles/Zorvanz.css'
+import '../styles/Zorvanz.css'
 
 export default function Zorvanz() {
     return (

@@ -1,7 +1,7 @@
 import fragrance1 from '/contact_fragrance1.svg'
 import fragrance2 from '/fragrance-blue.svg'
 import fragrance3 from '/fragrance-red.svg'
-import '../components/styles/imagesection.css'
+import '../styles/imagesection.css'
 
 export default function ImagesSection() {
     return (
