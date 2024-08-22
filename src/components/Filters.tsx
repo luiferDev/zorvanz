@@ -1,15 +1,14 @@
-import React, { useId, useState } from "react"
+import React, { useId } from "react"
 import { useFilters } from "../hooks/useFilters"
 
 export default function Filters() {
-    const { setFilters } = useFilters()
-    const [minPrice, SetMinPrice] = useState(0)
+    const { filters, setFilters } = useFilters()
+
     const minPriceFilterId = useId()
     const categoryFilterId = useId()
 
     const handleChangeMinPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value) // Convertir a número
-        SetMinPrice(value)
         setFilters(prevState => ({
             ...prevState,
             price: value
@@ -32,10 +31,10 @@ export default function Filters() {
                     id={minPriceFilterId}
                     min={0}
                     max={500}
-                    value={minPrice}
+                    value={filters.price}
                     onChange={handleChangeMinPrice}
                 />
-                <span>{minPrice}</span>
+                <span>{filters.price}</span>
             </div>
             <div>
                 <label htmlFor={categoryFilterId}>Categoría</label>
