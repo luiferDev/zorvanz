@@ -43,7 +43,6 @@
     width: 80%;
     left: 35px;
     bottom: 70px;
-    z-index: 12;
 }
 
 .image {
@@ -58,8 +57,7 @@
 }
 
 .image img {
-    width: 310px;
-    height: auto;
+    width: 100%;
 }
 
 .image::before {
