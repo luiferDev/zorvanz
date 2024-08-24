@@ -82,6 +82,12 @@
 
 /* MEdia queries section 2 */
 @media (min-width:1024px) {
+
+    .section {
+        width: 100%;
+        height: 50vh;
+    }
+
     .section__text__cta h2 {
         font-size: 64px;
     }
