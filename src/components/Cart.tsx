@@ -46,9 +46,9 @@ export default function Cart() {
             <input id={cartCheckboxId} type="checkbox" hidden />
 
             <aside className="cart">
-                <ul>
+                <ul className="cart__container">
                     {cart.map((product: Product) => (
-                        <CartItem
+                        <CartItem key={product.id}
                             id={product.id}
                             addToCart={() => addToCart(product)}
                             name={product.name}

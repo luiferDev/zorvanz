@@ -47,7 +47,6 @@ export default function Footer() {
                         <a href="#">Lorem, ipsum dolor.</a>
                     </div>
                 </div>
-
             </section>
         </footer>
     )
