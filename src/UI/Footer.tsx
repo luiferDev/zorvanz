@@ -2,7 +2,7 @@ import '../styles/footer.css'
 
 export default function Footer() {
     return (
-        <footer>
+        <footer className='footer'>
             <section className='footer__logo'>
                 <img src='/Zorvanz.png' alt="zorvanz logo" />
                 <div>
