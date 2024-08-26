@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 svg{
-  font-family: 'Ageo', sans-serif;
+  font-family: 'Voga', sans-serif;
   letter-spacing: -1px;
   line-height: 1.1;
 }
@@ -70,7 +70,6 @@ video,
 svg {
   height: auto;
   max-width: 100%;
-  font-family: 'Voga', serif;
 }
 
 body {
