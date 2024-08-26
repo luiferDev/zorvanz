@@ -17,13 +17,13 @@ interface CartItemI {
 function CartItem({ id, imageUrl, price, name, quantity, addToCart }: CartItemI) {
 
     return (
-        <li key={id}>
-            <img src={imageUrl}
+        <li className="cart__item__container" key={id}>
+            <img className="cart__item__img" src={imageUrl}
                 alt={name} />
-            <div>
-                <strong>{name}</strong> - ${price}
+            <div className="cart__item">
+                <strong>{name}</strong> ${price}
             </div>
-            <footer>
+            <footer className="cart__footer">
                 <small>
                     Qty: {quantity}
                 </small>
