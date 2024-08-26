@@ -1,11 +1,10 @@
-import zorvanzLogo from '/ZorvanzZorvanz.svg'
 import '../styles/footer.css'
 
 export default function Footer() {
     return (
         <footer>
             <section className='footer__logo'>
-                <img src={zorvanzLogo} alt="zorvanz logo" />
+                <img src='/Zorvanz.png' alt="zorvanz logo" />
                 <div>
                     <p><strong>Dirección: </strong>cll 100</p>
                     <p><strong>Contacto: </strong>+573186922713</p>

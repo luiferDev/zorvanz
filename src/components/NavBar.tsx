@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom'
-import zorvanz from '/Zorvanz_1.svg'
 import Menu from './menu'
 import Cart from './Cart';
 
@@ -32,7 +31,7 @@ export function NavBar() {
                 <div className="navbar">
                     <div className="navbar__logo">
                         <Link to="/">
-                            <img className='logo' src={zorvanz} alt="zorvanz logo" />
+                            <img className='logo' src='/Zorvanz_1.png' alt="zorvanz logo" />
                         </Link>
                     </div>
                     <div className='navbar__btns'>
