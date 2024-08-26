@@ -3,11 +3,13 @@ import '../styles/filter-header.css'
 
 export default function Header() {
     return (
-        <header className="filter__header" >
+        <aside className="filter__header" >
             <h2>
                 ZORVANZ
             </h2>
-            <Filters />
-        </header>
+            <div className="filters__container__header">
+                <Filters />
+            </div>
+        </aside>
     )
 }

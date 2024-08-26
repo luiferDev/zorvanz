@@ -49,14 +49,15 @@
 
 .cart__footer button {
     padding: 6px;
-    background-color: aqua;
+    background-color: #1c2470;
+    color: aliceblue;
 }
 
 .btn__img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #444;
+    background: #441c1c;
     border-radius: 25%;
     height: 50px;
     width: 50px;

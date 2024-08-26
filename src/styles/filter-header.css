@@ -1,3 +1,9 @@
 .filter__header {
-    margin: 120px 0 0 1rem;
+    margin: 120px 1rem 0 1rem;
+    background-color: #12184a;
+    color: aliceblue;
+}
+
+.filters__container__header {
+    padding: 20px;
 }
