@@ -98,7 +98,7 @@
     
     .image {
         position: relative;
-        width: 280px;
+        width: 300px;
         display: flex;
         flex-direction: row;
         gap: 1rem;
@@ -110,6 +110,6 @@
     .image img {
         width: 100%;
         height: auto;
-        aspect-ratio: 1/1;
+        aspect-ratio: 4/3;
     }
 }
