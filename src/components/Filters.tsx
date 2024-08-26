@@ -17,17 +17,18 @@ export default function Filters() {
     }
 
     const handleChangeCategory = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const value = event.target.value
         setFilters(prevState => ({
             ...prevState,
-            categoryName: event.target.value 
+            categoryName: value 
         }))
     }
 
     return (
         <section className="filters">
-            <div className="filter__range">
-                <label htmlFor={minPriceFilterId}>Precio</label>
-                <input
+            <div className="PB-range-slider-div">
+                <label className="PB-range-slidervalue" htmlFor={minPriceFilterId}>Precio</label>
+                <input className="PB-range-slider"
                     type="range"
                     id={minPriceFilterId}
                     min={0}
@@ -35,12 +36,12 @@ export default function Filters() {
                     value={filters.price}
                     onChange={handleChangeMinPrice}
                 />
-                <span>{filters.price}</span>
+                <span className="PB-range-slidervalue">{filters.price}</span>
             </div>
             <div className="filter_selector">
-                <label htmlFor={categoryFilterId}>Categoría</label>
-                <select id={categoryFilterId} onChange={handleChangeCategory}>
-                    <option value="all">Todos</option>
+                <label className="filter_selector_label" htmlFor={categoryFilterId}>Categoría</label>
+                <select className="filter_selector_select" id={categoryFilterId} onChange={handleChangeCategory}>
+                    <option value="all">Todas</option>
                     <option value="VELAS_AROMATICAS">Velas Arómaticas</option>
                     <option value="FRAGANCIAS_CORPORALES">Fragancias Corporales</option>
                     <option value="FRAGANCIAS_AMBIENTALES">Fragancias Ambientales</option>

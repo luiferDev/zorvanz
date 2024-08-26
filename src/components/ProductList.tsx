@@ -37,10 +37,13 @@ export default function ProductList() {
                                 </div>
                             </article>
                         </Link>
-                        <hr className='product__hr' />
-                        <div className='add__cart__product'>
-                            <p>${product.price}</p>
-                            <CartButton product={product} />
+                        <div>
+                            <hr className='product__hr' />
+                            <div className='add__cart__product'>
+                                <p>${product.price}</p>
+                                <CartButton product={product} />
+                            </div>
+
                         </div>
                     </div>
                 ))
