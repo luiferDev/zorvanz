@@ -35,7 +35,11 @@ export function NavBar() {
                         </Link>
                     </div>
                     <div className='navbar__btns'>
-                        <Link to='/login'><img src='/login.webp' alt="login image" width={20} height={20} /></Link>
+                        <Link className='login__btn' to='/login'><motion.img 
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                        src='/login.webp' alt="login image" width={20} height={20} /></Link>
                         <Cart />
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import '../styles/products.css'
 import { useFragrances } from '../hooks/useFragrances-copy'
 import { Link } from 'react-router-dom'
 import CartButton from '../components/CartButton'
+import { motion } from 'framer-motion'
 
 export function Products() {
 
@@ -24,7 +25,10 @@ export function Products() {
                             return (
                                 //<Link className='link' to={`/product-catalog/${f.id}`} key={f.id}>
                                 <section key={product.id} className='card__container'>
-                                    <img src={product.imageUrl} alt={product.name} />
+                                    <motion.img 
+                                    whileHover={{ scale: [null, 1.1], translateY: [0, -5, -4] }}
+                                    transition={{ duration: 0.3 }}
+                                    src={product.imageUrl} alt={product.name} />
                                     <div className='li'>
                                         <h3>{product.name}</h3>
                                         <p>{product.category.categoryName}</p>
