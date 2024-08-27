@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import './App.css'
 import { NavBar } from './components/NavBar'
 import { Texts } from './components/texts'
@@ -26,9 +27,12 @@ function App() {
           styles="section__text__cta"
           subtitle="Crea Tu Fragancia Ahora"
           body="Únete a nuestra comunidad de amantes de las fragancias personalizadas. Comienza hoy mismo." />
-        <div className='container__btn__cta'>
+        <motion.div 
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        className='container__btn__cta'>
           <a href="#" className='contact__btn'>Contáctanos</a>
-        </div>
+        </motion.div>
       </Section>
       <ContactSection />
       <Footer />

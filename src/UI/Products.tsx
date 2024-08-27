@@ -42,9 +42,12 @@ export function Products() {
                             )
                         })}
                     </ul>
-                    <div className='container__btn'>
+                    <motion.div 
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    className='container__btn'>
                         <Link to="/product-catalog" className='more__btn'>ver más</Link>
-                    </div>
+                    </motion.div>
                 </>
             )}
         </>
