@@ -22,7 +22,7 @@ export function NavBar() {
                 left: 0,
                 right: 0,
                 backgroundColor: backgroundColor, // Aplica la transformación al eje Y
-                zIndex: 1,
+                zIndex: 1000,
                 padding: '0 0 2rem 0',
                 transition: 'background-color 0.3s ease-in-out'
             }}
