@@ -17,6 +17,7 @@
 }
 
 #hero img {
+    aspect-ratio: 16/9;
     width: 50%;
     height: 60%;
     padding: 2rem;
