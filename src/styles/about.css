@@ -183,6 +183,10 @@
     gap: 1rem;
 }
 
+#team header h2 {
+    font-size: 3rem;
+}
+
 #team section div {
     height: 100%;
     width: 35ch;
@@ -210,4 +214,63 @@
     height: 50%;
     border-radius: 50% !important;
     margin-bottom: 1rem;
+}
+
+/* testimonials */
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem;
+}
+
+#testimonials header {
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+#testimonials header h2 {
+    font-size: 3rem;
+}
+
+#testimonials blockquote {
+    height: 40vh;
+}
+
+#testimonials blockquote p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+/* call to action */
+
+#call-to-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: flex-start;
+    height: 80vh;
+    gap: 3rem;
+}
+
+#call-to-action header {
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+}
+
+#call-to-action header h2 {
+    font-size: 3rem;
+}
+
+#call-to-action p {
+    font-size: 1.2rem;
+    width: 40ch;
+    text-align: center;
 }

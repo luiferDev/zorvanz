@@ -1,6 +1,11 @@
 import { NavBar } from "../components/NavBar"
 import Footer from "../UI/Footer"
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import { settings2 } from '../components/settings/sliderSettings'
 import '../styles/about.css'
+import { Link } from "react-router-dom"
 
 export default function About() {
     return (
@@ -99,6 +104,27 @@ export default function About() {
                     <p>Creemos que las fragancias deben ser tan únicas como las personas que las usan. Es por eso que ofrecemos un proceso de personalización que permite a nuestros clientes diseñar su aroma ideal.</p>
                 </section> */}
 
+                
+<section id="testimonials">
+                    <header>
+                        <h2>Testimonios</h2>
+                    </header>
+                    <Slider {...settings2}>
+                        <blockquote>
+                            <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."  Cliente Satisfecho</p>
+                        </blockquote>
+                        <blockquote>
+                            <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."  Cliente Satisfecho</p>
+                        </blockquote>
+                        <blockquote>
+                            <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."  Cliente Satisfecho</p>
+                        </blockquote>
+                        <blockquote>
+                            <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."  Cliente Satisfecho</p>
+                        </blockquote>
+                    </Slider>
+                </section>
+
                 <section id="team">
                     <header>
                         <h2>Nuestro Equipo</h2>
@@ -137,37 +163,22 @@ export default function About() {
                     </section>
 
                 </section>
-
+{/* 
                 <section id="sustainability">
                     <header>
                         <h2>Sostenibilidad</h2>
                     </header>
                     <p>Nos comprometemos a utilizar ingredientes sostenibles y prácticas responsables en la creación de nuestros productos, para que puedas disfrutar de tus fragancias con la tranquilidad de saber que estás cuidando el planeta.</p>
-                </section>
-
-                <section id="testimonials">
-                    <header>
-                        <h2>Testimonios</h2>
-                    </header>
-                    <blockquote>
-                        <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días." - Cliente Satisfecho</p>
-                    </blockquote>
-                    <blockquote>
-                        <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días." - Cliente Satisfecho</p>
-                    </blockquote>
-                    <blockquote>
-                        <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días." - Cliente Satisfecho</p>
-                    </blockquote>
-                    <blockquote>
-                        <p>"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días." - Cliente Satisfecho</p>
-                    </blockquote>
-                </section>
+                </section> */}
 
                 <section id="call-to-action">
                     <header>
-                        <h2>Llamada a la Acción</h2>
+                        <h2>Entérate de nuestra experiencia</h2>
                     </header>
-                    <p>Descubre el aroma que te define. Explora nuestra colección o personaliza tu fragancia hoy mismo. ¡Únete a la comunidad Zorvanz!</p>
+                    <p>Descubre el aroma que te define. Explora nuestra colección o personaliza tu fragancia hoy mismo. ¡Observa todo lo que ofrece Zorvanz!</p>
+                    <Link className='more__btn' to="/product-catalog">
+                        Nuestros productos
+                    </Link>
                 </section>
             </section>
             <Footer />
