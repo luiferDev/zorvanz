@@ -1,39 +1,213 @@
-/* #about__us {
-    margin: 8rem 0 8rem 2rem;
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#hero header {
+    width: 50%;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+#hero img {
+    width: 50%;
+    height: 60%;
+    padding: 2rem;
+}
+
+#hero header h1 {
+    padding-bottom: 1rem;
+    font-size: 4rem;
+}
+
+#hero header article p {
+    font-size: 1.2rem;
+}
+
+/* mission section */
+
+#mission {
+    margin: 0;
+    border: 1px solid black;
+    background-color: #1c2470;
+}
+
+#mission div {
+    border: #1c2470 solid 1px;
+    margin: 5rem 5rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#mission img {
+    aspect-ratio: 16/9;
+    width: 50%;
+    padding: 2rem;
+
+}
+
+#mission header {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    gap: 1rem;
+}
+
+#mission header h2 {
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    width: 100%;
+}
+
+#mission header p {
+    font-size: 1.2rem;
+    width: 40ch;
+}
+
+/* vision */
+
+#vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vision img {
+    aspect-ratio: 16/9;
+    width: 50%;
+    padding: 2rem;
+}
+
+#vision header {
+    width: 50%;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+#vision header h2 {
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+#vision header p {
+    font-size: 1.2rem;
+    width: 40ch;
+}
+
+/* values */
+
+#values {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 3rem;
+    background-color: #1c2470;
+}
+
+#values header h2 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: #e6e1d6;
+}
+
+#values article {
     width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-header h1 {
-    font-size: 3.6rem;
+#values article div {
+    height: 100%;
+    width: 40ch;
+    color: #e6e1d6;
+    padding: 1rem;
+    border-radius: 25px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+#values article div h2 {
+    font-size: 1.65rem;
     padding-bottom: 1rem;
 }
 
-p {
-    font-size: 1.25rem;
-    padding-bottom: 2.5rem;
+#values article div p {
+    font-size: 1rem;
 }
 
-h2 {
-    font-size: 2.85rem;
-    padding-bottom: 1rem;
+/* team section */
+
+#team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+    gap: 3rem;
 }
 
-@media (min-width:1024px) {
-    
-    #about__us {
-        margin: 9rem 0 8rem 6rem;
-        width: 80%;
-    }
+#team section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
 
-    header h1{
-        font-size: 7rem;
-    }
+#team section div {
+    height: 100%;
+    width: 35ch;
+    padding: 1rem;
+    background-color: white;
+    padding: 1rem;
+    background: linear-gradient(#fff, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
 
-    p {
-        font-size: 2rem;
-    }
+#team article div h2 {
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+}
 
-    h2 {
-        font-size: 4rem;
-    }
-} */
+#team article div p {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.avatar {
+    width: 50%;
+    height: 50%;
+    border-radius: 50% !important;
+    margin-bottom: 1rem;
+}
