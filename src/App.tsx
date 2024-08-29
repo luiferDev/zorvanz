@@ -8,6 +8,7 @@ import Footer from './UI/Footer'
 import Hero from './UI/Hero'
 import { Products } from './UI/Products'
 import { Section } from './UI/Section'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       </Section>
       <ContactSection />
       <Footer />
+      <SpeedInsights />
     </>
   )
 }
