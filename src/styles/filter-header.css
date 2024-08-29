@@ -1,6 +1,7 @@
 .filter__header {
     margin: 0px 1rem 1rem 1rem;
     background-color: #12184a;
+    box-shadow: 3px 3px 3px 3px black;
     border-radius: 25px;
     color: aliceblue;
     height: 100%;

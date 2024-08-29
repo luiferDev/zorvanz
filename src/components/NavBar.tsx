@@ -11,7 +11,7 @@ export function NavBar() {
     const backgroundColor = useTransform(
         scrollY,
         [0, 200], // El rango del scroll donde cambiará el color
-        ['#00000000', 'rgba(112, 28, 28, 0.5)'],
+        ['#00000000', 'rgba(255, 255, 255, 0.9)'],
     )
 
     return (

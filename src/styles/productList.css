@@ -14,7 +14,7 @@
 }
 
 .product__img {
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
     width: 350px;
     height: auto;
     padding: 1rem 0 0rem 0rem;
