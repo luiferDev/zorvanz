@@ -11,13 +11,15 @@ export default function ProductCatalog() {
         <FiltersProvider >
             <>
                 <NavBar />
-                <aside className="filters__product__list">
-                    <Header />
-                </aside>
-                <h1 className="title__product__list">Productos</h1>
-                <main className="product__list">
-                    <ProductList />
-                </main>
+                <h1 className="title__product__list">Nuestros Productos</h1>
+                <div className="product__catalog">
+                    <aside className="filters__product__list">
+                        <Header />
+                    </aside>
+                    <main className="product__list__container">
+                        <ProductList />
+                    </main>
+                </div>
                 <Footer />
             </>
         </FiltersProvider>

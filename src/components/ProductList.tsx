@@ -3,13 +3,13 @@ import { useFragrances } from '../hooks/useFragrances-copy'
 import CartButton from './CartButton'
 import { useFilters } from '../hooks/useFilters'
 import '../styles/productList.css'
+import { motion } from 'framer-motion'
 
 export default function ProductList() {
 
     const { fragrances, loading, error } = useFragrances()
     const { filterProducts } = useFilters()
     const filteredFragrances = filterProducts(fragrances)
-
 
     return (
         <>
@@ -21,11 +21,15 @@ export default function ProductList() {
                         <Link className='link'
                             to={`/product-catalog/${product.id}`}>
                             <article className='product__list'>
-                                <img className='product__img'
-                                    src={product.imageUrl} alt={product.name} />
+                                <motion.img
+                                    whileHover={{ scale: [null, 1.1], translateY: [0, -5, -4] }}
+                                    transition={{ duration: 0.3 }}
+                                    src={product.imageUrl} alt={product.name}
+                                    className='product__img' />
+
                                 <div className='info__container'>
                                     <h3 className='product__title'>{product.name}</h3>
-                                    <p>{product.description}</p>
+                                    {/* <p>{product.description}</p> */}
                                     <p>
                                         {product.category.categoryName}
                                     </p>
