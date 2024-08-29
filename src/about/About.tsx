@@ -27,7 +27,7 @@ export default function About() {
                         <img src="/mission.jpg" alt="imagen de una fragancia" />
                         <header>
                             <h2>Misión</h2>
-                            <p>Queremos ser líderes reconocidos en la industria de las fragancias, ofreciendo una amplia gama de aromas naturales que son amigables con el ambiente y suaves para la piel de cada persona. Nos esforzamos por crear fragancias que no sólo encantan los sentidos, sino que también respetan el bienestar del planeta y de quienes las usan. Queremos que cada experiencia con nuestras fragancias se inspire el amor y la lealtad, asegurándonos de estar siempre presentes en el corazón y la mente de nuestro público.</p>
+                            <p>Queremos ser un líder en la industria de las fragancias, ofreciendo productos naturales y respetuosos con el medio ambiente y la piel. Se enfocan en crear aromas que no solo agraden a los sentidos, sino que también promuevan el bienestar del planeta y de los usuarios, buscando inspirar amor y lealtad en cada experiencia con sus fragancias.</p>
                         </header>
                     </div>
 
@@ -36,7 +36,7 @@ export default function About() {
 
                     <header>
                         <h2>Visión</h2>
-                        <p>Queremos no solo ser un negocio nacional sino también exportar nuestros productos al extranjero y queremos que nuestra empresa sea exitosa, recibiendo el crédito de "líder del mercado global en fragancias y perfumes". Además, en un futuro vemos a nuestro emprendimiento como uno que se mantiene firme a sus valores originales; la innovación, la integridad, la transparencia, la honestidad, la orientación al cliente y la calidad de sus productos. En un futuro, nosotras queremos que nuestra empresa "Zorvanz: Le Fragrance" sea reconocida internacionalmente como una empresa exitosa por siempre buscar el bienestar, la seguridad, la comodidad y la satisfacción de sus clientes.</p>
+                        <p>Queremos ser un líder global en fragancias y perfumes, exportando sus productos al extranjero. A futuro, desea mantenerse fiel a sus valores de innovación, integridad, transparencia, honestidad, enfoque en el cliente y calidad. La visión es ser reconocida internacionalmente por priorizar el bienestar, la seguridad, la comodidad y la satisfacción de sus clientes.</p>
                     </header>
 
                     <img src="/mujerEnELCampo.jpg" alt="imagen de una mujer en un campo" />
@@ -51,25 +51,25 @@ export default function About() {
                         <div>
                             <img src="/amorIcon.png" alt="una mano con un corazon" />
                             <h2>Amor</h2>
-                            <p>Tomando en cuenta que el amor es un sentimiento intenso del ser humano hacía algo valioso, buscamos transmitir el amor con el que realizamos nuestros productos, el amor por satisfacer las necesidades del cliente y el amor por el progreso de nuestra empresa teniendo la satisfacción del cliente como medio principal para lograrlo.</p>
+                            <p>Transmitimos el amor con el que creamos nuestros productos, enfocándonos en satisfacer al cliente y en el progreso de nuestra empresa, con la satisfacción del cliente como objetivo principal.</p>
                         </div>
 
                         <div>
                             <img src="/honestyIcon.png" alt="una mano tocando un corazon" />
                             <h2>Honestidad</h2>
-                            <p>la honestidad implica mostrar respeto hacia los demás y tener integridad y conciencia de sí mismo. La empresa zorvanz venderá productos basados en la honestidad que reflejan lo que prometen y asi haremos uso de la misma, poniendo ante todo, la integridad y respeto que puede hacer crear esta de la empresa.</p>
+                            <p>Zorvanz venderá productos basados en la honestidad, reflejando lo que promete y priorizando la integridad y el respeto, fundamentales para la reputación de la empresa.</p>
                         </div>
 
                         <div>
                             <img src="/innovationIcon.png" alt="una cabeza con un bombillo en el medio" />
                             <h2>Innovación</h2>
-                            <p>como definición de innovación tenemos que es crear o modificar un producto y en su introducción a un mercado, nuevas formas de diseñar, producir o vender bienes y servicios. Esto se relaciona directamente con nuestra empresa, ya que se diferencia de las compañías comunes de perfumes, creando fragancias personalizadas que promueven la comodidad de nuestro cliente.</p>
+                            <p>Zorvanz se distingue por su innovación, creando fragancias personalizadas que promueven la comodidad del cliente, diferenciándose de las compañías comunes de perfumes.</p>
                         </div>
 
                         <div>
                             <img src="/optimismIcon.png" alt="una cabeza con un sol en la nuca" />
                             <h2>Optimismo</h2>
-                            <p>El optimismo es una perspectiva positiva y esperanzada del futuro y el mundo que lo rodea. Nuestra empresa, se caracterizará por tener aspectos de optimismo, como la resiliencia y fortaleza interna, siempre viendo lo mejor de las cosas y aprendiendo de ellas para que nuestra compañía tenga un desarrollo continuo</p>
+                            <p>Zorvanz se caracterizará por su optimismo, resiliencia y fortaleza, manteniendo una perspectiva positiva y aprendiendo de cada experiencia para asegurar el desarrollo continuo de la empresa.</p>
                         </div>
 
                     </article>
@@ -177,7 +177,7 @@ export default function About() {
                     </header>
                     <p>Descubre el aroma que te define. Explora nuestra colección o personaliza tu fragancia hoy mismo. ¡Observa todo lo que ofrece Zorvanz!</p>
                     <Link className='more__btn' to="/product-catalog">
-                        Nuestros productos
+                        Productos
                     </Link>
                 </section>
             </section>

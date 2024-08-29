@@ -1,13 +1,13 @@
 #hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 #hero header {
-    width: 50%;
-    padding: 8rem;
+    width: 100%;
+    padding: 5rem 2rem 0rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@
 
 #hero img {
     aspect-ratio: 16/9;
-    width: 50%;
+    width: 100%;
     height: 60%;
     padding: 2rem;
 }
@@ -42,10 +42,10 @@
 
 #mission div {
     border: #1c2470 solid 1px;
-    margin: 5rem 5rem;
-    height: 70vh;
+    margin: 2rem 2rem;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -53,8 +53,9 @@
 
 #mission img {
     aspect-ratio: 16/9;
-    width: 50%;
-    padding: 2rem;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
 
 }
 
@@ -64,7 +65,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: end;
+    text-align: start;
     gap: 1rem;
 }
 
@@ -76,43 +77,44 @@
 
 #mission header p {
     font-size: 1.2rem;
-    width: 40ch;
+    width: 20ch;
 }
 
 /* vision */
 
 #vision {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100dvh;
 }
 
 #vision img {
     aspect-ratio: 16/9;
-    width: 50%;
+    width: 100%;
     padding: 2rem;
 }
 
 #vision header {
     width: 50%;
-    padding: 8rem;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: start;
     gap: 1rem;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 #vision header h2 {
-    padding-bottom: 1rem;
     font-size: 3rem;
 }
 
 #vision header p {
     font-size: 1.2rem;
-    width: 40ch;
+    width: 30ch;
 }
 
 /* values */
@@ -122,7 +124,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    padding: 2rem;
     gap: 3rem;
     background-color: #1c2470;
 }
@@ -134,9 +136,8 @@
 }
 
 #values article {
-    width: 80%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -144,7 +145,7 @@
 
 #values article div {
     height: 100%;
-    width: 40ch;
+    width: 35ch;
     color: #e6e1d6;
     padding: 1rem;
     border-radius: 25px;
@@ -171,13 +172,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 60vh;
     gap: 3rem;
+    margin: 2rem;
 }
 
 #team section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -231,7 +232,7 @@
     width: 100%;
     text-align: center;
     gap: 1rem;
-    margin: 2rem;
+    margin: 0rem;
 }
 
 #testimonials header h2 {
@@ -239,7 +240,7 @@
 }
 
 #testimonials blockquote {
-    height: 40vh;
+    height: 45vh;
 }
 
 #testimonials blockquote p {
@@ -256,8 +257,9 @@
     justify-content: center;
     align-items: center;
     text-align: flex-start;
-    height: 80vh;
+    height: 70vh;
     gap: 3rem;
+    margin: 2rem;
 }
 
 #call-to-action header {
@@ -272,6 +274,122 @@
 
 #call-to-action p {
     font-size: 1.2rem;
-    width: 40ch;
+    width: 30ch;
     text-align: center;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    
+    #hero header {
+        width: 50%;
+        padding: 8rem;
+        display: flex;
+    }
+    
+    #hero img {
+        width: 50%;
+    }
+    
+    /* mission section */
+    
+    #mission div {
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #mission img {
+        aspect-ratio: 16/9;
+        width: 50%;
+        padding: 2rem;
+        margin-top: 0;
+    }
+    
+    #mission header {
+        margin: 5rem;
+        gap: 1rem;
+    }
+    
+    #mission header h2 {
+        width: 100%;
+    }
+    
+    #mission header p {
+        width: 40ch;
+    }
+    
+    /* vision */
+    
+    #vision {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #vision img {
+        width: 50%;
+    }
+    
+    #vision header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #vision header p {
+        font-size: 1.2rem;
+        width: 40ch;
+    }
+    
+    /* values */
+    
+    #values {
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        background-color: #1c2470;
+    }
+    
+    #values article {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    /* team section */
+    
+    #team {
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        gap: 3rem;
+    }
+    
+    #team section {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    /* testimonials */
+    
+    #testimonials blockquote {
+        height: 30vh;
+    }
+    
+    /* call to action */
+    
+    #call-to-action p {
+        font-size: 1.2rem;
+        width: 40ch;
+        text-align: center;
+    }
 }
