@@ -8,6 +8,10 @@ import ErrorPage from './error-page.tsx'
 import ProductCatalog from './products/ProductCatalog.tsx'
 import ProductInfo from './products/ProductInfo.tsx'
 import { CartProvider } from './context/cart.tsx'
+import { injectSpeedInsights } from '@vercel/speed-insights'
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+injectSpeedInsights()
 
 
 const router = createBrowserRouter([
@@ -35,6 +39,7 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <RouterProvider router={router} />
     </StrictMode>
+    <SpeedInsights />
   </CartProvider>
 
 )
