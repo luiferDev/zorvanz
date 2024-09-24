@@ -8,6 +8,7 @@ import ErrorPage from './error-page.tsx'
 import ProductCatalog from './products/ProductCatalog.tsx'
 import ProductInfo from './products/ProductInfo.tsx'
 import { CartProvider } from './context/cart.tsx'
+import ProducForm from './forms/ProducForm.tsx'
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/product-catalog/:id',
     element: <ProductInfo />,
+  },
+  {
+    path: '/product',
+    element: <ProducForm />,
   },
 ])
 
