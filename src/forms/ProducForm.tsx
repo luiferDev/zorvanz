@@ -17,7 +17,7 @@ export default function ProducForm() {
             <div className="flex">
                 <label>
                     <input className="input" {...register("name", { required: true })} type="text"
-                        placeholder="" />
+                        placeholder="" required />
                     <span>Producto</span>
                 </label>
 
@@ -40,14 +40,14 @@ export default function ProducForm() {
                 <span>Imagen</span>
             </label>
             <label>
-                <input className="input" {...register("stock", { required: true })} type="number" placeholder="" />
+                <input className="input" {...register("stock", { required: true })} type="number" placeholder="" required />
                 <span>Inventario</span>
             </label>
             <label>
-                <select className='input' {...register("categoryId", { required: true })} id="category">
-//                 <option value="1">FRAGANCIAS_CORPORALES</option>
-//                 <option value="3">FRAGANCIAS_AMBIENTALES</option>
-//                 <option value="1">VELAS_AROMATICAS</option>
+                <select className='input' {...register("categoryId", { required: true })} required >
+//                 <option value="2">FRAGANCIAS CORPORALES</option>
+//                 <option value="3">FRAGANCIAS AMBIENTALES</option>
+//                 <option value="1">VELAS AROMATICAS</option>
 //             </select>
                 <span>Categoría</span>
             </label>

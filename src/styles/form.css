@@ -1,4 +1,3 @@
-/* From Uiverse.io by ammarsaa */
 .form {
     display: flex;
     margin: 0 auto;
@@ -9,9 +8,9 @@
     padding: 20px;
     border-radius: 20px;
     position: relative;
-    background-color: #1a1a1a;
+    background-color: #12184a;
     color: #fff;
-    border: 1px solid #333;
+    border: 1px solid #12184a;
 }
 
 .title {
@@ -22,7 +21,7 @@
     display: flex;
     align-items: center;
     padding-left: 30px;
-    color: #00bfff;
+    color: #ece1dc;
 }
 
 .title::before {
@@ -76,7 +75,7 @@
 }
 
 .form label .input {
-    background-color: #333;
+    background-color: #1c2470;
     color: #fff;
     width: 100%;
     padding: 20px 05px 05px 10px;
@@ -124,7 +123,7 @@
 }
 
 .submit:hover {
-    background-color: #00bfff96;
+    background-color: #701c1c;
 }
 
 @keyframes pulse {
