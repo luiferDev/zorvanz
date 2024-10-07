@@ -5,11 +5,16 @@ export default function ProducForm() {
     const { register, handleSubmit } = useForm()
     return (
 
-        
-
         <form
+            action='http://localhost:8080/api/products'
             onSubmit={handleSubmit((data) => {
-                console.log(JSON.stringify(data))
+            fetch('http://localhost:8080/api/products', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
             })}
             className="form">
             <p className="title">Registrar Producto</p>
@@ -22,7 +27,7 @@ export default function ProducForm() {
                 </label>
 
                 <label>
-                    <input className="input" {...register("precio", { required: true })} type="text"
+                    <input className="input" {...register("price", { required: true })} type="text"
                         placeholder="" required />
                     <span>Precio</span>
                 </label>
@@ -53,7 +58,7 @@ export default function ProducForm() {
             </label>
             <label>
                 <input className="input" {...register("popularity", { required: true })} type="number"
-                    placeholder="" required />
+                    placeholder="" max={5} step={0.1} required />
                 <span>Popularidad</span>
             </label>
             <button type='submit' className="submit">Enviar</button>
