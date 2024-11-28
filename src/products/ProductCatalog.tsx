@@ -4,6 +4,7 @@ import ProductList from "../components/ProductList"
 import Header from "../components/Header"
 import { FiltersProvider } from "../context/filterProducts"
 import '../styles/product-catalog.css'
+import PP from "../nuevo/PP"
 
 export default function ProductCatalog() {
 
@@ -20,6 +21,7 @@ export default function ProductCatalog() {
                         <ProductList />
                     </main>
                 </div>
+                <PP />
                 <Footer />
             </>
         </FiltersProvider>

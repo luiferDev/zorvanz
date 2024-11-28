@@ -1,17 +1,16 @@
 import { motion } from "framer-motion"
 import { useCart } from "../hooks/useCart"
-import { Fragrance } from "../types/interfaces"
-
+import { Product } from "../types/interfaces"
 
 interface CartButtonProps {
-    product: Fragrance
+    product: Product
 }
 
 export default function CartButton({ product }: CartButtonProps) {
 
     const { addToCart, removeFromCart, cart } = useCart()
 
-    const checkProductInCart = (product: Fragrance) => {
+    const checkProductInCart = (product: Product) => {
         return cart.some(item => item.id === product.id)
     }
 
