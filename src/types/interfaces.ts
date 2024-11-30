@@ -52,6 +52,7 @@ export interface UseFragrancesState {
 
 // Define the Product interface, including the quantity property
 export interface Products {
+    category: Category;
     stock: number
     id: number
     imageUrl: string
@@ -61,10 +62,10 @@ export interface Products {
 }
 
 export interface CartContextType {
-    cart: Product[];
-    addToCart: (product: Product) => void
+    cart: Products[];
+    addToCart: (product: Products) => void
     clearCart: () => void
-    removeFromCart: (product: Product) => void
+    removeFromCart: (product: Products) => void
 }
 
 export interface Filters {
@@ -81,4 +82,16 @@ export interface FilterContextType {
         categoryName: string;
         price: number;
     }>>
+}
+
+export interface ProductDefinition {
+    id: number
+    name: string
+    imageUrl: string
+    price: number
+    description: string
+    stock: number
+    popularity: number
+    category: Category
+    selectedProduct?: number
 }
