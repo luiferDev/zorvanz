@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
 import { useFragrances } from "../hooks/useFragrances-copy"
 import Footer from "../UI/Footer"
-import { Fragrance } from "../types/interfaces"
+import { Product } from "../types/interfaces"
 import CartButton from "../components/CartButton"
 
 
@@ -11,7 +11,7 @@ export default function ProductInfo() {
     const { id } = useParams()
     const numericId = Number(id)
     const { fragrances, loading, error } = useFragrances()
-    const selectedProduct: Fragrance | undefined = fragrances?.find(f => f.id === numericId)
+    const selectedProduct: Product | undefined = fragrances?.find(f => f.id === numericId)
 
     console.log(selectedProduct?.id)
 
