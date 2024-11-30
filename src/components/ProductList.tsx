@@ -7,16 +7,16 @@ import { motion } from 'framer-motion'
 
 export default function ProductList() {
 
-    const { fragrances, loading, error } = useFragrances()
+    const { fragrances: products, loading, error } = useFragrances()
     const { filterProducts } = useFilters()
-    const filteredFragrances = filterProducts(fragrances)
+    const filteredProducts = filterProducts(products)
 
     return (
         <>
             {loading && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {!loading && !error && fragrances &&
-                filteredFragrances.map(product => (
+            {!loading && !error && products &&
+                filteredProducts.map(product => (
                     <div className='product__container' key={product.id}>
                         <Link className='link'
                             to={`/product-catalog/${product.id}`}>
