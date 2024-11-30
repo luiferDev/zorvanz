@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { ApiResponse, Fragrance, UseFragrancesState } from '../types/interfaces';
+import { PaginatedResponse, Product, UseFragrancesState } from '../types/interfaces';
 
 const url = 'http://localhost:8080/api/products'
 
 export const useFragrances = (): UseFragrancesState => {
-    const [fragrances, setFragrances] = useState<Fragrance[]>([])
+    const [fragrances, setFragrances] = useState<Product[]>([])
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError] = useState<string | null>(null)
 
@@ -21,7 +21,7 @@ export const useFragrances = (): UseFragrancesState => {
         .then(async res => {
             if (!res.ok) throw new Error('Error al obtener los datos')
             return await res.json()
-        }).then((data:ApiResponse)  => {
+        }).then((data:PaginatedResponse)  => {
             setFragrances(data.content)
             setLoading(false)
         }).catch(err => {
