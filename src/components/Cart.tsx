@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useId } from "react";
 import '../styles/cart.css';
-import { useCart } from "../hooks/useCart";
-import { Product } from "../types/interfaces";
 import { motion } from "framer-motion";
+import { useCartStore } from "../store/useCartStore";
 
 interface CartItemI {
     id: number;
@@ -30,9 +29,13 @@ function CartItem({ id, imageUrl, price, name, quantity, addToCart }: CartItemI)
 }
 
 export default function Cart() {
+
     const cartCheckboxId = useId();
-    const { cart, clearCart, addToCart } = useCart()
     const [isOpen, setIsOpen] = useState(false)
+
+    const productsInCart = useCartStore(state => state.cart)
+    const clearCart = useCartStore(state => state.clearCart)
+    const addToCart = useCartStore(state => state.addToCart)
 
     const toggleCart = () => {
         setIsOpen(!isOpen)
@@ -55,7 +58,7 @@ export default function Cart() {
 
             <aside className={`cart ${isOpen ? 'show' : 'hide'}`}>
                 <ul className="cart__container">
-                    {cart.map((product: Product) => (
+                    {productsInCart.map((product) => (
                         <CartItem key={product.id}
                             id={product.id}
                             addToCart={() => addToCart(product)}

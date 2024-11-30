@@ -1,15 +1,11 @@
 import { create } from 'zustand'
-import { Products } from '../types/interfaces'
 
-type CartState = {
-    cart: Products[]
-    addToCart: (product: Products) => void
-    removeFromCart: (id: number) => void
-    clearCart: () => void
-}
+import { persist } from 'zustand/middleware'
+import { CartContextType } from '../types/interfaces'
 
-export const useCartStore = create<CartState>((set) => ({
+export const useCartStore = create<CartContextType>()(persist((set) => ({
     cart: [],
+
     addToCart: (product) =>
         set((state) => {
             const existingProduct = state.cart.find((item) => item.id === product.id)
@@ -21,13 +17,22 @@ export const useCartStore = create<CartState>((set) => ({
                             ? { ...item, quantity: (item.quantity || 0) + 1 }
                             : item
                     ),
-                };
+                }
             }
             return { cart: [...state.cart, { ...product, quantity: 1 }] }
         }),
-    removeFromCart: (id) =>
+
+    removeFromCart: (product) =>
         set((state) => ({
-            cart: state.cart.filter((item) => item.id !== id),
+            cart: state.cart.filter((item) => item.id !== product.id),
+            quantity: (state.cart.find((item) => item.id === product.id)?.quantity || 0) - 1
         })),
+
     clearCart: () => set({ cart: [] }),
-}))
+
+}),
+    {
+        name: 'cart'
+    }
+
+))
