@@ -7,7 +7,6 @@ import '../styles/product-catalog.css'
 export default function ProductCatalog() {
 
     return (
-
         <>
             <NavBar />
             <h1 className="title__product__list">Nuestros Productos</h1>
@@ -21,6 +20,5 @@ export default function ProductCatalog() {
             </div>
             <Footer />
         </>
-
     )
 }
