@@ -16,15 +16,14 @@ export default function ProductInfo() {
 
     console.log(selectedProduct?.id)
 
+    if (isLoading) return <div>Loading...</div>;
+    if (isError) return <div>Error: producto no encontrado</div>;
+    if (!selectedProduct) return <div>Producto no encontrado</div>;
+
     return (
         <>
             <NavBar />
-            {isLoading && <div>Loading...</div>}
-            {isError && <div>Error: Datos no encontrados</div>}
-            {!isLoading && !isError && !selectedProduct && (
-                <div>Producto no encontrado</div>
-            )}
-            {!isLoading && !isError && selectedProduct && (
+            {selectedProduct && (
                 <div>
                     <div>
                         <h1>{selectedProduct?.name}</h1>
