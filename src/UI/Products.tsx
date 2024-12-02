@@ -1,13 +1,13 @@
 import { Texts } from '../components/texts'
 import '../styles/products.css'
-import { useFragrances } from '../hooks/useFragrances-copy'
 import { Link } from 'react-router-dom'
 import CartButton from '../components/CartButton'
 import { motion } from 'framer-motion'
+import { useFetchProducts } from '../hooks/useProducts'
 
 export function Products() {
 
-    const { fragrances, loading, error } = useFragrances()
+    const { data, isLoading, isError } = useFetchProducts()
 
     return (
         <>
@@ -16,12 +16,12 @@ export function Products() {
                 subtitle="Productos Destacados"
                 body="Explora nuestra gama de perfumes, velas y productos de cuidado personal. Cada uno hecho a la medida para ti."
             />
-            {loading && <div>Loading...</div>}
-            {error && <div>{error}</div>}
-            {!loading && !error && (
+            {isLoading && <div>Loading...</div>}
+            {isError && <div>Error: no se pudo acceder a los datos</div>}
+            {!isLoading && !isError && (
                 <>
                     <ul className='container__list'>
-                        {fragrances.map(product => {
+                        {data?.map(product => {
                             return (
                                 //<Link className='link' to={`/product-catalog/${f.id}`} key={f.id}>
                                 <section key={product.id} className='card__container'>

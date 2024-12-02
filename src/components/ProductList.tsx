@@ -1,21 +1,22 @@
 import { Link } from 'react-router-dom'
-import { useFragrances } from '../hooks/useFragrances-copy'
 import CartButton from './CartButton'
 import { useFilters } from '../hooks/useFilters'
 import '../styles/productList.css'
 import { motion } from 'framer-motion'
+import { useFetchProducts } from '../hooks/useProducts'
 
 export default function ProductList() {
 
-    const { fragrances: products, loading, error } = useFragrances()
+    const { data, isLoading, isError } = useFetchProducts()
     const { filterProducts } = useFilters()
-    const filteredProducts = filterProducts(products)
+    const filteredProducts = data ? filterProducts(data) : [];
+
 
     return (
         <>
-            {loading && <div>Loading...</div>}
-            {error && <div>{error}</div>}
-            {!loading && !error && products &&
+            {isLoading && <div>Loading...</div>}
+            {isError && <div>Error: producto no encontrado</div>}
+            {!isLoading && !isError && data &&
                 filteredProducts.map(product => (
                     <div className='product__container' key={product.id}>
                         <Link className='link'

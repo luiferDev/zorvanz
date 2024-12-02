@@ -1,29 +1,30 @@
 import { useParams } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
-import { useFragrances } from "../hooks/useFragrances-copy"
+
 import Footer from "../UI/Footer"
 import { Product } from "../types/interfaces"
 import CartButton from "../components/CartButton"
+import { useFetchProducts } from "../hooks/useProducts"
 
 
 export default function ProductInfo() {
 
     const { id } = useParams()
     const numericId = Number(id)
-    const { fragrances, loading, error } = useFragrances()
-    const selectedProduct: Product | undefined = fragrances?.find(f => f.id === numericId)
+    const { data, isLoading, isError } = useFetchProducts()
+    const selectedProduct: Product | undefined = data?.find(f => f.id === numericId)
 
     console.log(selectedProduct?.id)
 
     return (
         <>
             <NavBar />
-            {loading && <div>Loading...</div>}
-            {error && <div>{error}</div>}
-            {!loading && !error && !selectedProduct && (
+            {isLoading && <div>Loading...</div>}
+            {isError && <div>Error: Datos no encontrados</div>}
+            {!isLoading && !isError && !selectedProduct && (
                 <div>Producto no encontrado</div>
             )}
-            {!loading && !error && selectedProduct && (
+            {!isLoading && !isError && selectedProduct && (
                 <div>
                     <div>
                         <h1>{selectedProduct?.name}</h1>
