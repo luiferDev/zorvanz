@@ -8,7 +8,7 @@ import { useFetchProducts } from "../hooks/useProducts"
 
 
 export default function ProductInfo() {
-
+ 
     const { id } = useParams()
     const numericId = Number(id)
     const { data, isLoading, isError } = useFetchProducts()
