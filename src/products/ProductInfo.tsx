@@ -14,8 +14,6 @@ export default function ProductInfo() {
     const { data, isLoading, isError } = useFetchProducts()
     const selectedProduct: Product | undefined = data?.find(f => f.id === numericId)
 
-    console.log(selectedProduct?.id)
-
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: producto no encontrado</div>;
     if (!selectedProduct) return <div>Producto no encontrado</div>;
@@ -25,7 +23,7 @@ export default function ProductInfo() {
             <NavBar />
             {selectedProduct && (
                 <div>
-                    <div>
+                    <div key={selectedProduct?.id}>
                         <h1>{selectedProduct?.name}</h1>
                         <img src={selectedProduct?.imageUrl} alt={selectedProduct?.name} />
                         <p>{selectedProduct?.description}</p>
