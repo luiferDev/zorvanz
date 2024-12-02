@@ -8,6 +8,8 @@ import ErrorPage from './error-page.tsx'
 import ProductCatalog from './products/ProductCatalog.tsx'
 import ProductInfo from './products/ProductInfo.tsx'
 import ProducForm from './forms/ProducForm.tsx'
+import { QueryClientProvider } from '@tanstack/react-query'
+import queryClient from './queryClient.ts'
 
 
 const router = createBrowserRouter([
@@ -36,6 +38,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+      
     </StrictMode>
 )
