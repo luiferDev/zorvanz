@@ -6,8 +6,8 @@ import ContactSection from './UI/ContactSection'
 import { Features } from './UI/Features'
 import Footer from './UI/Footer'
 import Hero from './UI/Hero'
-import { Products } from './UI/Products'
 import { Section } from './UI/Section'
+import { Products } from './UI/Products'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           styles="section__text"
           subtitle="Personaliza Tu Fragancia"
           body="Elige tus notas favoritas y crea una fragancia exclusiva. Hazla tan única como tú." />
-      </Section>
+      </Section>  
       <Products />
       <Section>
         <Texts

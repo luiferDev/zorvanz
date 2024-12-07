@@ -1,27 +1,25 @@
 import React, { useId } from "react"
-import { useFilters } from "../hooks/useFilters"
 import '../styles/filters.css'
+import { useProductsStore } from "../store/useProductsStore"
 
 export default function Filters() {
-    const { filters, setFilters } = useFilters()
 
     const minPriceFilterId = useId()
     const categoryFilterId = useId()
 
+    const category = useProductsStore(state => state.category)
+    const price = useProductsStore(state => state.price)
+    const filterProductsPrice = useProductsStore(state => state.filterProductsPrice)
+    const filterProductsCategory = useProductsStore(state => state.filterProductsCategory)
+
     const handleChangeMinPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value) // Convertir a número
-        setFilters(prevState => ({
-            ...prevState,
-            price: value
-        }))
+        filterProductsPrice(value)
     }
 
     const handleChangeCategory = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const value = event.target.value
-        setFilters(prevState => ({
-            ...prevState,
-            categoryName: value 
-        }))
+        filterProductsCategory(value === "all" ? "" : value)
     }
 
     return (
@@ -33,14 +31,16 @@ export default function Filters() {
                     id={minPriceFilterId}
                     min={0}
                     max={500}
-                    value={filters.price}
+                    value={price}
                     onChange={handleChangeMinPrice}
                 />
-                <span className="PB-range-slidervalue">{filters.price}</span>
+                <span className="PB-range-slidervalue">{price}</span>
             </div>
             <div className="filter_selector">
                 <label className="filter_selector_label" htmlFor={categoryFilterId}>Categoría</label>
-                <select className="filter_selector_select" id={categoryFilterId} onChange={handleChangeCategory}>
+                <select className="filter_selector_select" id={categoryFilterId}
+                    value={category} // Obtener la categoría actual del estado
+                    onChange={handleChangeCategory}>
                     <option value="all">Todas</option>
                     <option value="VELAS_AROMATICAS">Velas Arómaticas</option>
                     <option value="FRAGANCIAS_CORPORALES">Fragancias Corporales</option>

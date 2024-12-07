@@ -1,22 +1,22 @@
-import { useContext } from "react"
-import { Fragrance } from "../types/interfaces"
-import { FiltersContext } from "../context/filterProducts"
+import { Product } from "../types/interfaces"
+import { useProductsStore } from "../store/useProductsStore"
 
 export function useFilters() {
 
-    const { filters, setFilters } = useContext(FiltersContext)
+    // Obtener los filtros y productos filtrados desde el store
+    const price = useProductsStore((state) => state.price)
+    const category = useProductsStore((state) => state.category)
 
-    const filterProducts = (products: Fragrance[]): Fragrance[] => {
+    // Función para filtrar productos manualmente (si es necesario)
+    const filterProducts = (products: Product[]): Product[] => {
         return products.filter((product) => {
             return (
-                product.price >= filters.price &&
-                (
-                    filters.categoryName === 'all' ||
-                    product.category.categoryName === filters.categoryName
-                )
+                product.price >= price && // Filtrar por precio
+                (category === "" || product.category.categoryName === category) // Filtrar por categoría
             )
         })
     }
 
-    return { filters, filterProducts, setFilters }
+    return { filterProducts }
+
 }

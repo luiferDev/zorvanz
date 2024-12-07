@@ -1,0 +1,133 @@
+{
+    "totalPages": 2,
+    "totalElements": 10,
+    "size": 8,
+    "content": [
+        {
+            "id": 17,
+            "name": "Brisa de Lavanda",
+            "description": "Relájate con esta vela aromática de lavanda pura, ideal para crear un ambiente de calma y serenidad en cualquier espacio.",
+            "price": 19.99,
+            "category": {
+                "categoryId": 1,
+                "categoryName": "VELAS_AROMATICAS"
+            },
+            "stock": 150,
+            "popularity": 85.0,
+            "imageUrl": "https://i.postimg.cc/bwZVTmSg/Default-una-fragancia-en-un-lugar-higienico-con-mesa-minimalis-0-3.webp"
+        },
+        {
+            "id": 18,
+            "name": "Vainilla y Sándalo",
+            "description": "Disfruta del equilibrio perfecto entre la calidez de la vainilla y la profundidad del sándalo en esta acogedora vela aromática.",
+            "price": 22.5,
+            "category": {
+                "categoryId": 1,
+                "categoryName": "VELAS_AROMATICAS"
+            },
+            "stock": 140,
+            "popularity": 88.0,
+            "imageUrl": "https://i.postimg.cc/fL1YMvRz/th-12.webpg"
+        },
+        {
+            "id": 2,
+            "name": "Liberacion",
+            "description": "Fresco y cálido, este perfume fusiona la vitalidad del limón con la suavidad de la miel. \nUna fragancia brillante y dulce que despierta los sentidos, perfecta para quienes buscan una esencia revitalizante con un toque de dulzura natural",
+            "price": 120.0,
+            "category": {
+                "categoryId": 2,
+                "categoryName": "FRAGANCIAS_CORPORALES"
+            },
+            "stock": 300,
+            "popularity": 156.0,
+            "imageUrl": "https://i.postimg.cc/pX4J2RyQ/Default-una-fragancia-en-un-lugar-higienico-con-mesa-minimalis-1-1.webp"
+        },
+        {
+            "id": 5,
+            "name": "Niebla Ámbar",
+            "description": "Misterioso y cálido, \"Niebla Ámbar\" combina la riqueza del ámbar con un toque de vainilla. Un perfume envolvente que deja una estela duradera, perfecto para las noches frías.",
+            "price": 180.0,
+            "category": {
+                "categoryId": 2,
+                "categoryName": "FRAGANCIAS_CORPORALES"
+            },
+            "stock": 500,
+            "popularity": 220.65,
+            "imageUrl": "https://i.postimg.cc/B6jxWzs7/th-11.webp"
+        },
+        {
+            "id": 8,
+            "name": "Higo y Almendra",
+            "description": "Delicadamente dulce, \"Higo y Almendra\" fusiona la suavidad de la almendra con la frescura frutal del higo. Un aroma gourmet que es suave y acogedor, ideal para el día a día.",
+            "price": 150.0,
+            "category": {
+                "categoryId": 2,
+                "categoryName": "FRAGANCIAS_CORPORALES"
+            },
+            "stock": 250,
+            "popularity": 250.25,
+            "imageUrl": "https://i.postimg.cc/LXgZQZBr/th-15.webp"
+        },
+        {
+            "id": 6,
+            "name": "Cítrico Albor",
+            "description": "Revitaliza tu día con \"Cítrico Albor\", una explosión de mandarina y bergamota que refresca los sentidos. Ligero y energético, es ideal para una sensación de frescura duradera.",
+            "price": 220.0,
+            "category": {
+                "categoryId": 2,
+                "categoryName": "FRAGANCIAS_CORPORALES"
+            },
+            "stock": 126,
+            "popularity": 350.25,
+            "imageUrl": "https://i.postimg.cc/fL1YMvRz/th-12.webp"
+        },
+        {
+            "id": 4,
+            "name": "Rosa Salvaje",
+            "description": "\"Rosa Salvaje\" captura la esencia de un jardín en flor. \nCon notas de rosa fresca y un toque especiado, esta fragancia es romántica y elegante, ideal para los amantes de lo clásico.",
+            "price": 250.0,
+            "category": {
+                "categoryId": 2,
+                "categoryName": "FRAGANCIAS_CORPORALES"
+            },
+            "stock": 260,
+            "popularity": 400.5,
+            "imageUrl": "https://i.postimg.cc/Kzj1k3H1/th-10.webp"
+        },
+        {
+            "id": 7,
+            "name": "Madera Oriental",
+            "description": "\"Madera Oriental\" evoca tierras lejanas con su mezcla de sándalo y especias exóticas. Un aroma profundo y exótico que añade un toque de misterio y sofisticación a tu presencia.",
+            "price": 310.0,
+            "category": {
+                "categoryId": 2,
+                "categoryName": "FRAGANCIAS_CORPORALES"
+            },
+            "stock": 600,
+            "popularity": 500.0,
+            "imageUrl": "https://i.postimg.cc/dt2GKrPF/th-14.webp"
+        }
+    ],
+    "number": 0,
+    "sort": {
+        "empty": false,
+        "sorted": true,
+        "unsorted": false
+    },
+    "pageable": {
+        "pageNumber": 0,
+        "pageSize": 8,
+        "sort": {
+            "empty": false,
+            "sorted": true,
+            "unsorted": false
+        },
+        "offset": 0,
+        "paged": true,
+        "unpaged": false
+    },
+    "numberOfElements": 8,
+    "first": true,
+    "last": false,
+    "empty": false
+}

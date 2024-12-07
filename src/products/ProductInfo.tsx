@@ -1,31 +1,29 @@
 import { useParams } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
-import { useFragrances } from "../hooks/useFragrances-copy"
+
 import Footer from "../UI/Footer"
-import { Fragrance } from "../types/interfaces"
+import { Product } from "../types/interfaces"
 import CartButton from "../components/CartButton"
+import { useFetchProducts } from "../hooks/useProducts"
 
 
 export default function ProductInfo() {
-
+ 
     const { id } = useParams()
     const numericId = Number(id)
-    const { fragrances, loading, error } = useFragrances()
-    const selectedProduct: Fragrance | undefined = fragrances?.find(f => f.id === numericId)
+    const { data, isLoading, isError } = useFetchProducts()
+    const selectedProduct: Product | undefined = data?.find(f => f.id === numericId)
 
-    console.log(selectedProduct?.id)
+    if (isLoading) return <div>Loading...</div>;
+    if (isError) return <div>Error: producto no encontrado</div>;
+    if (!selectedProduct) return <div>Producto no encontrado</div>;
 
     return (
         <>
             <NavBar />
-            {loading && <div>Loading...</div>}
-            {error && <div>{error}</div>}
-            {!loading && !error && !selectedProduct && (
-                <div>Producto no encontrado</div>
-            )}
-            {!loading && !error && selectedProduct && (
+            {selectedProduct && (
                 <div>
-                    <div>
+                    <div key={selectedProduct?.id}>
                         <h1>{selectedProduct?.name}</h1>
                         <img src={selectedProduct?.imageUrl} alt={selectedProduct?.name} />
                         <p>{selectedProduct?.description}</p>
