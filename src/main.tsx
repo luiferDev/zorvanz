@@ -10,6 +10,7 @@ import ProductInfo from './products/ProductInfo.tsx'
 import ProducForm from './forms/ProducForm.tsx'
 import { QueryClientProvider } from '@tanstack/react-query'
 import queryClient from './queryClient.ts'
+import LoginPage from './Auth/LoginPage.tsx'
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/add-product',
     element: <ProducForm />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
   },
 ])
 
