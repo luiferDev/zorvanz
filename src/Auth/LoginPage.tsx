@@ -1,6 +1,8 @@
 import { useForm } from 'react-hook-form'
 import { loginRequest } from "../api/loginRequest"
 import { useAuthStore } from '../store/auth'
+import '../styles/login.css'
+import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
 
@@ -11,17 +13,33 @@ export default function LoginPage() {
 
     return (
         <>
-            <form action={url} onSubmit={handleSubmit( async(data) => {             
+            <form className='form' action={url} onSubmit={handleSubmit(async (data) => {
                 const res = await loginRequest(data.userName, data.password)
-                setToken(res.data.token) 
+                setToken(res.data.token)
                 console.log(res)
             })}>
-                <input type="text" placeholder="Usuario"
-                {...register("userName", { required: true })} />
-                <input type="password" placeholder="**********"
-                {...register("password", { required: true })}  />
-                <button type="submit">Login</button>
+                <p className="form-title">Iniciar Sesión</p>
+                <div className='input-container'>
+                    <input type="text" placeholder="usuario123"
+                        {...register("userName", { required: true })} />
+                    <span>
+                    </span>
+                </div>
+                <div className='input-container'>
+                    <input type="password" placeholder="**********"
+                        {...register("password", { required: true })} />
+                </div>
+
+                <button className='submit' type="submit">Login</button>
+                <p className="signup-link">
+                    ¿No tienes una cuenta? 
+                    <Link to="/register"> Registrate</Link>
+                </p>
             </form>
         </>
     )
 }
+
+
+
+
