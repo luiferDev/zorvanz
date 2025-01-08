@@ -67,19 +67,19 @@ export default function ProducForm() {
                 <span>Imagen</span>
             </label>
             <label>
-                <input className="input" {...register("stock", { required: true })} type="number" placeholder="" required />
+                <input className="input" {...register("stock", { required: true })} type="text" placeholder="" required />
                 <span>Inventario</span>
             </label>
             <label>
-                <select className='input' {...register("categoryId", { required: true })} required >
-//                 <option value="2">FRAGANCIAS CORPORALES</option>
-//                 <option value="3">FRAGANCIAS AMBIENTALES</option>
-//                 <option value="1">VELAS AROMATICAS</option>
-//             </select>
+                <select className='input' {...register("category.categoryId", { required: true })} required >
+                    <option value="2">FRAGANCIAS CORPORALES</option>
+                    <option value="3">FRAGANCIAS AMBIENTALES</option>
+                    <option value="1">VELAS AROMATICAS</option>
+                </select>
                 <span>Categoría</span>
             </label>
             <label>
-                <input className="input" {...register("popularity", { required: true })} type="number"
+                <input className="input" {...register("popularity", { required: true })} type="text"
                     placeholder="" max={5} step={0.1} required />
                 <span>Popularidad</span>
             </label>
