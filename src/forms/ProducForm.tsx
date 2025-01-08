@@ -29,17 +29,7 @@ export default function ProducForm() {
     return (
 
         <form
-            action='http://localhost:8080/api/products'
-            onSubmit={handleSubmit((data) => {
-                fetch('http://localhost:8080/api/products', // local api
-                    {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                    })
-            })}
+        onSubmit={handleSubmit((data) => createProduct(data, baseUrl))}
             className="form">
             <p className="title">Registrar Producto</p>
             <p className="message">Ingresa los datos del producto</p>
