@@ -41,8 +41,16 @@ export default function ProducForm() {
                 </label>
 
                 <label>
-                    <input className="input" {...register("price", { required: true })} type="text"
-                        placeholder="" required />
+                <input
+                        className="input"
+                        {...register('price', {
+                            required: true,
+                            validate: (value) => !isNaN(value) || 'El precio debe ser un número',
+                        })}
+                        type="text"
+                        placeholder=""
+                        required
+                    />
                     <span>Precio</span>
                 </label>
             </div>
