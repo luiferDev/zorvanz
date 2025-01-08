@@ -24,7 +24,8 @@ async function createProduct(data: Product, baseUrl: string) {
 }
 
 export default function ProducForm() {
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit } = useForm<Product>()
+    const baseUrl = import.meta.env.VITE_API_URL
     return (
 
         <form
