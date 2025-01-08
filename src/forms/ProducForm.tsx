@@ -1,6 +1,27 @@
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import '../styles/form.css'
+import { Product } from '../types/interfaces';
+
+async function createProduct(data: Product, baseUrl: string) {
+    try {
+        const response = await axios.post(`${baseUrl}/api/products`, data, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        console.log('Producto registrado:', response.data);
+        alert('Producto registrado exitosamente!');
+    } catch (error: any) {
+        if (axios.isAxiosError(error)) {
+            console.error('Error de Axios:', error.response?.data || error.message);
+            alert('Error al registrar el producto: ' + (error.response?.data?.message || error.message));
+        } else {
+            console.error('Error desconocido:', error);
+            alert('Hubo un error inesperado.');
+        }
+    }
+}
 
 export default function ProducForm() {
     const { register, handleSubmit } = useForm()
