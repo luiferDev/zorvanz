@@ -32,7 +32,7 @@ export default function LoginPage() {
 
                 <button className='submit' type="submit">Login</button>
                 <p className="signup-link">
-                    ¿No tienes una cuenta? 
+                    ¿No tienes una cuenta?
                     <Link to="/register"> Registrate</Link>
                 </p>
             </form>
