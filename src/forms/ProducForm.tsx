@@ -30,19 +30,19 @@ export default function ProducForm() {
 
         <form
         onSubmit={handleSubmit((data) => createProduct(data, baseUrl))}
-            className="form">
-            <p className="title">Registrar Producto</p>
-            <p className="message">Ingresa los datos del producto</p>
-            <div className="flex">
+            className="product__form">
+            <p className="product__title">Registrar Producto</p>
+            <p className="product__message">Ingresa los datos del producto</p>
+            <div className="product__flex">
                 <label>
-                    <input className="input" {...register("name", { required: true })} type="text"
+                    <input className="product__input" {...register("name", { required: true })} type="text"
                         placeholder="" required />
                     <span>Producto</span>
                 </label>
 
                 <label>
                 <input
-                        className="input"
+                        className="product__input"
                         {...register('price', {
                             required: true,
                             validate: (value) => !isNaN(value) || 'El precio debe ser un número',
@@ -56,22 +56,22 @@ export default function ProducForm() {
             </div>
 
             <label>
-                <textarea className="input" {...register("description", { required: true })} cols={30} rows={5} placeholder="" required />
+                <textarea className="product__input" {...register("description", { required: true })} cols={30} rows={5} placeholder="" required />
                 <span>Descripción</span>
             </label>
 
             <label>
-                <input className="input" type="text"
+                <input className="product__input" type="text"
                     {...register("imageUrl", { required: true })} accept="image/*"
                     placeholder="" required />
                 <span>Imagen</span>
             </label>
             <label>
-                <input className="input" {...register("stock", { required: true })} type="text" placeholder="" required />
+                <input className="product__input" {...register("stock", { required: true })} type="text" placeholder="" required />
                 <span>Inventario</span>
             </label>
             <label>
-                <select className='input' {...register("category.categoryId", { required: true })} required >
+                <select className='product__input' {...register("category.categoryId", { required: true })} required >
                     <option value="2">FRAGANCIAS CORPORALES</option>
                     <option value="3">FRAGANCIAS AMBIENTALES</option>
                     <option value="1">VELAS AROMATICAS</option>
@@ -79,12 +79,12 @@ export default function ProducForm() {
                 <span>Categoría</span>
             </label>
             <label>
-                <input className="input" {...register("popularity", { required: true })} type="text"
+                <input className="product__input" {...register("popularity", { required: true })} type="text"
                     placeholder="" max={5} step={0.1} required />
                 <span>Popularidad</span>
             </label>
-            <button type='submit' className="submit">Enviar</button>
-            <button className='submit' type="reset">Limpiar</button>
+            <button type='submit' className="product__submit">Enviar</button>
+            <button className='product__submit' type="reset">Limpiar</button>
             {/* <p className="signin">Already have an acount ? <a href="#">Signin</a> </p> */}
         </form>
     )

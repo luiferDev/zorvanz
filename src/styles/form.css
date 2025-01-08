@@ -1,4 +1,4 @@
-.form {
+.product__form {
     display: flex;
     margin: 0 auto;
     margin-top: 25px;
@@ -13,7 +13,7 @@
     border: 1px solid #12184a;
 }
 
-.title {
+.product__title {
     font-size: 28px;
     font-weight: 600;
     letter-spacing: -1px;
@@ -24,19 +24,19 @@
     color: #ece1dc;
 }
 
-.title::before {
+.product__title::before {
     width: 18px;
     height: 18px;
 }
 
-.title::after {
+.product__title::after {
     width: 18px;
     height: 18px;
     animation: pulse 1s linear infinite;
 }
 
-.title::before,
-.title::after {
+.product__title::before,
+.product__title::after {
     position: absolute;
     content: "";
     height: 16px;
@@ -46,35 +46,22 @@
     background-color: #00bfff;
 }
 
-.message,
-.signin {
+.product__message{
     font-size: 14.5px;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.signin {
-    text-align: center;
-}
-
-.signin a:hover {
-    text-decoration: underline royalblue;
-}
-
-.signin a {
-    color: #00bfff;
-}
-
-.flex {
+.product__flex {
     display: flex;
     width: 100%;
     gap: 6px;
 }
 
-.form label {
+.product__form label {
     position: relative;
 }
 
-.form label .input {
+.product__form label .product__input {
     background-color: #1c2470;
     color: #fff;
     width: 100%;
@@ -84,7 +71,7 @@
     border-radius: 10px;
 }
 
-.form label .input+span {
+.product__form label .product__input+span {
     color: rgba(255, 255, 255, 0.5);
     position: absolute;
     left: 10px;
@@ -94,24 +81,24 @@
     transition: 0.3s ease;
 }
 
-.form label .input:placeholder-shown+span {
+.product__form label .product__input:placeholder-shown+span {
     top: 12.5px;
     font-size: 0.9em;
 }
 
-.form label .input:focus+span,
-.form label .input:valid+span {
+.product__form label .product__input:focus+span,
+.product__form label .product__input:valid+span {
     color: #00bfff;
     top: 0px;
     font-size: 0.7em;
     font-weight: 600;
 }
 
-.input {
+.product__input {
     font-size: medium;
 }
 
-.submit {
+.product__submit {
     border: none;
     outline: none;
     padding: 10px;
@@ -122,7 +109,7 @@
     background-color: #00bfff;
 }
 
-.submit:hover {
+.product__submit:hover {
     background-color: #701c1c;
 }
 
