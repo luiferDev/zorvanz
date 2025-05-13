@@ -6,9 +6,11 @@ import { Product } from "../types/interfaces"
 import CartButton from "../components/CartButton"
 import { useFetchProducts } from "../hooks/useProducts"
 
+import '../styles/product-info.css'
+
 
 export default function ProductInfo() {
- 
+
     const { id } = useParams()
     const numericId = Number(id)
     const { data, isLoading, isError } = useFetchProducts()
@@ -22,17 +24,22 @@ export default function ProductInfo() {
         <>
             <NavBar />
             {selectedProduct && (
-                <div>
-                    <div key={selectedProduct?.id}>
-                        <h1>{selectedProduct?.name}</h1>
-                        <img src={selectedProduct?.imageUrl} alt={selectedProduct?.name} />
-                        <p>{selectedProduct?.description}</p>
-                        <p>Price: ${selectedProduct?.price}</p>
-                        <p>Rating: {selectedProduct?.popularity}</p>
-                        <p>Stock: {selectedProduct?.stock} unidades</p>
-                        <p>Category: {selectedProduct?.category.categoryName}</p>
+                <div className="info">
+                    <div className="info__product" key={selectedProduct?.id}>
+                        <img className="info__img" 
+                            src={selectedProduct?.imageUrl} 
+                            alt={selectedProduct?.name} />
+                        <div className="info__details">
+                            <h1>{selectedProduct?.name}</h1>
+                            <p className="info__description">{selectedProduct?.description}</p>
+                            <p className="info__price">Price: ${selectedProduct?.price}</p>
+                            <p className="info__popularity">Rating: {selectedProduct?.popularity}</p>
+                            <p className="info__stock">Stock: {selectedProduct?.stock} unidades</p>
+                            <p className="info__category">Category: {selectedProduct?.category.categoryName}</p>
+                            <CartButton product={selectedProduct} />
+                        </div>
                     </div>
-                    <CartButton product={selectedProduct} />
+                    
                 </div>
             )}
             <Footer />
