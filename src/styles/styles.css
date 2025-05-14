@@ -1,16 +1,4 @@
-@font-face {
-    font-family: 'Ageo';
-    src: url('../../fonts/AgeoTrial-SemiBold.ttf') format('ttf');
-    font-weight: 600;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Vanio';
-    src: url('../../fonts/VanioTrial-RegularItalic.ttf') format('ttf');
-    font-weight: 400;
-    font-style: italic;
-}
 
 .navbar {
     position: sticky;
@@ -27,37 +15,6 @@
     position: relative;
     top: 10px;
     left: 30px;
-}
-
-.hero__text {
-    color: #e6e1dc;
-}
-
-.hero__title {
-    padding: 370px 1rem 0 2rem;
-    font-family: 'Ageo', sans-serif;
-    font-size: 40px;
-}
-
-.hero__body {
-    font-family: 'Vanio', serif;
-    font-style: italic;
-    width: 45ch;
-    font-size: 12px;
-    padding: 16px 0 0 2rem;
-}
-
-.cta__hero__btn {
-    width: 125px;
-    height: 34px;
-    border-radius: 25px;
-    font-family: 'Ageo', sans-serif;
-    font-size: 10px;
-    background-color: #701C1C;
-    color: #e6e1dc;
-    border: none;
-    margin: 2rem 0 0 2rem;
-    cursor: pointer;
 }
 
 .navbar__btns {
@@ -88,24 +45,6 @@
         height: auto;
     }
 
-    .hero {
-        margin: 0px 0 0 90px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .hero__title {
-        margin-top: -50px;
-        font-size: 96px;
-        width: 12ch;
-    }
-
-    .hero__body {
-        font-size: 24px;
-        width: 45ch;
-    }
-
     .navbar__btns {
         visibility: visible;
         display: flex;
@@ -127,21 +66,12 @@
         z-index: 9999;
     }
 
-    .login__btn:hover {
-        scale: 1.1;
-    }
+
 
     .navbar__btns a:first-child {
         margin-right: 1rem;
     }
 
-    .cta__hero__btn {
-        margin-top: 320px;
-        margin-right: 90px;
-        width: 263px;
-        height: 70px;
-        font-size: 24px;
-    }
 }
 
 #error-page {
