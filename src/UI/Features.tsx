@@ -1,5 +1,4 @@
 import { Texts } from "../components/texts"
-import '../styles/features.css'
 import { images } from "../hooks/constants"
 import { motion } from "framer-motion"
 
