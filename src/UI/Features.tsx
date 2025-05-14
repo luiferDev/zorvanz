@@ -7,14 +7,16 @@ export function Features() {
     return (
         <>
             <Texts
-                styles="feature__text"
+				styles="flex flex-col justify-center text-center items-center"
+				titleStyles="pt-12 text-4xl lg:text-6xl lg:mb-12"
+				bodyStyles="text-xs w-[40ch] pb-12 lg:text-2xl lg:mb-20"
                 subtitle="Nuestros Productos"
                 body="Descubre las características que hacen nuestras fragancias y velas especiales."
             />
             <div className="lg:flex lg:pb-12">
                 {images.map((image) => (
                     <section
-						className={`flex flex-col items-center relative 
+						className={`flex flex-col items-center relative
 							w-full lg:h-[300px] ${image.class}`}
                         key={image.id}
                     >
