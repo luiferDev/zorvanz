@@ -1,44 +1,3 @@
-@font-face {
-    font-family: 'Ageo';
-    src: url('../../fonts/AgeoTrial-SemiBold.ttf') format('ttf');
-    font-weight: 600;
-    font-style: normal;
-}
-
-menu{
-    position: sticky;
-    z-index: 50;
-}
-
-.menu-container {
-    position: relative;
-}
-
-
-.hamburger {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: #701C1C;
-    gap: .65rem;
-    border-radius: 50%;
-    z-index: 999;
-}
-
-.hamburger>div {
-    background: #e6e1dc;
-    height: 2px;
-    width: 60%;
-    border-radius: 5px;
-}
-
 .menu-options {
     position: absolute;
     top: 0px;
@@ -77,10 +36,6 @@ menu{
 }
 
 @media (min-width: 1024px) {
-    .hamburger {
-        display: none;
-        animation: none;
-    }
 
     .menu-options {
         background: transparent;

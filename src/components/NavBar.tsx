@@ -16,35 +16,52 @@ export function NavBar() {
 
     return (
         <>
-            <motion.menu style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                right: 0,
-                backgroundColor: backgroundColor, // Aplica la transformación al eje Y
-                zIndex: 1,
-                padding: '0 0 2rem 0',
-                transition: 'background-color 0.3s ease-in-out'
-            }}
+            <motion.menu
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    backgroundColor: backgroundColor, // Aplica la transformación al eje Y
+                    zIndex: 1,
+                    padding: '0 0 2rem 0',
+                    transition: 'background-color 0.3s ease-in-out',
+                }}
             >
                 <Menu />
-                <div className="navbar">
-                    <div className="navbar__logo">
+                <div className="sticky flex items-center justify-center z-[1]">
+                    <div className="mt-2.5 w-24 h-auto relative top-2.5 left-8 lg:w-60 lg:h-auto">
                         <Link to="/">
-                            <img className='logo' src='/Zorvanz_1.png' alt="zorvanz logo" />
+                            <img
+                                className="logo"
+                                src="/Zorvanz_1.png"
+                                alt="zorvanz logo"
+                            />
                         </Link>
                     </div>
-                    <div className='navbar__btns'>
-                        <Link className='login__btn' to='/login'><motion.img 
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                        src='/login.webp' alt="login image" width={20} height={20} /></Link>
+                    <div className="z-[999] flex items-center gap-5 relative right-[-70] top-5 lg:visible lg:absolute lg:right-20">
+                        <Link
+                            className="bg-[#701C1C] rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
+                            to="/login"
+                        >
+                            <motion.img
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={{
+                                    type: 'spring',
+                                    stiffness: 400,
+                                    damping: 17,
+                                }}
+                                src="/login.webp"
+                                alt="login image"
+                                width={20}
+                                height={20}
+                            />
+                        </Link>
                         <Cart />
                     </div>
                 </div>
             </motion.menu>
-
         </>
     )
 }
