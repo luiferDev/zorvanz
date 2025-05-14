@@ -32,7 +32,7 @@ export default function CartButton({ product }: CartButtonProps) {
                     isProductInCart
                         ? removeFromCart(product)
                         : addToCart(product)
-                } className='add__btn'>
+                } className='flex justify-center items-center p-2 rounded-[20%] w-full h-full cursor-pointer'>
                 {
                     isProductInCart
                         ? <img src="/removeCart.webp" 
