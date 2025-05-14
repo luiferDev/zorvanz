@@ -10,14 +10,8 @@ const BackButton: React.FC = () => {
 
     return (
         <button
-            onClick={handleGoBack}
-            style={{
-                padding: '10px',
-                cursor: 'pointer',
-                background: 'none',
-                border: '1px #1c2470 solid',
-                borderRadius: '50%',
-            }}
+			onClick={handleGoBack}
+			className="bg-none border-1 border-solid border-[#1c2470] rounded-full p-2 cursor-pointer"
         >
             <ArrowLeftIcon />
         </button>
