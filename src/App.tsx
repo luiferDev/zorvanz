@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import './App.css'
 import { NavBar } from './components/NavBar'
 import { Texts } from './components/texts'
 import ContactSection from './UI/ContactSection'
