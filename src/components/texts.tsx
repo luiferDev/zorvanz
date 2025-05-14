@@ -1,3 +1,5 @@
+import { JSX } from "react"
+
 interface TitleI {
     styles: string
     subtitle: string
