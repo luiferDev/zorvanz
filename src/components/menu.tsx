@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import '../styles/menu.css'
 
 const menuItems = [
     { path: '/', label: 'Home', delay: 0.2 },
