@@ -24,15 +24,15 @@ function CartItem({
     removeFromCart,
 }: CartItemI) {
     return (
-        <li className="cart__item__container" key={id}>
-            <img className="cart__item__img" src={imageUrl} alt={name} />
-            <div className="cart__item">
-                <strong>{name}</strong> ${price}
+        <li className="text-amber-50 list-none" key={id}>
+            <img className="pt-8 aspect-square w-full" src={imageUrl} alt={name} />
+            <div className="flex flex-col justify-center items-center text-xl pt-4">
+                <strong className='text-xl items-center pt-4'>{name}</strong> ${price}
             </div>
-            <footer className="cart__footer">
-                <small>Qty: {quantity}</small>
-                <button onClick={addToCart}>+</button>
-                <button onClick={removeFromCart}> - </button>
+            <footer className="flex gap-[5px] justify-center items-center pt-4 pb-2 px-0">
+                <small className='text-xl'>Qty: {quantity}</small>
+                <button className='p-4 bg-[#1c2470] text-amber-50 rounded-full' onClick={addToCart}>+</button>
+                <button className='p-4 bg-[#1c2470] text-amber-50 rounded-full' onClick={removeFromCart}> - </button>
             </footer>
         </li>
     )
@@ -86,8 +86,12 @@ export default function Cart() {
                         />
                     ))}
                 </ul>
-                <button onClick={clearCart} className="btn__img">
+                <button
+                    onClick={clearCart}
+                    className="flex justify-center items-center h-[50px] w-[50px] cursor-pointer relative rounded-[25%] left-[75px] bg-[#441c1c]"
+                >
                     <img
+                        className="items-center justify-center flex h-[30px] transition-all duration-[0.3s] ease-[ease] w-[30px] z-[9999] p-1"
                         src="/removeCart.webp"
                         alt="imagen de remover del carrito"
                     />
