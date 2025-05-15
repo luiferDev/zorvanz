@@ -65,7 +65,8 @@ export interface CartContextType {
     cart: Products[];
     addToCart: (product: Products) => void
     clearCart: () => void
-    removeFromCart: (product: Products) => void
+	removeFromCart: (product: Products) => void
+	deleteFromCart: (product: Products) => void
 }
 
 export interface Filters {
