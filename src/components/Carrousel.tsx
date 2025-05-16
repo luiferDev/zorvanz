@@ -10,14 +10,15 @@ function CarouselBackground({ children }: React.PropsWithChildren) {
     const images: string[] = useImageSize()
 
     return (
-        <div className="carousel-background">
+        <div className="static top-0 left-0 w-full h-full overflow-hidden -z-10">
             <Slider {...settings}>
                 {images.map((image, index) => (
                     <div key={index}>
                         <div
-                            className="carousel-image"
-                            style={{ backgroundImage: `url(${image})` }} >
-                                {children}
+                            className="w-full h-[100dvh] bg-cover bg-center bg-no-repeat bg-blend-darken bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0%,rgba(0,0,0,1)_100%)]"
+                            style={{ backgroundImage: `url(${image})` }}
+                        >
+                            {children}
                         </div>
                     </div>
                 ))}
