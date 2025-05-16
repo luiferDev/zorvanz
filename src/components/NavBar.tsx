@@ -28,8 +28,8 @@ export function NavBar() {
                 }}
             >
                 <Menu />
-                <div className="sticky flex items-center justify-center z-[1]">
-                    <div className="mt-2.5 w-24 h-auto relative top-2.5 left-8 lg:w-60 lg:h-auto">
+                <div className="sticky flex items-center justify-between lg:justify-center z-[1]">
+                    <div className="mt-2.5 w-28 h-auto relative top-3 left-31 lg:w-60 lg:h-auto">
                         <Link to="/">
                             <img
                                 className="logo"
@@ -38,7 +38,7 @@ export function NavBar() {
                             />
                         </Link>
                     </div>
-                    <div className="z-[999] flex items-center gap-5 relative right-[-70] top-5 lg:visible lg:absolute lg:right-20">
+                    <div className="flex items-center gap-4 relative top-5 right-4 lg:absolute lg:right-20">
                         <Link
                             className="bg-[#701C1C] rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
                             to="/login"
