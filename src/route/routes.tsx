@@ -1,11 +1,12 @@
-import { createBrowserRouter } from 'react-router-dom';
-import App from '../App';
-import ErrorPage from '../error-page';
-import About from '../about/About';
-import ProductCatalog from '../products/ProductCatalog';
-import ProductInfo from '../products/ProductInfo';
-import ProducForm from '../forms/ProducForm';
-import LoginPage from '../Auth/LoginPage';
+import { createBrowserRouter } from 'react-router-dom'
+import App from '../App'
+import ErrorPage from '../error-page'
+import About from '../about/About'
+import ProductCatalog from '../products/ProductCatalog'
+import ProductInfo from '../products/ProductInfo'
+import ProducForm from '../forms/ProducForm'
+import LoginPage from '../Auth/LoginPage'
+import ShoppingCart from '../components/ShoppingCart'
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: '/login',
         element: <LoginPage />,
     },
-]);
+    {
+        path: '/cart',
+        element: <ShoppingCart />,
+    },
+])
 
-export default router;
+export default router
