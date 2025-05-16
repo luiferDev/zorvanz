@@ -24,29 +24,20 @@ export default function CartButton({ product }: CartButtonProps) {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                 style={{
-                    backgroundColor: isProductInCart ? '#701c1c' : '#1c2470',
+					backgroundColor: isProductInCart ? 'transparent' : '#1c2470',
+					color: isProductInCart ? 'black' : 'white'
                 }}
                 onClick={() =>
                     isProductInCart
                         ? deleteFromCart(product)
                         : addToCart(product)
                 }
-                className="flex justify-center items-center p-2 rounded-[20%] w-full h-full cursor-pointer"
+                className="text-white flex justify-center items-center p-2 rounded-[10%] cursor-pointer"
             >
                 {isProductInCart ? (
-                    <img
-                        src="/removeCart.webp"
-                        alt="imagen de remover al carrito de la compra"
-                        width={25}
-                        height={25}
-                    />
+                    <button>En el carrito</button>
                 ) : (
-                    <img
-                        src="/carrito.webp"
-                        alt="imagen de añadir al carrito de la compra"
-                        width={30}
-                        height={30}
-                    />
+                    <button>Añadir al carrito</button>
                 )}
             </motion.button>
         </div>
