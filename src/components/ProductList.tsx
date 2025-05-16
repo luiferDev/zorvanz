@@ -40,16 +40,16 @@ export default function ProductList() {
                                 <h3 className="text-[1.65rem] mt-0 mb-4 mx-0">
                                     {product.name}
                                 </h3>
-                                <p className="text-xl pb-[0.65rem]">
+                                <p className="text-xl pb-2.5">
                                     {product.category?.categoryName ||
                                         'Sin categoría'}
                                 </p>
                                 {product.stock === 0 ? (
-                                    <strong className="no__stock">
+                                    <strong>
                                         Producto Agotado
                                     </strong>
                                 ) : (
-                                    <strong className="stock">
+                                    <strong>
                                         Disponible
                                     </strong>
                                 )}
