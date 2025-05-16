@@ -9,10 +9,10 @@ export default function ShoppingCart() {
 
     return (
         <>
-            <main className="w-[50vw] ml-8 bg-gray-50 rounded-sm mb-14">
+            <main className="w-[80vw] ml-8 bg-gray-50 rounded-sm mb-14 lg:w-[50vw]">
                 <div className="ml-8 max-w-[685px]">
                     <h2 className="pt-8 mt-8 text-3xl lg:text-5xl">Carrito</h2>
-                    <span className='flex items-end! justify-end! text-sm font-extralight text-right! after:content-[""] after:w-[685px] after:absolute after:h-[1px] after:bg-gray-500 after:top-36'>
+                    <span className='lg:flex lg:items-end! pr-4 lg:justify-end! text-sm font-extralight text-right! lg:pr-0 invisible lg:visible after:content-[""] after:w-[70vw] lg:after:w-[685px] after:absolute after:h-[1px] after:bg-gray-500 after:top-36'>
                         Precio
                     </span>
                     <ul className="mt-4 flex flex-col gap-4 items-start">
@@ -30,9 +30,8 @@ export default function ShoppingCart() {
                         ))}
                     </ul>
                     {/* Calculate total quantity and price */}
-                    <div className="pt-4 gap-2 flex flex-row items-end! justify-end! pb-14">
-                        <span className="text-xl">Subtotal</span>
-                        <span className="text-xl">
+                    <div className="flex flex-col pt-8 lg:pt-4 gap-2 text-md pr-4 lg:text-xl lg:flex lg:flex-row items-end! justify-end! pb-14">
+                        <span className="lg:text-xl">Subtotal
                             (
                             {productsInCart.reduce(
                                 (total, product) =>
@@ -41,7 +40,7 @@ export default function ShoppingCart() {
                             )}{' '}
                             productos):{' '}
                         </span>
-                        <strong className="text-xl">
+                        <strong className="lg:text-xl">
                             $
                             {productsInCart
                                 .reduce(
