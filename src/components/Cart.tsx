@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import { useId } from 'react'
 import '../styles/cart.css'
 import { motion } from 'framer-motion'
-import { useCartStore } from '../store/useCartStore'
+import { Link } from 'react-router-dom'
 
 interface CartItemI {
     id: number
@@ -14,7 +12,7 @@ interface CartItemI {
     removeFromCart: () => void
 }
 
-function CartItem({
+export function CartItem({
     id,
     imageUrl,
     price,
@@ -24,79 +22,78 @@ function CartItem({
     removeFromCart,
 }: CartItemI) {
     return (
-        <li className="text-amber-50 list-none" key={id}>
-            <img className="pt-8 aspect-square w-full" src={imageUrl} alt={name} />
-            <div className="flex flex-col justify-center items-center text-xl pt-4">
-                <strong className='text-xl items-center pt-4'>{name}</strong> ${price}
+        <li
+            className="text-black list-none border-b-[1px] border-b-gray-500 pb-3.5 "
+            key={id}
+        >
+            <div className="flex flex-row">
+                <img
+                    className="pt-8 aspect-square w-44 mr-8"
+                    src={imageUrl}
+                    alt={name}
+                />
+                <div className="flex flex-col">
+                    <div className="flex flex-col justify-center items-center text-xl pt-4">
+                        <strong className="text-2xl items-center pt-4 lg:w-96">
+                            {name}
+                        </strong>
+                    </div>
+                    <div className="flex flex-row gap-1.5 justify-between items-center border-2 border-solid border-[#701C1C] rounded-full mt-4 w-32 px-3">
+                        {quantity === 1 ? (
+                            <img
+                                className="w-5 h-5"
+                                onClick={removeFromCart}
+                                src="/trash.webp"
+                                alt="icono de basura para eliminar"
+                                width={15}
+                                height={15}
+                            />
+                        ) : (
+                            <img
+                                onClick={removeFromCart}
+                                src="/minus.webp"
+                                alt="icono de resta"
+                                width={15}
+                                height={15}
+                            />
+                        )}
+                        <small className="text-xl">{quantity}</small>
+                        <img
+                            src="/plus.webp"
+                            alt="imagend el signo de suma"
+                            width={15}
+                            height={15}
+                            onClick={addToCart}
+                        />
+                    </div>
+                </div>
+                <strong className="text-xl mt-9 ml-12">${price}</strong>
             </div>
-            <footer className="flex gap-[5px] justify-center items-center pt-4 pb-2 px-0">
-                <small className='text-xl'>Qty: {quantity}</small>
-                <button className='p-4 bg-[#1c2470] text-amber-50 rounded-full' onClick={addToCart}>+</button>
-                <button className='p-4 bg-[#1c2470] text-amber-50 rounded-full' onClick={removeFromCart}> - </button>
-            </footer>
         </li>
     )
 }
 
-export default function Cart() {
-    const cartCheckboxId = useId()
-    const [isOpen, setIsOpen] = useState(false)
-
-    const productsInCart = useCartStore((state) => state.cart)
-    const clearCart = useCartStore((state) => state.clearCart)
-    const addToCart = useCartStore((state) => state.addToCart)
-    const removeFromCart = useCartStore((state) => state.removeFromCart)
-
-    const toggleCart = () => {
-        setIsOpen(!isOpen)
-    }
-
+export function Cart() {
     return (
         <>
-            <motion.label
-                whileHover={{ scale: 1.3 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{
-                    duration: 0.2,
-                    type: 'spring',
-                    stiffness: 400,
-                    damping: 17,
-                }}
-                className="card__button"
-                htmlFor={cartCheckboxId}
-                onClick={toggleCart}
+            <Link
+                className="bg-[#701C1C] rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
+                to="/cart"
             >
-                <img src="/cart.webp" alt="" />
-            </motion.label>
-
-            <input id={cartCheckboxId} type="checkbox" hidden />
-
-            <aside className={`cart ${isOpen ? 'show' : 'hide'}`}>
-                <ul className="cart__container">
-                    {productsInCart.map((product) => (
-                        <CartItem
-                            key={product.id}
-                            id={product.id}
-                            addToCart={() => addToCart(product)}
-                            removeFromCart={() => removeFromCart(product)}
-                            name={product.name}
-                            price={product.price}
-                            imageUrl={product.imageUrl}
-                            quantity={product.quantity || 1}
-                        />
-                    ))}
-                </ul>
-                <button
-                    onClick={clearCart}
-                    className="flex justify-center items-center h-[50px] w-[50px] cursor-pointer relative rounded-[25%] left-[75px] bg-[#441c1c]"
-                >
-                    <img
-                        className="items-center justify-center flex h-[30px] transition-all duration-[0.3s] ease-[ease] w-[30px] z-[9999] p-1"
-                        src="/removeCart.webp"
-                        alt="imagen de remover del carrito"
-                    />
-                </button>
-            </aside>
+                <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{
+                        type: 'spring',
+                        stiffness: 400,
+                        damping: 17,
+                    }}
+                    src="/cart.webp"
+                    alt="cart image"
+                    width={20}
+                    height={20}
+                />
+            </Link>
         </>
     )
 }
