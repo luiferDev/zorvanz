@@ -1,12 +1,11 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Menu from './menu'
-import Cart from './Cart';
-
+import { Cart } from './Cart'
 
 export function NavBar() {
     // Hook para obtener el progreso del scroll
-    const { scrollY } = useScroll();
+    const { scrollY } = useScroll()
     // Hook para transformar el scroll en una propiedad CSS (en este caso, el valor de 'y')
     const backgroundColor = useTransform(
         scrollY,
@@ -65,4 +64,3 @@ export function NavBar() {
         </>
     )
 }
-
