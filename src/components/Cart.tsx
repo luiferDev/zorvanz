@@ -88,7 +88,7 @@ export function Cart() {
                         stiffness: 400,
                         damping: 17,
                     }}
-                    src="/cart.webp"
+                    src="/online-shopping.webp"
                     alt="cart image"
                     width={20}
                     height={20}
