@@ -26,16 +26,19 @@ export function CartItem({
             className="text-black list-none border-b-[1px] border-b-gray-500 pb-3.5 "
             key={id}
         >
-            <div className="flex flex-row">
+            <div className="flex flex-col lg:flex-row">
                 <img
                     className="pt-8 aspect-square w-44 mr-8"
                     src={imageUrl}
                     alt={name}
                 />
                 <div className="flex flex-col">
-                    <div className="flex flex-col justify-center items-center text-xl pt-4">
+                    <div className="flex flex-col justify-start items-start text-xl pt-4 lg:justify-center lg:items-center">
                         <strong className="text-2xl items-center pt-4 lg:w-96">
                             {name}
+                        </strong>
+                        <strong className="text-xl lg:hidden">
+                            ${price} <span>COP</span>
                         </strong>
                     </div>
                     <div className="flex flex-row gap-1.5 justify-between items-center border-2 border-solid border-[#701C1C] rounded-full mt-4 w-32 px-3">
@@ -67,7 +70,9 @@ export function CartItem({
                         />
                     </div>
                 </div>
-                <strong className="text-xl mt-9 ml-12">${price}</strong>
+                <strong className="invisible lg:text-xl lg:mt-9 lg:ml-12 lg:visible!">
+                    ${price}
+                </strong>
             </div>
         </li>
     )
