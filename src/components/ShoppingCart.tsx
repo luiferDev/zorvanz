@@ -3,13 +3,13 @@ import { CartItem } from './Cart'
 
 export default function ShoppingCart() {
     const productsInCart = useCartStore((state) => state.cart)
-    const clearCart = useCartStore((state) => state.clearCart)
+    // const clearCart = useCartStore((state) => state.clearCart)
     const addToCart = useCartStore((state) => state.addToCart)
     const removeFromCart = useCartStore((state) => state.removeFromCart)
 
     return (
         <>
-            <main className="w-[50vw] ml-8 bg-gray-50 rounded-sm">
+            <main className="w-[50vw] ml-8 bg-gray-50 rounded-sm mb-14">
                 <div className="ml-8 max-w-[685px]">
                     <h2 className="pt-8 mt-8 text-3xl lg:text-5xl">Carrito</h2>
                     <span className='flex items-end! justify-end! text-sm font-extralight text-right! after:content-[""] after:w-[685px] after:absolute after:h-[1px] after:bg-gray-500 after:top-36'>
@@ -30,7 +30,7 @@ export default function ShoppingCart() {
                         ))}
                     </ul>
                     {/* Calculate total quantity and price */}
-                    <div className="pt-4 gap-2 flex flex-row items-end! justify-end!">
+                    <div className="pt-4 gap-2 flex flex-row items-end! justify-end! pb-14">
                         <span className="text-xl">Subtotal</span>
                         <span className="text-xl">
                             (
@@ -54,7 +54,7 @@ export default function ShoppingCart() {
                         </strong>
                     </div>
 
-                    <button
+                    {/* <button
                         onClick={clearCart}
                         className="flex justify-center items-center h-[50px] w-[50px] cursor-pointer relative rounded-[25%] left-[75px] bg-[#441c1c] mt-4"
                     >
@@ -63,7 +63,7 @@ export default function ShoppingCart() {
                             src="/removeCart.webp"
                             alt="imagen de remover del carrito"
                         />
-                    </button>
+                    </button> */}
                 </div>
             </main>
         </>
