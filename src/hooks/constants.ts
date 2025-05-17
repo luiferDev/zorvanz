@@ -53,3 +53,41 @@ export const images = [
         class: "image-large"
     }
 ]
+
+export const owners = [
+    {
+        id: 1,
+        src: '/angelly.webp',
+        alt: 'imagen de la gerente general de zorvanz',
+        nombre: 'Angelly Cruz',
+        cargo: 'Gerente General',
+    },
+    {
+        id: 2,
+        src: '/mariangel.webp',
+        alt: 'imagen la gerente administrativa de zorvanz',
+        nombre: 'Mariangel Calderón',
+        cargo: 'Gerente administrativa',
+    },
+    {
+        id: 3,
+        src: '/mariana.webp',
+        alt: 'imagen la gerente de recursos humanos de zorvanz',
+        nombre: 'Mariana Calderón',
+        cargo: 'Gerente de RRSS',
+    },
+    {
+        id: 4,
+        src: '/vanessa.webp',
+        alt: 'imagen de la gerente de seguridad y salud en el trabajo de zorvanz',
+        nombre: 'Vanessa Barrera',
+        cargo: 'Gerente de SST',
+    },
+    {
+        id: 5,
+        src: '/nicolle.webp',
+        alt: 'imagen de la gerente de marketing de zorvanz',
+        nombre: 'Nicolle Bedoya',
+        cargo: 'Gerente de marketing',
+    },
+]
