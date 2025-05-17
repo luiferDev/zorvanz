@@ -6,8 +6,6 @@ import { Product } from "../types/interfaces"
 import CartButton from "../components/CartButton"
 import { useFetchProducts } from "../hooks/useProducts"
 
-import '../styles/product-info.css'
-
 
 export default function ProductInfo() {
 
@@ -24,18 +22,18 @@ export default function ProductInfo() {
         <>
             <NavBar />
             {selectedProduct && (
-                <div className="info">
-                    <div className="info__product" key={selectedProduct?.id}>
-                        <img className="info__img" 
+                <div className="flex flex-col justify-center py-8 px-8 bg-white mx-4 items-center mt-24 mb-5 lg:py-12 lg:px-20 rounded-xl lg:mt-38">
+                    <div className="flex flex-col justify-center items-center mb-5 lg:flex-row" key={selectedProduct?.id}>
+                        <img className="w-full lg:w-md lg-h-md lg:mr-14 rounded-2xl" 
                             src={selectedProduct?.imageUrl} 
                             alt={selectedProduct?.name} />
-                        <div className="info__details">
-                            <h1>{selectedProduct?.name}</h1>
-                            <p className="info__description">{selectedProduct?.description}</p>
-                            <p className="info__price">Price: ${selectedProduct?.price}</p>
-                            <p className="info__popularity">Rating: {selectedProduct?.popularity}</p>
-                            <p className="info__stock">Stock: {selectedProduct?.stock} unidades</p>
-                            <p className="info__category">Category: {selectedProduct?.category.categoryName}</p>
+                        <div className="flex flex-col w-full mt-4 justify-start items-start lg:mt-0 lg:relative lg:-top-16 lg:w-[50ch]">
+                            <h1 className="text-4xl mb-2">{selectedProduct?.name}</h1>
+                            <p className="mb-4 text-blue-900">{selectedProduct?.category.categoryName}</p>
+                            <p className="text-base mb-4">{selectedProduct?.description}</p>
+                            <p className={`mb-1 ${selectedProduct?.stock > 1 ? "text-emerald-600" : "text-red-600"}`}> {selectedProduct?.stock > 1 ? 'Disponible' : 'No Disponible'}</p>
+                            <p className="mb-1">Precio: ${selectedProduct?.price}</p>
+                            <p className="mb-4">puntuación: {selectedProduct?.popularity}</p>
                             <CartButton product={selectedProduct} />
                         </div>
                     </div>
