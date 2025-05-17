@@ -1,43 +1,33 @@
+import { owners } from '../../hooks/constants'
 
 export default function Team() {
     return (
-        <section id="team">
-            <header>
-                <h2>Nuestro Equipo</h2>
-            </header>
-            <section>
-                <div>
-                    <img className="avatar" src="/angelly.webp" alt="imagen de una mujer de negocios" />
-                    <h2>Angelly Cruz</h2>
-                    <h3>Gerente General</h3>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum, ex eaque sint laboriosam repellendus facere maiores quod error consectetur sunt at magnam suscipit fuga laudantium quam molestiae incidunt doloribus, odit quis ipsam eius dolorum!</p> */}
-                </div>
-                <div>
-                    <img className="avatar" src="/mariangel.webp" alt="imagen de una mujer de negocios" />
-                    <h2>Mariangel Calderón</h2>
-                    <h3>Gerente administrativa</h3>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum, ex eaque sint laboriosam repellendus facere maiores quod error consectetur sunt at magnam suscipit fuga laudantium quam molestiae incidunt doloribus, odit quis ipsam eius dolorum!</p> */}
-                </div>
-                <div>
-                    <img className="avatar" src="/mariana.webp" alt="imagen de una mujer de negocios" />
-                    <h2>Mariana Calderón</h2>
-                    <h3>Gerente de recursos humanos</h3>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum, ex eaque sint laboriosam repellendus facere maiores quod error consectetur sunt at magnam suscipit fuga laudantium quam molestiae incidunt doloribus, odit quis ipsam eius dolorum!</p> */}
-                </div>
-                <div>
-                    <img className="avatar" src="/vanessa.webp" alt="imagen de una mujer de negocios" />
-                    <h2>Vanessa Barrera</h2>
-                    <h3>Gerente de seguridad y salud en el trabajo</h3>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum, ex eaque sint laboriosam repellendus facere maiores quod error consectetur sunt at magnam suscipit fuga laudantium quam molestiae incidunt doloribus, odit quis ipsam eius dolorum!</p> */}
-                </div>
-                <div>
-                    <img className="avatar" src="/nicolle.webp" alt="imagen de una mujer de negocios" />
-                    <h2>Nicolle Bedoya</h2>
-                    <h3>Gerente de Marketing</h3>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum, ex eaque sint laboriosam repellendus facere maiores quod error consectetur sunt at magnam suscipit fuga laudantium quam molestiae incidunt doloribus, odit quis ipsam eius dolorum!</p> */}
-                </div>
+        <>
+            <h2 className="text-4xl px-14 lg:text-6xl lg:pl-18 lg:my-20">Nuestro Equipo</h2>
+            <section className="flex flex-col gap-4 m-8 lg:flex-row lg:gap-12">
+                <header></header>
+                {owners.map((owner) => (
+                    <section
+                        key={owner.id}
+                        className="flex flex-col justify-center text-center items-center"
+                    >
+                        <div
+                            className="h-full w-[25ch] flex flex-col items-center rounded-xl
+				border shadow-[0_25px_25px_rgba(0,0,0,0.25)] backdrop-blur-[10px] p-4 border-solid border-[rgba(255,255,255,0.1)] bg-gradient-to-b from-white to-transparent"
+                        >
+                            <img
+                                className="w-3/4 aspect-square rounded-full"
+                                src={owner.src}
+                                alt={owner.alt}
+                            />
+                            <h2 className="text-xl mt-4 font-bold">
+                                {owner.nombre}
+                            </h2>
+                            <h3 className="text-base m-4">{owner.cargo}</h3>
+                        </div>
+                    </section>
+                ))}
             </section>
-
-        </section>
+        </>
     )
 }
