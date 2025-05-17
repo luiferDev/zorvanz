@@ -6,7 +6,7 @@ export default function Hero() {
         <>
             <CarouselBackground>
                 <div className="lg:ml-24 lg:flex lg:justify-between lg:items-center">
-                    <div className="text-[#e6e1dc] ">
+                    <div className="text-zorvanz-beige ">
                         <h1 className="pt-96 pr-4 pl-8 text-[40px] font-[Ageo] lg:mt-[-50px] lg:text-8xl lg:w-[12ch]">
                             Personaliza tu Aroma
                         </h1>
@@ -24,7 +24,7 @@ export default function Hero() {
                             stiffness: 400,
                             damping: 17,
                         }}
-                        className="w-[125px] h-9 rounded-3xl font-[Ageo] text-xs bg-[#701C1C] text-[#e6e1dc] border-0 mt-8 ml-8 cursor-pointer lg:mt-80 lg:mr-24  lg:w-64 lg:h-16 lg:text-2xl"
+                        className="w-[125px] h-9 rounded-3xl font-[Ageo] text-xs bg-zorvanz-red text-zorvanz-beige border-0 mt-8 ml-8 cursor-pointer lg:mt-80 lg:mr-24  lg:w-64 lg:h-16 lg:text-2xl"
                     >
                         Comprar Ahora
                     </motion.button>

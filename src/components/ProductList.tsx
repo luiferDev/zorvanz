@@ -18,7 +18,8 @@ export default function ProductList() {
         <>
             {filteredProducts.map((product) => (
                 <div
-                    className="bg-[white] shadow-[3px_3px_3px_3px_black] m-4 rounded-[25px] border-[solid] lg:m-0"
+					className="bg-white shadow-[3px_3px_3px_3px_black] m-4 rounded-3xl 
+					border-solid lg:m-0"
                     key={product.id}
                 >
                     <Link

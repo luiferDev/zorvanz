@@ -30,7 +30,7 @@ export function Features() {
                                 alt={image.alt}
                             />
                         </motion.div>
-						<div className="relative text-[#e6e1dc] items-start w-4/5 
+						<div className="relative text-zorvanz-beige items-start w-4/5 
 						left-9 bottom-16 ">
                             <h4 className="text-2xl">{image.title}</h4>
                             <p className="text-base">{image.body}</p>

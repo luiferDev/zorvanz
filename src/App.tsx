@@ -16,7 +16,7 @@ function App() {
             <Features />
             <Section>
                 <Texts
-                    styles="flex flex-col justify-center text-center items-center text-[#e6d1dc] "
+                    styles="flex flex-col justify-center text-center items-center text-zorvanz-beige "
                     subtitle="Personaliza Tu Fragancia"
                     titleStyles="mt-20 mb-4 lg:mt-32 lg:text-6xl"
                     bodyStyles="mb-20 text-base w-[25ch] lg:mb-32 lg:text-2xl lg:w-[50ch]"
@@ -26,7 +26,7 @@ function App() {
             <Products />
             <Section>
                 <Texts
-                    styles="flex flex-col justify-center text-start items-start text-[#e6d1dc] ml-12"
+                    styles="flex flex-col justify-center text-start items-start text-zorvanz-beige ml-12"
                     subtitle="Crea Tu Fragancia Ahora"
                     body="Únete a nuestra comunidad de amantes de las fragancias personalizadas. Comienza hoy mismo."
                     titleStyles="mt-20 mb-4 text-4xl lg:text-6xl"
@@ -39,7 +39,7 @@ function App() {
                 >
                     <a
                         href="#"
-                        className="py-2.5 px-6 rounded-3xl text-xs bg-[#701C1C] text-[#e6d1dc] mt-8 cursor-pointer lg:relative lg:bottom-24 lg:left-2/3 lg:py-6 lg:px-20 lg:text-2xl"
+                        className="py-2.5 px-6 rounded-3xl text-xs bg-zorvanz-red text-zorvanz-beige mt-8 cursor-pointer lg:relative lg:bottom-24 lg:left-2/3 lg:py-6 lg:px-20 lg:text-2xl"
                     >
                         Contáctanos
                     </a>

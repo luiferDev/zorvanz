@@ -18,19 +18,19 @@ function Menu() {
     return (
         <div className="relative">
             <motion.div
-                className="absolute top-4 left-4 w-12 h-12 flex flex-col items-center justify-center cursor-pointer bg-[#701C1C] gap-2.5 rounded-full z-50 lg:hidden lg:animate-none"
+                className="absolute top-4 left-4 w-12 h-12 flex flex-col items-center justify-center cursor-pointer bg-zorvanz-red gap-2.5 rounded-full z-50 lg:hidden lg:animate-none"
                 onClick={toggleMenu}
             >
                 <motion.div
-                    className="bg-[#e6e1dc] h-0.5 w-3/5 rounded-sm"
+                    className="bg-zorvanz-beige h-0.5 w-3/5 rounded-sm"
                     animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 12 : 0 }}
                 ></motion.div>
                 <motion.div
-                    className="bg-[#e6e1dc] h-0.5 w-3/5 rounded-sm"
+                    className="bg-zorvanz-beige h-0.5 w-3/5 rounded-sm"
                     animate={{ opacity: isOpen ? 0 : 1 }}
                 ></motion.div>
                 <motion.div
-                    className="bg-[#e6e1dc] h-0.5 w-3/5 rounded-sm"
+                    className="bg-zorvanz-beige h-0.5 w-3/5 rounded-sm"
                     animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -12 : 0 }}
                 ></motion.div>
             </motion.div>
@@ -38,7 +38,7 @@ function Menu() {
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -100 }}
                 transition={{ duration: 0.3 }}
-                className={`absolute top-0 left-0 w-[80vw] h-[100vh] bg-[#701C1C] px-5 py-20 z-[2] lg:bg-transparent lg:top-[-58px] lg:left-[10px] lg:w-[40vw] lg:h-[10vh] lg:z-[2] lg:opacity-100! lg:transform! lg:translate-x-0! ${
+                className={`absolute top-0 left-0 w-[80vw] h-[100vh] bg-zorvanz-red px-5 py-20 z-[2] lg:bg-transparent lg:top-[-58px] lg:left-[10px] lg:w-[40vw] lg:h-[10vh] lg:z-[2] lg:opacity-100! lg:transform! lg:translate-x-0! ${
                     isOpen ? 'open' : ''
                 }`}
             >
@@ -60,7 +60,7 @@ function Menu() {
                                     // clases base (desktop y mobile) + las de "activo" cuando isActive === true
                                     `font-normal lg:text-2xl lg:text-black ${
                                         isActive
-                                            ? 'lg:border-4 lg:border-[#701C1C] lg:p-2.5 lg:rounded-3xl lg:text-black'
+                                            ? 'lg:border-4 lg:border-zorvanz-red lg:p-2.5 lg:rounded-3xl lg:text-black'
                                             : ''
                                     }`
                                 }

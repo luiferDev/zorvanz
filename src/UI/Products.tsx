@@ -66,7 +66,7 @@ export function Products() {
             >
                 <Link
                     to="/product-catalog"
-                    className="flex items-center text-center justify-center font-ageo text-base rounded-3xl w-32 h-9 border-none bg-[#701c1c] text-[#e6d1dc] lg:w-64 lg:h-16 lg:text-2xl"
+                    className="flex items-center text-center justify-center font-ageo text-base rounded-3xl w-32 h-9 border-none bg-zorvanz-red text-zorvanz-beige lg:w-64 lg:h-16 lg:text-2xl"
                 >
                     ver más
                 </Link>

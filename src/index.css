@@ -24,7 +24,11 @@
     font-weight: 400;
     font-style: normal;
 }
-
+@theme {
+	--color-zorvanz-blue: #1c2470;
+	--color-zorvanz-beige: #e6e1dc;
+	--color-zorvanz-red: #701C1C;
+}
 /* Estilos base personalizados */
 @layer base {
     *,

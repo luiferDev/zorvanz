@@ -40,7 +40,7 @@ export function CartItem({
                             ${price} <span>COP</span>
                         </strong>
                     </div>
-                    <div className="flex flex-row gap-1.5 justify-between items-center border-2 border-solid border-[#701C1C] rounded-full mt-4 w-32 px-3">
+                    <div className="flex flex-row gap-1.5 justify-between items-center border-2 border-solid border-zorvanz-red rounded-full mt-4 w-32 px-3">
                         {quantity === 1 ? (
                             <img
                                 className="w-5 h-5"
@@ -81,7 +81,7 @@ export function Cart() {
     return (
         <>
             <Link
-                className="bg-[#701C1C] rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
+                className="bg-zorvanz-red rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
                 to="/cart"
             >
                 <motion.img

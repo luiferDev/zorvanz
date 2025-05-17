@@ -11,7 +11,7 @@ const BackButton: React.FC = () => {
     return (
         <button
 			onClick={handleGoBack}
-			className="bg-none border-1 border-solid border-[#1c2470] rounded-full p-2 cursor-pointer"
+			className="bg-none border-1 border-solid border-zorvanz-blue rounded-full p-2 cursor-pointer"
         >
             <ArrowLeftIcon />
         </button>

@@ -40,7 +40,7 @@ export function NavBar() {
                     </div>
                     <div className="flex items-center gap-4 relative top-5 right-4 lg:absolute lg:right-20">
                         <Link
-                            className="bg-[#701C1C] rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
+                            className="bg-zorvanz-red rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
                             to="/login"
                         >
                             <motion.img
