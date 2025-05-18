@@ -28,6 +28,9 @@
 	--color-zorvanz-blue: #1c2470;
 	--color-zorvanz-beige: #e6e1dc;
 	--color-zorvanz-red: #701C1C;
+	--font-voga: 'Voga', sans-serif;
+	--font-ageo: 'Ageo', sans-serif;
+	--font-vanio: 'Vanio', serif;
 }
 /* Estilos base personalizados */
 @layer base {
