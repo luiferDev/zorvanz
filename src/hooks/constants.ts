@@ -125,3 +125,26 @@ export const values = [
             'Zorvanz se caracterizará por su optimismo, resiliencia y fortaleza, manteniendo una perspectiva positiva y aprendiendo de cada experiencia para asegurar el desarrollo continuo de la empresa.',
     },
 ]
+
+export const testimonials = [
+    {
+        id: 1,
+        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        author: 'Cliente Satisfecho',
+    },
+    {
+        id: 2,
+        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        author: 'Cliente Satisfecho',
+    },
+    {
+        id: 3,
+        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        author: 'Cliente Satisfecho',
+    },
+    {
+        id: 4,
+        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        author: 'Cliente Satisfecho',
+    },
+]
