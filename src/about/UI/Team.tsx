@@ -3,7 +3,7 @@ import { owners } from '../../hooks/constants'
 export default function Team() {
     return (
         <>
-            <h2 className="text-4xl px-14 lg:text-6xl lg:pl-18 lg:my-20">
+            <h2 className="text-4xl text-center px-14 lg:text-6xl lg:pl-18 lg:my-20">
                 Nuestro Equipo
             </h2>
             <section className="flex flex-col gap-4 m-8 lg:flex-row lg:gap-12">
