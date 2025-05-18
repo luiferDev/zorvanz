@@ -2,7 +2,6 @@ import { NavBar } from '../components/NavBar'
 import Footer from '../UI/Footer'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import '../styles/about.css'
 import Hero from './UI/Hero'
 import Mission from './UI/Mission'
 import Vision from './UI/Vision'
@@ -15,7 +14,7 @@ export default function About() {
     return (
         <>
             <NavBar />
-            <section id="about__us">
+            <main>
                 <Hero />
                 <Mission />
                 <Vision />
@@ -23,7 +22,7 @@ export default function About() {
                 <Testimonials />
                 <Team />
                 <CTA />
-            </section>
+            </main>
             <Footer />
         </>
     )

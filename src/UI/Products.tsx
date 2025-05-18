@@ -1,5 +1,5 @@
 import { Texts } from '../components/texts'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import CartButton from '../components/CartButton'
 import { motion } from 'framer-motion'
 import { useFetchProducts } from '../hooks/useProducts'
@@ -64,12 +64,12 @@ export function Products() {
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                 className="flex justify-center pt-20 pb-20 cursor-pointer"
             >
-                <Link
+                <NavLink
                     to="/product-catalog"
                     className="flex items-center text-center justify-center font-ageo text-base rounded-3xl w-32 h-9 border-none bg-zorvanz-red text-zorvanz-beige lg:w-64 lg:h-16 lg:text-2xl"
                 >
                     ver más
-                </Link>
+                </NavLink>
             </motion.div>
         </>
     )
