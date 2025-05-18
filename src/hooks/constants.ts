@@ -91,3 +91,37 @@ export const owners = [
         cargo: 'Gerente de marketing',
     },
 ]
+export const values = [
+    {
+        id: 1,
+        icon: '/amorIcon.png',
+        title: 'Amor',
+        alt: 'una mano con un corazon',
+        description:
+            'Transmitimos el amor con el que creamos nuestros productos, enfocándonos en satisfacer al cliente y en el progreso de nuestra empresa, con la satisfacción del cliente como objetivo principal.',
+    },
+    {
+        id: 2,
+        icon: '/honestyIcon.png',
+        title: 'Honestidad',
+        alt: 'una mano tocando un corazon',
+        description:
+            'Zorvanz venderá productos basados en la honestidad, reflejando lo que promete y priorizando la integridad y el respeto, fundamentales para la reputación de la empresa.',
+    },
+    {
+        id: 3,
+        icon: '/innovationIcon.png',
+        title: 'Innovación',
+        alt: 'una cabeza con un bombillo en el medio',
+        description:
+            'Zorvanz se distingue por su innovación, creando fragancias personalizadas que promueven la comodidad del cliente, diferenciándose de las compañías comunes de perfumes.',
+    },
+    {
+        id: 4,
+        icon: '/optimismIcon.png',
+        title: 'Optimismo',
+        alt: 'una cabeza con un sol en la nuca',
+        description:
+            'Zorvanz se caracterizará por su optimismo, resiliencia y fortaleza, manteniendo una perspectiva positiva y aprendiendo de cada experiencia para asegurar el desarrollo continuo de la empresa.',
+    },
+]
