@@ -1,53 +1,25 @@
-import { motion } from 'framer-motion'
-import { NavBar } from './components/NavBar'
-import { Texts } from './components/texts'
-import ContactSection from './UI/ContactSection'
-import { Features } from './UI/Features'
-import Footer from './UI/Footer'
-import Hero from './UI/Hero'
-import { Section } from './UI/Section'
-import { Products } from './UI/Products'
+import { Route, Routes } from 'react-router'
+import Home from './UI/Home'
+import About from './about/About'
+import ProductCatalog from './products/ProductCatalog'
+import LoginPage from './Auth/LoginPage'
+import ProductInfo from './products/ProductInfo'
+import ProducForm from './forms/ProducForm'
+import ShoppingCart from './components/ShoppingCart'
+import ErrorPage from './error-page'
 
 function App() {
     return (
-        <>
-            <NavBar />
-            <Hero />
-            <Features />
-            <Section>
-                <Texts
-                    styles="flex flex-col justify-center text-center items-center text-zorvanz-beige "
-                    subtitle="Personaliza Tu Fragancia"
-                    titleStyles="mt-20 mb-4 lg:mt-32 lg:text-6xl"
-                    bodyStyles="mb-20 text-base w-[25ch] lg:mb-32 lg:text-2xl lg:w-[50ch]"
-                    body="Elige tus notas favoritas y crea una fragancia exclusiva. Hazla tan única como tú."
-                />
-            </Section>
-            <Products />
-            <Section>
-                <Texts
-                    styles="flex flex-col justify-center text-start items-start text-zorvanz-beige ml-12"
-                    subtitle="Crea Tu Fragancia Ahora"
-                    body="Únete a nuestra comunidad de amantes de las fragancias personalizadas. Comienza hoy mismo."
-                    titleStyles="mt-20 mb-4 text-4xl lg:text-6xl"
-                    bodyStyles="mb-8 text-base w-[30ch] lg:text-2xl lg:w-[50ch]"
-                />
-                <motion.div
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                    className="ml-12"
-                >
-                    <a
-                        href="#"
-                        className="py-2.5 px-6 rounded-3xl text-xs bg-zorvanz-red text-zorvanz-beige mt-8 cursor-pointer lg:relative lg:bottom-24 lg:left-2/3 lg:py-6 lg:px-20 lg:text-2xl"
-                    >
-                        Contáctanos
-                    </a>
-                </motion.div>
-            </Section>
-            <ContactSection />
-            <Footer />
-        </>
+        <Routes>
+			<Route index element={<Home />} />
+			<Route path="/about" element={<About />} />
+			<Route path="/product-catalog" element={<ProductCatalog />} />
+			<Route path="/login" element={<LoginPage />} />
+			<Route path="/cart" element={<ShoppingCart />} />
+			<Route path="/product-catalog/:id" element={<ProductInfo />} />
+			<Route path="/add-product" element={<ProducForm />} />
+			<Route path="*" element={<ErrorPage />} />
+		</Routes>
     )
 }
 
