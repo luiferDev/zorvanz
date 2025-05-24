@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { loginRequest } from '../api/loginRequest'
 import { useAuthStore } from '../store/auth'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import BackButton from '../UI/back-button'
 
 export default function LoginPage() {

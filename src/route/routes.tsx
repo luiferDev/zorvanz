@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router'
 import App from '../App'
 import ErrorPage from '../error-page'
 import About from '../about/About'

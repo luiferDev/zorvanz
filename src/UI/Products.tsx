@@ -1,5 +1,5 @@
 import { Texts } from '../components/texts'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router'
 import CartButton from '../components/CartButton'
 import { motion } from 'framer-motion'
 import { useFetchProducts } from '../hooks/useProducts'

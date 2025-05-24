@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import CartButton from './CartButton'
 import { useFilters } from '../hooks/useFilters'
 import { motion } from 'framer-motion'
