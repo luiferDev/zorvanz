@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router"
 import { NavBar } from "../components/NavBar"
 
 import Footer from "../UI/Footer"

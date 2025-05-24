@@ -23,7 +23,7 @@ export default function About() {
                 <Team />
                 <CTA />
             </main>
-            <Footer />
+			<Footer />
         </>
     )
 }
