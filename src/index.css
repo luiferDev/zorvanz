@@ -28,10 +28,25 @@
 	--color-zorvanz-blue: #1c2470;
 	--color-zorvanz-beige: #e6e1dc;
 	--color-zorvanz-red: #701C1C;
+	--color-zorvanz-deep-blue: #12184a;
+	--color-zorvanz-sky-blue: #00bfff;
 	--font-voga: 'Voga', sans-serif;
 	--font-ageo: 'Ageo', sans-serif;
 	--font-vanio: 'Vanio', serif;
 }
+
+@layer components {
+	.product__input {
+		background-color: #1c2470;
+		color: #fff;
+		width: 100%;
+		padding: 10px 5px 5px 10px;
+		outline: 0;
+		border: 1px solid rgba(105, 105, 105, 0.397);
+		border-radius: 10px;
+	}
+}
+
 /* Estilos base personalizados */
 @layer base {
     *,
