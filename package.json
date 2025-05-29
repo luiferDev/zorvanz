@@ -7,7 +7,7 @@
         "dev": "react-router dev",
         "build": "react-router build",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "reac4-router preview"
     },
     "dependencies": {
         "@react-router/node": "^7.6.0",
