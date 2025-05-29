@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion'
-=======
 import { motion, AnimatePresence } from 'framer-motion'
->>>>>>> fix-react-router
 import { Link } from 'react-router'
 
 interface CartItemI {
