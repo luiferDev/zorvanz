@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { PaginatedResponse, Product, UseFragrancesState } from '../types/interfaces';
 
-const url = 'http://localhost:8080/api/products'
+const url = import.meta.env.VITE_API_URL
 
 export const useFragrances = (): UseFragrancesState => {
+	
     const [fragrances, setFragrances] = useState<Product[]>([])
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError] = useState<string | null>(null)
