@@ -35,9 +35,9 @@ export default function CartButton({ product }: CartButtonProps) {
                 className="text-white flex justify-center items-center p-2 rounded-[10%] cursor-pointer"
             >
                 {isProductInCart ? (
-                    <button>En el carrito</button>
+                    <div>En el carrito</div>
                 ) : (
-                    <button>Añadir al carrito</button>
+                    <div>Añadir al carrito</div>
                 )}
             </motion.button>
         </div>

@@ -1,5 +1,6 @@
 import { useCartStore } from '../store/useCartStore'
 import { CartItem } from './Cart'
+import { NavBar } from './NavBar'
 
 export default function ShoppingCart() {
     const productsInCart = useCartStore((state) => state.cart)
@@ -8,11 +9,12 @@ export default function ShoppingCart() {
     const removeFromCart = useCartStore((state) => state.removeFromCart)
 
     return (
-        <>
-            <main className="w-[80vw] ml-8 bg-gray-50 rounded-sm mb-14 lg:w-[50vw]">
+		<>
+			<NavBar />
+            <main className="w-[80vw] ml-8 bg-gray-50 rounded-sm mb-14 lg:ml-20 lg:mt-28 lg:w-[50vw]">
                 <div className="ml-8 max-w-[685px]">
                     <h2 className="pt-8 mt-8 text-3xl lg:text-5xl">Carrito</h2>
-                    <span className='lg:flex lg:items-end! pr-4 lg:justify-end! text-sm font-extralight text-right! lg:pr-0 invisible lg:visible after:content-[""] after:w-[70vw] lg:after:w-[685px] after:absolute after:h-[1px] after:bg-gray-500 after:top-36'>
+                    <span className='lg:flex lg:items-end! pr-4 lg:justify-end! text-sm font-extralight text-right! lg:pr-0 invisible lg:visible after:content-[""] after:w-[70vw] lg:after:w-[685px] after:absolute after:h-[1px] after:bg-gray-500 after:top-54'>
                         Precio
                     </span>
                     <ul className="mt-4 flex flex-col gap-4 items-start">

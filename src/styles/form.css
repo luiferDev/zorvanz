@@ -38,7 +38,7 @@
 .product__title::before,
 .product__title::after {
     position: absolute;
-    content: "";
+    content: '';
     height: 16px;
     width: 16px;
     border-radius: 50%;
@@ -46,7 +46,7 @@
     background-color: #00bfff;
 }
 
-.product__message{
+.product__message {
     font-size: 14.5px;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -71,7 +71,7 @@
     border-radius: 10px;
 }
 
-.product__form label .product__input+span {
+.product__form label .product__input + span {
     color: rgba(255, 255, 255, 0.5);
     position: absolute;
     left: 10px;
@@ -81,13 +81,13 @@
     transition: 0.3s ease;
 }
 
-.product__form label .product__input:placeholder-shown+span {
+.product__form label .product__input:placeholder-shown + span {
     top: 12.5px;
     font-size: 0.9em;
 }
 
-.product__form label .product__input:focus+span,
-.product__form label .product__input:valid+span {
+.product__form label .product__input:focus + span,
+.product__form label .product__input:valid + span {
     color: #00bfff;
     top: 0px;
     font-size: 0.7em;
@@ -105,7 +105,7 @@
     border-radius: 10px;
     color: #fff;
     font-size: 16px;
-    transform: .3s ease;
+    transform: 0.3s ease;
     background-color: #00bfff;
 }
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion'
+=======
+import { motion, AnimatePresence } from 'framer-motion'
+>>>>>>> fix-react-router
 import { Link } from 'react-router'
 
 interface CartItemI {
@@ -59,7 +63,18 @@ export function CartItem({
                                 height={15}
                             />
                         )}
-                        <small className="text-xl">{quantity}</small>
+                        <AnimatePresence initial={false} mode="popLayout">
+                            <motion.small
+                                key={quantity}
+                                initial={{ opacity: 0, translateY: -5 }}
+                                animate={{ opacity: 1, translateY: 0 }}
+                                exit={{ opacity: 0.5, translateY: 15, translateX: -5 }}
+                                transition={{ duration: 0.2 }}
+                                className="text-xl mx-2"
+                            >
+                                {quantity}
+                            </motion.small>
+                        </AnimatePresence>
                         <img
                             src="/plus.webp"
                             alt="imagend el signo de suma"
