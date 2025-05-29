@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router'
-import Home from './UI/Home'
-import About from './about/About'
-import ProductCatalog from './products/ProductCatalog'
-import LoginPage from './Auth/LoginPage'
-import ProductInfo from './products/ProductInfo'
-import ProducForm from './forms/ProducForm'
-import ShoppingCart from './components/ShoppingCart'
-import ErrorPage from './error-page'
+import Home from './UI/Home.tsx'
+import About from './about/About.tsx'
+import ProductCatalog from './products/ProductCatalog.tsx'
+import LoginPage from './Auth/LoginPage.tsx'
+import ProductInfo from './products/ProductInfo.tsx'
+import ProducForm from './forms/ProducForm.tsx'
+import ShoppingCart from './components/ShoppingCart.tsx'
+import ErrorPage from './error-page.tsx'
 
 function App() {
     return (
