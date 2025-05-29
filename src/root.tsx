@@ -9,7 +9,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
-                <title>Zorvanz | </title>
+                <link rel="icon" type="image/svg+xml" href="/Zorvanz_1.svg" />
+                <title>Zorvanz | Fragancias, Escencias y más</title>
                 <Meta />
                 <Links />
             </head>
