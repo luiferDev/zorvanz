@@ -20,8 +20,9 @@ export default function LoginPage() {
                 action={url}
                 onSubmit={handleSubmit(async (data) => {
                     const res = await loginRequest(data.userName, data.password)
-                    setToken(res.data.token)
-                    console.log(res)
+                    setToken(res.token)	
+					//localStorage.setItem('token', res.token)
+                    console.log(res.token)
                 })}
             >
                 <p className="text-xl leading-7 font-semibold text-center text-black">
