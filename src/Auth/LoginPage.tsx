@@ -7,21 +7,23 @@ import { NavBar } from '../components/NavBar'
 
 export default function LoginPage() {
     const { register, handleSubmit } = useForm()
-    const setToken = useAuthStore((state) => state.setToken)
-
-    const url: string = import.meta.env.VITE_LOGIN
-
+	const setToken = useAuthStore((state) => state.setToken)
+	
+	console.log('Zustand token:', useAuthStore.getState().token)
+	console.log('localStorage auth:', localStorage.getItem('auth'))
+	//TODO: create a profile store and set the profile after login
+	// TODO: handle errors from the login request
+	// TODO: Navigate to the home page wheteher it's an user or a dashboard it's an admin
     return (
 		<>
 			<NavBar />
             <BackButton />
             <form
                 className="w-full bg-white block max-w-[350px] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)] mx-auto my-[10%] p-4 rounded-lg"
-                action={url}
+            
                 onSubmit={handleSubmit(async (data) => {
                     const res = await loginRequest(data.userName, data.password)
-                    setToken(res.token)	
-					//localStorage.setItem('token', res.token)
+                    setToken(res.token)
                     console.log(res.token)
                 })}
             >
