@@ -96,3 +96,8 @@ export interface Actions {
     setProfile: (profile: Profile) => void
     logout: () => void
 }
+
+export interface LoginFormInputs {
+    userName: string
+    password: string
+}
