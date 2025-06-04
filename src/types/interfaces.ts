@@ -88,7 +88,8 @@ export interface Profile {
     name: string
     lastName: string
     email: string
-    userName: string
+	userName: string
+	role: string
 }
 
 export interface Actions {
