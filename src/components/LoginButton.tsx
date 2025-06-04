@@ -8,7 +8,15 @@ export default function LoginButton() {
     return (
         <>
             {profile ? (
-                <small><Link to='/dashboard'>{profile.userName}</Link></small>
+                <small className="font-bold">
+                    <Link
+                        to={
+                            profile.role === 'Admin' ? '/dashboard' : '/profile'
+                        }
+                    >
+                        {profile.userName}
+                    </Link>
+                </small>
             ) : (
                 <Link
                     className="bg-zorvanz-red rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
