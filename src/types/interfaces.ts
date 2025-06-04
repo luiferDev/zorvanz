@@ -76,3 +76,23 @@ export interface ProductDefinition {
     category: Category
     selectedProduct?: number
 }
+
+export interface State {
+    token: string
+    profile: Profile | null
+    isAuth: boolean
+}
+
+export interface Profile {
+    id: string
+    name: string
+    lastName: string
+    email: string
+    username: string
+}
+
+export interface Actions {
+    setToken: (token: string) => void
+    setProfile: (profile: Profile) => void
+    logout: () => void
+}
