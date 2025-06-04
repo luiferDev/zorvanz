@@ -9,6 +9,7 @@ import ShoppingCart from './components/ShoppingCart.tsx'
 import ErrorPage from './error-page.tsx'
 import Profile from './Auth/Profile.tsx'
 import Dashboard from './Auth/Dashboard.tsx'
+import Register from './Auth/Register.tsx'
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/add-product" element={<ProducForm />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     )
