@@ -8,7 +8,7 @@ export default function LoginButton() {
     return (
         <>
             {profile ? (
-                <small className="font-bold">
+                <small className="font-bold text-[8px] lg:text-xs">
                     <Link
                         to={
                             profile.role === 'Admin' ? '/dashboard' : '/profile'
