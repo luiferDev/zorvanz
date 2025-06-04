@@ -1,9 +1,15 @@
-import axios from "../api/auth";
+import axios from '../api/auth'
 
 export const loginRequest = async (userName: string, password: string) => {
-	const res = await axios.post('http://localhost:5297/api/login', {
+    const res = await axios.post('/api/login', {
         userName,
-        password
+        password,
     })
     return res.data
+}
+
+export const profileRequest = async ({ username }: { username: string }) => {
+    return await axios.get(
+        `/User?username=${username}`,
+    )
 }
