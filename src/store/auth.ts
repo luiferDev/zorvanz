@@ -1,35 +1,16 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-
-interface State {
-    token: string
-    profile: Profile | null
-    isAuth: boolean
-}
-
-interface Profile {
-    id: string
-	name: string
-	lastName: string
-    email: string
-    username: string
-}
-
-interface Actions {
-    setToken: (token: string) => void
-    setProfile: ( profile: Profile ) => void
-    logout: () => void
-}
+import { State, Actions, Profile } from '../types/interfaces'
 
 export const useAuthStore = create<State & Actions>()(
     persist(
         (set) => ({
-			token: '',
-			profile: null,
+            token: '',
+            profile: null,
             isAuth: false,
-			setToken: (token: string) => set({ token, isAuth: true }),
-			setProfile: (profile: Profile) => set({ profile }),
-            logout: () => set({ token: '', isAuth: false }),
+            setToken: (token: string) => set({ token, isAuth: true }),
+            setProfile: (profile: Profile) => set({ profile }),
+            logout: () => set({ token: '', isAuth: false, profile: null }),
         }),
         {
             name: 'auth',
