@@ -4,7 +4,7 @@ import { useCallback } from 'react'
 import { NavBar } from '../components/NavBar'
 
 export default function Dashboard() {
-	
+
     const logout = useAuthStore((state) => state.logout)
     const profile = useAuthStore((state) => state.profile)
     const navigate = useNavigate()
@@ -20,7 +20,7 @@ export default function Dashboard() {
             <h1>Dashboard</h1>
             {profile && (
                 <div>
-                    <p>Bienvenido: {profile.userName}</p>
+					<p>Bienvenida {profile.name} {profile.lastName}</p>
                 </div>
             )}
             <button
