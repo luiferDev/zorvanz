@@ -1,35 +1,34 @@
 import { useForm } from 'react-hook-form'
-import { loginRequest, profileRequest } from '../api/loginRequest'
 import { useAuthStore } from '../store/auth'
-import { Link } from 'react-router'
-import BackButton from '../UI/back-button'
 import { NavBar } from '../components/NavBar'
-import { useNavigate } from 'react-router'
+import { useNavigate, Link } from 'react-router'
+import { LoginFormInputs } from '../types/interfaces'
+import { loginRequest, profileRequest } from '../api/loginRequest'
 
 export default function LoginPage() {
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit } = useForm<LoginFormInputs>()
     const setToken = useAuthStore((state) => state.setToken)
     const setProfile = useAuthStore((state) => state.setProfile)
     const navigate = useNavigate()
+
+    const onLogin = async (data: LoginFormInputs) => {
+        const res = await loginRequest(data.userName, data.password)
+        const resProfile = await profileRequest({ username: data.userName })
+        setToken(res.token)
+        setProfile(resProfile.data)
+        if (resProfile.data.role === 'Admin') {
+            navigate('/dashboard')
+        } else {
+            navigate('/profile')
+        }
+    }
+
     return (
         <>
             <NavBar />
-            <BackButton />
             <form
                 className="w-full bg-white block max-w-[350px] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)] mx-auto my-[10%] p-4 rounded-lg"
-                onSubmit={handleSubmit(async (data) => {
-                    const res = await loginRequest(data.userName, data.password)
-                    const resProfile = await profileRequest({
-                        username: data.userName,
-                    })
-                    setToken(res.token)
-                    setProfile(resProfile.data)
-
-                    if (resProfile.data.role === 'Admin') {
-                        return navigate('/dashboard')
-                    }
-                    navigate('/profile')
-                })}
+                onSubmit={handleSubmit(onLogin)}
             >
                 <p className="text-xl leading-7 font-semibold text-center text-black">
                     Iniciar Sesión
