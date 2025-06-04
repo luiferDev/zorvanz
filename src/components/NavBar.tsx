@@ -30,7 +30,7 @@ export function NavBar() {
             >
                 <Menu />
                 <div className="sticky flex items-center justify-between lg:justify-center z-[1]">
-                    <div className="mt-2.5 w-28 h-auto relative top-3 left-8 lg:w-60 lg:h-auto">
+                    <div className="mt-2.5 w-14 h-auto relative top-4 left-30 lg:left-8 lg:w-40 lg:top-3 lg:h-auto">
                         <Logo />
                     </div>
                     <div className="flex items-center gap-4 relative top-5 right-4 lg:absolute lg:right-20">
