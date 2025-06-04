@@ -111,8 +111,8 @@ const chartData = [
 ]
 
 const chartConfig = {
-    views: {
-        label: 'Page Views',
+    Ventas: {
+        label: 'Ventas',
     },
     Fragancias: {
         label: 'Fragancias',
