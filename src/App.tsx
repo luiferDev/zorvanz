@@ -7,19 +7,23 @@ import ProductInfo from './products/ProductInfo.tsx'
 import ProducForm from './forms/ProducForm.tsx'
 import ShoppingCart from './components/ShoppingCart.tsx'
 import ErrorPage from './error-page.tsx'
+import Profile from './Auth/Profile.tsx'
+import Dashboard from './Auth/Dashboard.tsx'
 
 function App() {
     return (
         <Routes>
-			<Route index element={<Home />} />
-			<Route path="/about" element={<About />} />
-			<Route path="/product-catalog" element={<ProductCatalog />} />
-			<Route path="/login" element={<LoginPage />} />
-			<Route path="/cart" element={<ShoppingCart />} />
-			<Route path="/product-catalog/:id" element={<ProductInfo />} />
-			<Route path="/add-product" element={<ProducForm />} />
-			<Route path="*" element={<ErrorPage />} />
-		</Routes>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/product-catalog" element={<ProductCatalog />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/cart" element={<ShoppingCart />} />
+            <Route path="/product-catalog/:id" element={<ProductInfo />} />
+            <Route path="/add-product" element={<ProducForm />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="*" element={<ErrorPage />} />
+        </Routes>
     )
 }
 
