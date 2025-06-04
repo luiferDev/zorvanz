@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Link } from 'react-router'
 import Menu from './menu'
 import { Cart } from './Cart'
+import LoginButton from './LoginButton'
+import Logo from './Logo'
 
 export function NavBar() {
     // Hook para obtener el progreso del scroll
@@ -29,34 +30,11 @@ export function NavBar() {
             >
                 <Menu />
                 <div className="sticky flex items-center justify-between lg:justify-center z-[1]">
-                    <div className="mt-2.5 w-28 h-auto relative top-3 left-31 lg:w-60 lg:h-auto">
-                        <Link to="/">
-                            <img
-                                className="logo"
-                                src="/Zorvanz_1.png"
-                                alt="zorvanz logo"
-                            />
-                        </Link>
+                    <div className="mt-2.5 w-28 h-auto relative top-3 left-8 lg:w-60 lg:h-auto">
+                        <Logo />
                     </div>
                     <div className="flex items-center gap-4 relative top-5 right-4 lg:absolute lg:right-20">
-                        <Link
-                            className="bg-zorvanz-red rounded-full cursor-pointer w-8 h-8 flex items-center justify-center z-50 lg:w-11 lg:h-11 lg:transition-all lg:duration-300 lg:ease-in-out"
-                            to="/login"
-                        >
-                            <motion.img
-                                whileHover={{ scale: 1.2 }}
-                                whileTap={{ scale: 0.9 }}
-                                transition={{
-                                    type: 'spring',
-                                    stiffness: 400,
-                                    damping: 17,
-                                }}
-                                src="/login.webp"
-                                alt="login image"
-                                width={20}
-                                height={20}
-                            />
-                        </Link>
+                        <LoginButton />
                         <Cart />
                     </div>
                 </div>
