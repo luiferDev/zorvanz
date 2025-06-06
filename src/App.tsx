@@ -10,6 +10,7 @@ import ErrorPage from './error-page.tsx'
 import Profile from './Auth/Profile.tsx'
 import Dashboard from './Auth/Dashboard.tsx'
 import Register from './Auth/Register.tsx'
+import RegisterAdmin from './Auth/RegisterAdmin.tsx'
 
 function App() {
     return (
@@ -23,7 +24,8 @@ function App() {
             <Route path="/add-product" element={<ProducForm />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/register" element={<Register />} />
+			<Route path="/register" element={<Register />} />
+			<Route path="/register-admin" element={<RegisterAdmin />} />
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     )
