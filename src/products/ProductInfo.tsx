@@ -10,9 +10,9 @@ import { useFetchProducts } from "../hooks/useProducts"
 export default function ProductInfo() {
 
     const { id } = useParams()
-    const numericId = Number(id)
+    const Id = id?.toString()
     const { data, isLoading, isError } = useFetchProducts()
-    const selectedProduct: Product | undefined = data?.find(f => f.id === numericId)
+    const selectedProduct: Product | undefined = data?.find(f => f.id.toString() === Id)
 
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: producto no encontrado</div>;
