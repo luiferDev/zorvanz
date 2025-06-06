@@ -4,7 +4,7 @@ import { PaginatedResponse } from '../types/interfaces'
 
 async function fetchProducts() {
     const { data } = await api.get<PaginatedResponse>(
-        'http://zorvanz-api.runasp.net/Product?pageNumber=1&pageSize=6',
+        '/Product?pageNumber=1&pageSize=6',
     )
     return data.data
 }
