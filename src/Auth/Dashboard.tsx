@@ -24,16 +24,23 @@ export default function Dashboard() {
                     <h1 className="text-5xl font-bold">Dashboard</h1>
                     {profile && (
                         <p className="text-2xl">
-                            Bienvenida {profile.name} {profile.lastName}
+                            Bienvenida/o {profile.name} {profile.lastName}
                         </p>
                     )}
                 </div>
-                <div>
+                <div className='flex flex-col items-end gap-4'>
+                    <button
+						className="cursor-pointer px-8 py-4 bg-zorvanz-blue text-white 
+						rounded-2xl hover:bg-zorvanz-blue/90 transition-all duration-300 ease-in-out"
+                        onClick={() => navigate('/add-product')}
+                    >
+                        Crear Producto
+                    </button>
                     <button
                         className="cursor-pointer px-8 py-4 bg-zorvanz-red text-white rounded-2xl hover:bg-zorvanz-red/90 transition-all duration-300 ease-in-out"
                         onClick={handleLogout}
                     >
-                        Logout
+                        Cerrar Sesión
                     </button>
                 </div>
             </div>
