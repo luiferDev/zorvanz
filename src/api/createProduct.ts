@@ -1,4 +1,4 @@
-import axios from '../api/zorvanz-api'
+import axios from '../api/auth'
 
 export const createProduct = async (
 	name: string,
