@@ -7,7 +7,7 @@ export const registerUserRequest = async (
     password: string,
     email: string,
 ) => {
-    const res = await axios.post('/api/register', {
+    const res = await axios.post('/api/Register', {
         name,
         lastName,
         userName,
