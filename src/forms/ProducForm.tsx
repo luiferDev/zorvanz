@@ -1,39 +1,24 @@
 import { useForm } from 'react-hook-form'
-import axios from 'axios'
 import { Product } from '../types/interfaces'
-
-async function createProduct(data: Product, baseUrl: string) {
-    try {
-        const response = await axios.post(`${baseUrl}/api/products`, data, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-        console.log('Producto registrado:', response.data)
-        alert('Producto registrado exitosamente!')
-    } catch (error: any) {
-        if (axios.isAxiosError(error)) {
-            console.error(
-                'Error de Axios:',
-                error.response?.data || error.message,
-            )
-            alert(
-                'Error al registrar el producto: ' +
-                    (error.response?.data?.message || error.message),
-            )
-        } else {
-            console.error('Error desconocido:', error)
-            alert('Hubo un error inesperado.')
-        }
-    }
-}
+import { createProduct } from '../api/createProduct'
+import '../styles/form.css'
 
 export default function ProducForm() {
     const { register, handleSubmit } = useForm<Product>()
-    const baseUrl = import.meta.env.VITE_API_URL
+    // const baseUrl = import.meta.env.VITE_API_URL
     return (
         <form
-            onSubmit={handleSubmit((data) => createProduct(data, baseUrl))}
+            onSubmit={handleSubmit((data: Product) =>
+                createProduct(
+                    data.name,
+                    parseFloat(data.price.toString()),
+                    data.description,
+                    data.imageUrl,
+                    parseInt(data.stock.toString()),
+                    parseInt(data.category.categoryId.toString()),
+                    parseFloat(data.popularity.toString()),
+                ),
+            )}
             className="product__form"
         >
             <p className="product__title">Registrar Producto</p>
@@ -129,7 +114,6 @@ export default function ProducForm() {
             <button className="product__submit" type="reset">
                 Limpiar
             </button>
-            {/* <p className="signin">Already have an acount ? <a href="#">Signin</a> </p> */}
         </form>
     )
 }
