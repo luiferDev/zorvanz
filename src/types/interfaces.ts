@@ -102,3 +102,17 @@ export interface LoginFormInputs {
     userName: string
     password: string
 }
+
+export interface RegisterFormInputs {
+	name: string
+	lastName: string
+    userName: string
+	password: string
+	email: string
+	role?: Role
+}
+
+export interface Role {
+	User: string
+	Admin: string
+}
