@@ -35,7 +35,7 @@ export default function Register() {
                 onSubmit={handleSubmit(onRegister)}
             >
                 <p className="text-xl leading-7 font-semibold text-center text-black">
-                    Iniciar Sesión
+                    Registrar Usuario
                 </p>
                 <div className="input-container">
                     <input
