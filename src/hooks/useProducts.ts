@@ -4,7 +4,7 @@ import { PaginatedResponse } from '../types/interfaces'
 
 async function fetchProducts() {
     const { data } = await api.get<PaginatedResponse>(
-        '/Product?pageNumber=1&pageSize=6',
+        '/Product?pageNumber=1&pageSize=8',
     )
     return data.data
 }
@@ -12,6 +12,6 @@ async function fetchProducts() {
 export function useFetchProducts() {
     return useQuery({
         queryKey: ['productData'],
-        queryFn: fetchProducts,
+		queryFn: fetchProducts,
     })
 }
