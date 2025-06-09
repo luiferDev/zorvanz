@@ -3,14 +3,24 @@ import { NavLink } from 'react-router'
 import CartButton from '../components/CartButton'
 import { motion } from 'framer-motion'
 import { useFetchProducts } from '../hooks/useProducts'
+import { SkeletonCard } from './SkeletonCard'
 
 export function Products() {
-
     const { data, isLoading, isError } = useFetchProducts()
 
-    if (isLoading) return <div>Loading...</div>;
-    if (isError) return <div>Error: producto no encontrado</div>;
-    if (!data) return null;
+    if (isLoading)
+        return (
+            <>
+                <div className="flex flex-row justify-center items-center gap-8 pt-20 pb-8 pl-8 lg:pb-20 lg:pl-20">
+                    <SkeletonCard />
+                    <SkeletonCard />
+                    <SkeletonCard />
+                    <SkeletonCard />
+                </div>
+            </>
+        )
+    if (isError) return <div>Error: producto no encontrado</div>
+    if (!data) return null
 
     return (
         <>
@@ -22,13 +32,13 @@ export function Products() {
                 body="Explora nuestra gama de perfumes, velas y productos de cuidado personal. Cada uno hecho a la medida para ti."
             />
 
-            <ul className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 pr-12 lg:px-12">
+            <ul className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 pr-12 lg:px-12 space-x-3">
                 {data?.map((product) => {
                     return (
                         //<Link className='deciration-none text-black' to={`/product-catalog/${f.id}`} key={f.id}>
                         <section
                             key={product.id}
-                            className="p-4 rounded-3xl shadow-[5px_2px_12px_2px_#e6d1dc] aspect-[4/3]"
+                            className="p-4 rounded-3xl shadow-[5px_2px_12px_2px_#e6d1dc] aspect-[4/3] w-80"
                         >
                             <motion.img
                                 className="rounded-3xl aspect-[4/3] object-cover"
