@@ -1,21 +1,56 @@
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { motion } from 'motion/react'
 import { useAuthStore } from '../store/auth'
+import { Button } from '../components/ui/button'
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuTrigger
+} from '../components/ui/dropdown-menu'
+import { useCallback } from 'react'
 
 export default function LoginButton() {
+    const logout = useAuthStore((state) => state.logout)
     const profile = useAuthStore((state) => state.profile)
+    const navigate = useNavigate()
+
+    const handleLogout = useCallback(async (): Promise<void> => {
+        await logout()
+        navigate('/')
+    }, [logout, navigate])
 
     return (
         <>
             {profile ? (
                 <small className="font-bold text-[8px] lg:text-xs">
-                    <Link
-                        to={
-                            profile.role === 'Admin' ? '/dashboard' : '/profile'
-                        }
-                    >
-                        {profile.userName}
-                    </Link>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button
+                                variant={'outline'}
+                                className="border-zorvanz-blue border-3 bg-transparent cursor-pointer hover:bg-zorvanz-blue hover:text-white"
+                            >
+                                {profile.userName}
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuLabel>Mi Cuenta</DropdownMenuLabel>
+                            <DropdownMenuGroup>
+                                <Link
+                                    to={
+                                        profile.role === 'Admin'
+                                            ? '/dashboard'
+                                            : '/profile'
+                                    }
+                                >
+                                    <DropdownMenuItem>Perfil</DropdownMenuItem>
+                                </Link>
+                                <DropdownMenuItem onClick={handleLogout}>Log out</DropdownMenuItem>
+                            </DropdownMenuGroup>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                 </small>
             ) : (
                 <Link
