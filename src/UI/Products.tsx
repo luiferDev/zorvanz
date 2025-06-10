@@ -4,9 +4,12 @@ import CartButton from '../components/CartButton'
 import { motion } from 'framer-motion'
 import { useFetchProducts } from '../hooks/useProducts'
 import { SkeletonCard } from './SkeletonCard'
+import { useAuthStore } from '../store/auth'
 
 export function Products() {
     const { data, isLoading, isError } = useFetchProducts()
+    const profile = useAuthStore((state) => state.profile)
+    const isAdmin = profile?.role === 'Admin'
 
     if (isLoading)
         return (
@@ -35,7 +38,6 @@ export function Products() {
             <ul className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 pr-12 lg:px-12 space-x-3">
                 {data?.map((product) => {
                     return (
-                        //<Link className='deciration-none text-black' to={`/product-catalog/${f.id}`} key={f.id}>
                         <section
                             key={product.id}
                             className="p-4 rounded-3xl shadow-[5px_2px_12px_2px_#e6d1dc] aspect-[4/3] w-80"
@@ -64,8 +66,17 @@ export function Products() {
                                 </p>
                                 <CartButton product={product} />
                             </div>
+                            {isAdmin && (
+                                <div className="flex justify-end mt-4">
+                                    <NavLink
+                                        to={`/update-product/${product.id}`}
+                                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                    >
+                                        Actualizar
+                                    </NavLink>
+                                </div>
+                            )}
                         </section>
-                        // </Link>
                     )
                 })}
             </ul>
