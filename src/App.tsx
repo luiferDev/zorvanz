@@ -11,6 +11,7 @@ import Profile from './Auth/Profile.tsx'
 import Dashboard from './Auth/Dashboard.tsx'
 import Register from './Auth/Register.tsx'
 import RegisterAdmin from './Auth/RegisterAdmin.tsx'
+import ProductUpdateForm from './forms/ProductUpdateForm.tsx'
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
 			<Route path="/register" element={<Register />} />
 			<Route path="/register-admin" element={<RegisterAdmin />} />
+			<Route path="/update-product/:id" element={<ProductUpdateForm />} />
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     )
