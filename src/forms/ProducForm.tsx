@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form'
 import { Product } from '../types/interfaces'
 import { createProduct } from '../api/createProduct'
-import '../styles/form.css'
 import BackButton from '../UI/back-button'
 
 export default function ProducForm() {
