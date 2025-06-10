@@ -2,7 +2,6 @@ import { useForm } from 'react-hook-form'
 import { loginRequest } from '../api/loginRequest'
 import { useAuthStore } from '../store/auth'
 import { Link } from 'react-router'
-import BackButton from '../UI/back-button'
 import { NavBar } from '../components/NavBar'
 
 export default function LoginPage() {
@@ -14,14 +13,13 @@ export default function LoginPage() {
     return (
 		<>
 			<NavBar />
-            <BackButton />
             <form
                 className="w-full bg-white block max-w-[350px] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)] mx-auto my-[10%] p-4 rounded-lg"
                 action={url}
                 onSubmit={handleSubmit(async (data) => {
                     const res = await loginRequest(data.userName, data.password)
-                    setToken(res.data.token)
-                    console.log(res)
+                    setToken(res.token)
+                    console.log(res.token)
                 })}
             >
                 <p className="text-xl leading-7 font-semibold text-center text-black">
