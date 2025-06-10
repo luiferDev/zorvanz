@@ -7,6 +7,7 @@ import { ChartBarMixed } from '../charts/ChartBarMixed'
 import { ChartLineInteractive } from '../charts/ChartLineInteractive'
 
 export default function Dashboard() {
+	
     const logout = useAuthStore((state) => state.logout)
     const profile = useAuthStore((state) => state.profile)
     const navigate = useNavigate()
