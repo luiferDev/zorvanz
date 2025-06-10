@@ -1,11 +1,14 @@
-import { Link } from 'react-router'
+import { Link, NavLink } from 'react-router'
 import CartButton from './CartButton'
 import { useFilters } from '../hooks/useFilters'
 import { motion } from 'framer-motion'
 import { useFetchProducts } from '../hooks/useProducts'
+import { useAuthStore } from '../store/auth'
 
 export default function ProductList() {
-    const { data, isLoading, isError } = useFetchProducts()
+	const { data, isLoading, isError } = useFetchProducts()
+	const profile = useAuthStore((state) => state.profile)
+	const isAdmin = profile?.role === 'Admin'
     const { filterProducts } = useFilters()
 
     if (isLoading) return <div>Loading...</div>
@@ -18,7 +21,7 @@ export default function ProductList() {
         <>
             {filteredProducts.map((product) => (
                 <div
-					className="bg-white shadow-[3px_3px_3px_3px_black] m-4 rounded-3xl 
+                    className="bg-white shadow-[3px_3px_3px_3px_black] m-4 rounded-3xl 
 					border-solid lg:m-0 w-80"
                     key={product.id}
                 >
@@ -46,13 +49,9 @@ export default function ProductList() {
                                         'Sin categoría'}
                                 </p>
                                 {product.stock === 0 ? (
-                                    <strong>
-                                        Producto Agotado
-                                    </strong>
+                                    <strong>Producto Agotado</strong>
                                 ) : (
-                                    <strong>
-                                        Disponible
-                                    </strong>
+                                    <strong>Disponible</strong>
                                 )}
                             </div>
                         </article>
@@ -64,6 +63,16 @@ export default function ProductList() {
                                 ${product.price}
                             </p>
                             <CartButton product={product} />
+                            {isAdmin && (
+                                <div className="flex justify-end mt-4">
+                                    <NavLink
+                                        to={`/update-product/${product.id}`}
+                                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                    >
+                                        Actualizar
+                                    </NavLink>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
