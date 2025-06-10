@@ -1,6 +1,6 @@
 import api from '../api/zorvanz-api'
 import { useQuery } from '@tanstack/react-query'
-import { PaginatedResponse } from '../types/interfaces'
+import { PaginatedResponse, Product } from '../types/interfaces'
 
 async function fetchProducts() {
     const { data } = await api.get<PaginatedResponse>(
@@ -15,3 +15,16 @@ export function useFetchProducts() {
 		queryFn: fetchProducts,
     })
 }
+
+async function fetchProductById(id: string): Promise<Product> {
+    const { data } = await api.get<Product>(`/Product/${id}`)
+    return data
+}
+
+export function useFetchProductById(id: string) {
+    return useQuery({
+        queryKey: ['productData', id],
+        queryFn: () => fetchProductById(id),
+    })
+}
+
