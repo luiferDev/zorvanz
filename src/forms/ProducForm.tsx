@@ -1,14 +1,15 @@
 import { useForm } from 'react-hook-form'
 import { Product } from '../types/interfaces'
 import { createProduct } from '../api/createProduct'
-import BackButton from '../UI/back-button'
+import { NavBar } from '../components/NavBar'
 
 export default function ProducForm() {
-    const { register, handleSubmit } = useForm<Product>()
-    // const baseUrl = import.meta.env.VITE_API_URL
+
+	const { register, handleSubmit } = useForm<Product>()
+	
     return (
         <>
-            <BackButton />
+            <NavBar />
             <form
                 onSubmit={handleSubmit((data: Product) =>
                     createProduct(
