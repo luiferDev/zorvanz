@@ -1,5 +1,7 @@
+import { UUID } from "crypto"
+
 export interface Product {
-    id: number
+    id: UUID
     name: string
     description: string
     price: number
@@ -66,7 +68,7 @@ export interface FilterContextType {
 }
 
 export interface ProductDefinition {
-    id: number
+    id: UUID
     name: string
     imageUrl: string
     price: number
