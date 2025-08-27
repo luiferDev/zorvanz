@@ -23,7 +23,7 @@ export const useFragrances = (): UseFragrancesState => {
             if (!res.ok) throw new Error('Error al obtener los datos')
             return await res.json()
         }).then((data:PaginatedResponse)  => {
-            setFragrances(data.content)
+            setFragrances(data.data)
             setLoading(false)
         }).catch(err => {
             setError(err.message)

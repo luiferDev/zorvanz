@@ -1,92 +1,109 @@
 import { useForm } from 'react-hook-form'
+import { useParams, useNavigate } from 'react-router'
+import { useEffect } from 'react'
 import { Product } from '../types/interfaces'
-import { createProduct } from '../api/createProduct'
+import { useFetchProductById } from '../hooks/useProducts'
 import { NavBar } from '../components/NavBar'
+import { updateProduct } from '../api/updateProduct'
 
-export default function ProducForm() {
+export default function ProductUpdateForm() {
+    const { id } = useParams()
+    const Id = id ? id.toString() : ''
+    console.log(Id)
+    const navigate = useNavigate()
+    const { data, isLoading, error } = useFetchProductById(Id)
+    const { register, handleSubmit, reset } = useForm<Product>()
+    console.log(data)
 
-	const { register, handleSubmit } = useForm<Product>()
-	
+    useEffect(() => {
+        // Fetch product data to prefill the form
+        if (data) {
+            reset({
+                name: data.name,
+                price: data.price,
+                description: data.description,
+                imageUrl: data.imageUrl,
+                stock: data.stock,
+                category: { categoryId: data.category.categoryId },
+            })
+        }
+    }, [data, reset])
+
+    const onSubmit = async (data: Partial<Product>) => {
+        try {
+            await updateProduct(
+                Id,
+                data.name || '',
+                data.price || 0,
+                data.description || '',
+                data.imageUrl || '',
+                data.stock || 0,
+                data.category?.categoryId || 0,
+                data.popularity || 0,
+            )
+            alert('Producto actualizado correctamente')
+            navigate('/product-catalog')
+        } catch (err: any) {
+            alert('Error al actualizar el producto. Intentente de nuevo.')
+        }
+    }
+
+    if (isLoading) return <div>Cargando...</div>
+    if (error) return <div>Error: {error.message}</div>
+
     return (
         <>
             <NavBar />
-            <form
-                onSubmit={handleSubmit((data: Product) =>
-                    createProduct(
-                        data.name,
-                        parseFloat(data.price.toString()),
-                        data.description,
-                        data.imageUrl,
-                        parseInt(data.stock.toString()),
-                        parseInt(data.category.categoryId.toString()),
-                        parseFloat(data.popularity.toString()),
-					),
-                )}
-                className="product__form"
-            >
-                <p className="product__title">Registrar Producto</p>
+            <form onSubmit={handleSubmit(onSubmit)} className="product__form">
+                <p className="product__title">Actualizar Producto</p>
                 <p className="product__message">
-                    Ingresa los datos del producto
+                    Modifica solo los campos necesarios
                 </p>
                 <div className="product__flex">
                     <label>
                         <input
                             className="product__input"
-                            {...register('name', { required: true })}
                             type="text"
+                            {...register('name')}
                             placeholder=""
-                            required
                         />
                         <span>Producto</span>
                     </label>
-
                     <label>
                         <input
                             className="product__input"
-                            {...register('price', {
-                                required: true,
-                                validate: (value) =>
-                                    !isNaN(value) ||
-                                    'El precio debe ser un número',
-                            })}
                             type="text"
+                            {...register('price')}
                             placeholder=""
-                            required
                         />
                         <span>Precio</span>
                     </label>
                 </div>
-
                 <label>
                     <textarea
                         className="product__input"
-                        {...register('description', { required: true })}
+                        {...register('description')}
                         cols={30}
                         rows={5}
                         placeholder=""
-                        required
                     />
                     <span>Descripción</span>
                 </label>
-
                 <label>
                     <input
                         className="product__input"
                         type="text"
-                        {...register('imageUrl', { required: true })}
-                        accept="image/*"
+                        {...register('imageUrl')}
                         placeholder=""
-                        required
                     />
                     <span>Imagen</span>
                 </label>
                 <label>
                     <input
                         className="product__input"
-                        {...register('stock', { required: true })}
                         type="text"
+                        {...register('stock')}
                         placeholder=""
-                        required
                     />
                     <span>Inventario</span>
                 </label>
@@ -102,23 +119,8 @@ export default function ProducForm() {
                     </select>
                     <span>Categoría</span>
                 </label>
-                <label>
-                    <input
-                        className="product__input"
-                        {...register('popularity', { required: true })}
-                        type="text"
-                        placeholder=""
-                        max={5}
-                        step={0.1}
-                        required
-                    />
-                    <span>Popularidad</span>
-                </label>
                 <button type="submit" className="product__submit">
-                    Enviar
-                </button>
-                <button className="product__submit" type="reset">
-                    Limpiar
+                    Actualizar
                 </button>
             </form>
         </>

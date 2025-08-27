@@ -55,12 +55,16 @@ function Menu() {
                             transition={{ delay: item.delay, type: 'just' }}
                         >
                             <NavLink
+                                viewTransition
                                 to={item.path}
-                                className={({ isActive }) =>
-                                    // clases base (desktop y mobile) + las de "activo" cuando isActive === true
-                                    `font-normal lg:text-2xl lg:text-black ${
+                                className={({ isActive, isTransitioning }) =>
+                                    `n font-normal lg:text-2xl lg:text-black ${
                                         isActive
                                             ? 'lg:border-4 lg:border-zorvanz-red lg:p-2.5 lg:rounded-3xl lg:text-black'
+                                            : ''
+                                    } ${
+                                        isTransitioning
+                                            ? 'transition-all ease-in-out animate-bounce'
                                             : ''
                                     }`
                                 }

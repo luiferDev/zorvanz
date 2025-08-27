@@ -1,20 +1,18 @@
-import { NavBar } from "../components/NavBar"
-import Footer from "../UI/Footer"
-import ProductList from "../components/ProductList"
-import Header from "../components/Header"
-import '../styles/product-catalog.css'
+import { NavBar } from '../components/NavBar'
+import Footer from '../UI/Footer'
+import ProductList from '../components/ProductList'
+import Header from '../components/Header'
 
 export default function ProductCatalog() {
-
     return (
         <>
             <NavBar />
-            <h1 className="title__product__list">Nuestros Productos</h1>
-            <div className="product__catalog">
-                <aside className="filters__product__list">
+            <h1 className="pt-40 pb-8 pl-12 text-5xl">Nuestros Productos</h1>
+            <div className="lg:flex lg:flex-row lg:pt-4 lg:mr-8 lg:space-x-8 lg:my-12">
+                <aside className="lg:w-[30%] lg:pt-4 lg:sticky">
                     <Header />
                 </aside>
-                <main className="product__list__container">
+                <main className="lg:grid lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] lg:gap-8 lg:w-[70%]">
                     <ProductList />
                 </main>
             </div>

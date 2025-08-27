@@ -1,48 +1,28 @@
+import { UUID } from "crypto"
+
 export interface Product {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    category: Category;
-    stock: number;
-    popularity: number;
-    imageUrl: string;
+    id: UUID
+    name: string
+    description: string
+    price: number
+    category: Category
+    stock: number
+    popularity: number
+    imageUrl: string
 }
 
 export interface Category {
-    categoryId: number;
-    categoryName: string;
+    categoryId: number
+    categoryName: string
 }
 
 export interface PaginatedResponse {
-    totalPages: number;
-    totalElements: number;
-    size: number;
-    content: Product[];
-    number: number;
-    sort: SortInfo;
-    pageable: PageableInfo;
-    numberOfElements: number;
-    first: boolean;
-    last: boolean;
-    empty: boolean;
+	data: Product[]
+	pageNumber: number
+	pageSize: number
+	totalPages: number
+	totalRecords: number
 }
-
-interface SortInfo {
-    empty: boolean;
-    sorted: boolean;
-    unsorted: boolean;
-}
-
-interface PageableInfo {
-    pageNumber: number;
-    pageSize: number;
-    sort: SortInfo;
-    offset: number;
-    paged: boolean;
-    unpaged: boolean;
-}
-
 
 export interface UseFragrancesState {
     fragrances: Product[]
@@ -52,7 +32,7 @@ export interface UseFragrancesState {
 
 // Define the Product interface, including the quantity property
 export interface Products {
-    category: Category;
+    category: Category
     stock: number
     id: number
     imageUrl: string
@@ -62,11 +42,11 @@ export interface Products {
 }
 
 export interface CartContextType {
-    cart: Products[];
+    cart: Products[]
     addToCart: (product: Products) => void
     clearCart: () => void
-	removeFromCart: (product: Products) => void
-	deleteFromCart: (product: Products) => void
+    removeFromCart: (product: Products) => void
+    deleteFromCart: (product: Products) => void
 }
 
 export interface Filters {
@@ -76,17 +56,19 @@ export interface Filters {
 
 export interface FilterContextType {
     filters: {
-        categoryName: string;
-        price: number;
-    };
-    setFilters: React.Dispatch<React.SetStateAction<{
-        categoryName: string;
-        price: number;
-    }>>
+        categoryName: string
+        price: number
+    }
+    setFilters: React.Dispatch<
+        React.SetStateAction<{
+            categoryName: string
+            price: number
+        }>
+    >
 }
 
 export interface ProductDefinition {
-    id: number
+    id: UUID
     name: string
     imageUrl: string
     price: number
@@ -95,4 +77,44 @@ export interface ProductDefinition {
     popularity: number
     category: Category
     selectedProduct?: number
+}
+
+export interface State {
+    token: string
+    profile: Profile | null
+    isAuth: boolean
+}
+
+export interface Profile {
+    id: string
+    name: string
+    lastName: string
+    email: string
+	userName: string
+	role: string
+}
+
+export interface Actions {
+    setToken: (token: string) => void
+    setProfile: (profile: Profile) => void
+    logout: () => void
+}
+
+export interface LoginFormInputs {
+    userName: string
+    password: string
+}
+
+export interface RegisterFormInputs {
+	name: string
+	lastName: string
+    userName: string
+	password: string
+	email: string
+	role?: Role
+}
+
+export interface Role {
+	User: string
+	Admin: string
 }

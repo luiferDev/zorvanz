@@ -7,16 +7,23 @@ export default function Hero() {
             <CarouselBackground>
                 <div className="lg:ml-24 lg:flex lg:justify-between lg:items-center">
                     <div className="text-zorvanz-beige ">
-                        <h1 className="pt-96 pr-4 pl-8 text-[40px] font-[Ageo] lg:mt-[-50px] lg:text-8xl lg:w-[12ch]">
+                        <h1
+                            data-cy="hero-title"
+                            className="pt-96 pr-4 pl-8 text-[40px] font-[Ageo] lg:mt-[-50px] lg:text-8xl lg:w-[12ch]"
+                        >
                             Personaliza tu Aroma
                         </h1>
-                        <p className="font-[Vanio] italic w-[45ch] text-[12px] pt-4 pl-8 lg:text-2xl lg:w-[45ch]">
+                        <p
+                            data-cy="hero-text"
+                            className="font-[Vanio] italic w-[45ch] text-[12px] pt-4 pl-8 lg:text-2xl lg:w-[45ch]"
+                        >
                             Descubre tu aroma único con nuestras fragancias
                             exclusivas. Personaliza cada detalle y dale un toque
                             personal.
                         </p>
                     </div>
                     <motion.button
+                        data-cy="hero-btn"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{
