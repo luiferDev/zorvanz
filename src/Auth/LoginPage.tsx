@@ -24,11 +24,13 @@ export default function LoginPage() {
     }
 
     return (
+
         <>
             <NavBar />
             <form
                 className="w-full bg-white block max-w-[350px] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)] mx-auto my-[10%] p-4 rounded-lg"
                 onSubmit={handleSubmit(onLogin)}
+
             >
                 <p className="text-xl leading-7 font-semibold text-center text-black">
                     Iniciar Sesión
