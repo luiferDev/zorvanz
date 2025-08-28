@@ -25,7 +25,7 @@ export const images = [
         src: "/fragancia_con_velas.svg",
         alt: "una mesa con una vela y una fragancia",
         title:"Aroma Fresco",
-        body:"Toque de frescura natural.",
+        body:"Toque de frescura.",
         class: "image-large"
     },
     {
@@ -33,7 +33,7 @@ export const images = [
         src: "/th 17 .svg",
         alt: "frasco de perfume azul con rosas azules rodeandolo",
         title:"Fragancias Únicas",
-        body:"Cada producto es exclusivo.",
+        body:"Productos exclusivos.",
         class: ""
     },
     {
@@ -48,8 +48,8 @@ export const images = [
         id: 4,
         src: "/velas_flores.svg",
         alt: "perfume azul con plantas azules a su alrededor",
-        title:"Ingredientes Naturales",
-        body:"Solo lo mejor de la naturaleza.",
+		title:"Ambiente Acogedor",
+        body:"Solo lo mejor para tu entorno.",
         class: "image-large"
     }
 ]
@@ -114,7 +114,7 @@ export const values = [
         title: 'Innovación',
         alt: 'una cabeza con un bombillo en el medio',
         description:
-            'Zorvanz se distingue por su innovación, creando fragancias personalizadas que promueven la comodidad del cliente, diferenciándose de las compañías comunes de perfumes.',
+            'Zorvanz se distingue por su innovación, creando fragancias personalizadas que promueven la comodidad del cliente, diferenciándose de las compañías comunes de ambientadores.',
     },
     {
         id: 4,
@@ -129,22 +129,22 @@ export const values = [
 export const testimonials = [
     {
         id: 1,
-        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        text: '"Zorvanz no es solo una escencia, es una experiencia olfativa única que me acompaña todos los días."',
         author: 'Cliente Satisfecho',
     },
     {
         id: 2,
-        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        text: '"Zorvanz no es solo una fragancia, es una experiencia olfativa única que me acompaña todos los días."',
         author: 'Cliente Satisfecho',
     },
     {
         id: 3,
-        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        text: '"Zorvanz no es solo un ambientador, es una experiencia olfativa única que me acompaña todos los días."',
         author: 'Cliente Satisfecho',
     },
     {
         id: 4,
-        text: '"Zorvanz no es solo un perfume, es una experiencia olfativa única que me acompaña todos los días."',
+        text: '"Zorvanz no es solo unas velas aromáticas, es una experiencia olfativa única que me acompaña todos los días."',
         author: 'Cliente Satisfecho',
     },
 ]
