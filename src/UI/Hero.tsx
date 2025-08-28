@@ -19,7 +19,7 @@ export default function Hero() {
                         >
                             Descubre tu aroma único con nuestras fragancias
                             exclusivas. Personaliza cada detalle y dale un toque
-                            personal.
+                            personal a tu entorno.
                         </p>
                     </div>
                     <motion.button
