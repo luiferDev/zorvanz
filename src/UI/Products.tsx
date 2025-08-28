@@ -32,7 +32,7 @@ export function Products() {
                 titleStyles="text-4xl lg:text-6xl"
                 bodyStyles="text-sm mt-4 w-[30ch] lg:text-2xl lg:w-[50ch]"
                 subtitle="Productos Destacados"
-                body="Explora nuestra gama de perfumes, velas y productos de cuidado personal. Cada uno hecho a la medida para ti."
+                body="Explora nuestra gama de ambientadores y velas aromáticas. Cada uno hecho a la medida para ti."
             />
 
             <ul className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 pr-12 lg:px-12 space-x-3">
