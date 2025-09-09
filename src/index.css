@@ -211,7 +211,7 @@
     p,
     li,
     strong {
-        font-family: 'Vanio', serif;
+        font-family: 'Voga', sans-serif;
         font-style: italic;
         line-height: 1.1;
         text-wrap: pretty;
@@ -223,7 +223,7 @@
     h4,
     h5,
     h6 {
-        font-family: 'Ageo', sans-serif;
+        font-family: 'Ageo', serif;
         letter-spacing: -1px;
         line-height: 1.1;
         text-wrap: balance;
