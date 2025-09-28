@@ -12,7 +12,7 @@ export default function ProductCatalog() {
                 <aside className="lg:w-[30%] lg:pt-4 lg:sticky">
                     <Header />
                 </aside>
-                <main className="lg:grid lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] lg:gap-8 lg:w-[70%]">
+                <main className="lg:grid lg:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:gap-10 lg:w-[100%] lg:mt-4">
                     <ProductList />
                 </main>
             </div>
