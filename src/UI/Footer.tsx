@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 export default function Footer() {
@@ -11,10 +12,10 @@ export default function Footer() {
                 />
                 <div>
                     <p>
-                        <strong>Dirección: </strong>cll 100
+                        <strong>Dirección: </strong>0500001, Medellín, Antioquia
                     </p>
                     <p>
-                        <strong>Contacto: </strong>+573186922713
+                        <strong>Contacto: </strong>+573172390532
                     </p>
                     <strong>Siguenos:</strong>
                 </div>
@@ -33,17 +34,17 @@ export default function Footer() {
             <section className="lg:flex lg:flex-row lg:justify-between">
                 <div className="mb-4 flex flex-col lg:mr-16">
                     <div className="mb-4 flex flex-col">
-                        <a className="mb-2.5 text-black" href="#">
-                            Lorem, ipsum dolor.
-                        </a>
-                        <a className="mb-2.5 text-black" href="#">
-                            Lorem, ipsum dolor.
-                        </a>
-                        <a className="mb-2.5 text-black" href="#">
-                            Lorem, ipsum dolor.
-                        </a>
+                        <Link className="mb-2.5 text-black" to="#">
+                            Politica de privacidad
+                        </Link>
+                        <Link className="mb-2.5 text-black" to="/about">
+                            Acerca de Nosotros
+                        </Link>
+                        <Link className="mb-2.5 text-black" to="/product-catalog">
+                            Catálogo
+                        </Link>
                     </div>
-                    <div className="mb-4 flex flex-col">
+                    {/* <div className="mb-4 flex flex-col">
                         <a className="mb-2.5 text-black" href="#">
                             Lorem, ipsum dolor.
                         </a>
@@ -86,7 +87,7 @@ export default function Footer() {
                         <a className="mb-2.5 text-black" href="#">
                             Lorem, ipsum dolor.
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </footer>
