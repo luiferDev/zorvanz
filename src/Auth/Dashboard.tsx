@@ -7,15 +7,14 @@ import { ChartBarMixed } from '../charts/ChartBarMixed'
 import { ChartLineInteractive } from '../charts/ChartLineInteractive'
 
 export default function Dashboard() {
-	
-    const logout = useAuthStore((state) => state.logout)
-    const profile = useAuthStore((state) => state.profile)
-    const navigate = useNavigate()
-
+	const logout = useAuthStore((state) => state.logout)
+	const profile = useAuthStore((state) => state.profile)
+	const navigate = useNavigate()
     const handleLogout = useCallback(async (): Promise<void> => {
         await logout()
         navigate('/')
-    }, [logout, navigate])
+	}, [logout, navigate])
+
 
     return (
         <div className="px-22">
@@ -29,9 +28,9 @@ export default function Dashboard() {
                         </p>
                     )}
                 </div>
-                <div className='flex flex-col items-end gap-4'>
+                <div className="flex flex-col items-end gap-4">
                     <button
-						className="cursor-pointer px-8 py-4 bg-zorvanz-blue text-white 
+                        className="cursor-pointer px-8 py-4 bg-zorvanz-blue text-white 
 						rounded-2xl hover:bg-zorvanz-blue/90 transition-all duration-300 ease-in-out"
                         onClick={() => navigate('/add-product')}
                     >
