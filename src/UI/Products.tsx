@@ -7,7 +7,8 @@ import { SkeletonCard } from './SkeletonCard'
 import { useAuthStore } from '../store/auth'
 
 export function Products() {
-    const { data, isLoading, isError } = useFetchProducts()
+	const pageSize = 4
+    const { data, isLoading, isError } = useFetchProducts(pageSize)
     const profile = useAuthStore((state) => state.profile)
     const isAdmin = profile?.role === 'Admin'
 
@@ -43,7 +44,7 @@ export function Products() {
                             className="p-4 rounded-3xl shadow-[5px_2px_12px_2px_#e6d1dc] aspect-[4/3] w-80"
                         >
                             <motion.img
-                                className="rounded-3xl aspect-[4/3] object-cover"
+                                className="rounded-3xl aspect-[4/3] object-cover w-80 h-80"
                                 whileHover={{
                                     scale: [null, 1.1],
                                     translateY: [0, -5, -4],
