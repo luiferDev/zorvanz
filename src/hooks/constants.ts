@@ -22,73 +22,73 @@ export const imagesLarge = [
 export const images = [
     {
         id: 1,
-        src: "/fragancia_con_velas.svg",
-        alt: "una mesa con una vela y una fragancia",
-        title:"Aroma Fresco",
-        body:"Toque de frescura.",
-        class: "image-large"
+        src: '/fragancia_con_velas.svg',
+        alt: 'una mesa con una vela y una fragancia',
+        title: 'Aroma Fresco',
+        body: 'Toque de frescura.',
+        class: 'image-large',
     },
     {
         id: 2,
-        src: "/th 17 .svg",
-        alt: "frasco de perfume azul con rosas azules rodeandolo",
-        title:"Fragancias Únicas",
-        body:"Productos exclusivos.",
-        class: ""
+        src: '/th 17 .svg',
+        alt: 'frasco de perfume azul con rosas azules rodeandolo',
+        title: 'Fragancias Únicas',
+        body: 'Productos exclusivos.',
+        class: '',
     },
     {
         id: 3,
-        src: "/th 1 .svg",
-        alt: " frasco de perfume amarillo con plantas alrededor",
-        title:"Personalización",
-        body:"Tu aroma, tu estilo propio.",
-        class: ""
+        src: '/th 1 .svg',
+        alt: ' frasco de perfume amarillo con plantas alrededor',
+        title: 'Personalización',
+        body: 'Tu aroma, tu estilo propio.',
+        class: '',
     },
     {
         id: 4,
-        src: "/velas_flores.svg",
-        alt: "perfume azul con plantas azules a su alrededor",
-		title:"Ambiente Acogedor",
-        body:"Solo lo mejor para tu entorno.",
-        class: "image-large"
-    }
+        src: '/velas_flores.svg',
+        alt: 'perfume azul con plantas azules a su alrededor',
+        title: 'Ambiente Acogedor',
+        body: 'Solo lo mejor para tu entorno.',
+        class: 'image-large',
+    },
 ]
 
 export const owners = [
     {
         id: 1,
         src: '/angelly.webp',
-        alt: 'imagen de la gerente general de zorvanz',
+        alt: 'imagen de la encargada de la produccion y logitica de zorvanz',
         nombre: 'Angelly Cruz',
-        cargo: 'Gerente General',
+        cargo: 'Producción y Logística',
     },
     {
         id: 2,
         src: '/mariangel.webp',
-        alt: 'imagen la gerente administrativa de zorvanz',
+        alt: 'imagen la administradora de zorvanz',
         nombre: 'Mariangel Calderón',
-        cargo: 'Gerente administrativa',
+        cargo: 'Administradora',
     },
     {
         id: 3,
         src: '/mariana.webp',
         alt: 'imagen la gerente de recursos humanos de zorvanz',
         nombre: 'Mariana Calderón',
-        cargo: 'Gerente de RRSS',
+        cargo: 'Gerente de RRSS y Gerente de Seguridad y Salud en el trabajo',
     },
     {
         id: 4,
         src: '/vanessa.webp',
-        alt: 'imagen de la gerente de seguridad y salud en el trabajo de zorvanz',
+        alt: 'imagen de la gerente de general',
         nombre: 'Vanessa Barrera',
-        cargo: 'Gerente de SST',
+        cargo: 'Gerente de General',
     },
     {
         id: 5,
         src: '/nicolle.webp',
-        alt: 'imagen de la gerente de marketing de zorvanz',
+        alt: 'imagen de la gerente de marketing y ventas de zorvanz',
         nombre: 'Nicolle Bedoya',
-        cargo: 'Gerente de marketing',
+        cargo: 'Gerente de Marketing y Ventas',
     },
 ]
 export const values = [
