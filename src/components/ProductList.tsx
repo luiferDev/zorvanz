@@ -2,15 +2,30 @@ import { Link, NavLink } from 'react-router'
 import CartButton from './CartButton'
 import { useFilters } from '../hooks/useFilters'
 import { motion } from 'framer-motion'
-import { useFetchProducts } from '../hooks/useProducts'
+import { useDeleteProduct, useFetchProducts } from '../hooks/useProducts'
 import { useAuthStore } from '../store/auth'
 
 export default function ProductList() {
-	const pageSize = 12
-	const { data, isLoading, isError } = useFetchProducts(pageSize)
-	const profile = useAuthStore((state) => state.profile)
-	const isAdmin = profile?.role === 'Admin'
-    const { filterProducts } = useFilters()
+    const pageSize = 12
+    const { data, isLoading, isError } = useFetchProducts(pageSize)
+    const profile = useAuthStore((state) => state.profile)
+    const isAdmin = profile?.role === 'Admin'
+	const { filterProducts } = useFilters()
+	const { mutate, isPending, isSuccess } = useDeleteProduct()
+
+	const handleDelete = (productName: string, productId: string) => {
+        // Confirmación del usuario (Buena práctica UX)
+        if (
+            window.confirm(
+                `¿Estás seguro de que quieres borrar el producto: "${productName}"?`,
+            )
+        ) {
+            // 3. Llama a 'mutate' y pasa el 'id' como argumento.
+            // Este 'id' será el valor que reciba 'deleteProductRequest'
+            mutate(productId)
+        }
+    }
+
 
     if (isLoading) return <div>Loading...</div>
     if (isError) return <div>Error: producto no encontrado</div>
@@ -30,7 +45,7 @@ export default function ProductList() {
                         className="link"
                         to={`/product-catalog/${product.id}`}
                     >
-                        <article className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 mt-0 mb-8 mx-4">
+                        <article className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8 mt-0 mb-8 mx-4">
                             <motion.img
                                 whileHover={{
                                     scale: [null, 1.1],
@@ -59,20 +74,43 @@ export default function ProductList() {
                     </Link>
                     <div>
                         <hr className="w-4/5 border ml-8 border-solid border-[black]" />
-                        <div className="flex flex-row justify-between mt-4 pt-0 pb-8 px-8; items-stretch mx-6">
+                        <div className="flex flex-row justify-between mt-4 pt-0 pb-8 px-8 items-stretch mx-6">
                             <p className="text-[2rem] font-[bold]">
                                 ${product.price}
                             </p>
                             <CartButton product={product} />
                             {isAdmin && (
-                                <div className="flex justify-end mt-4">
-                                    <NavLink
-                                        to={`/update-product/${product.id}`}
-                                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
-                                    >
-                                        Actualizar
-                                    </NavLink>
-                                </div>
+                                <>
+                                    <div className="flex justify-end mt-4">
+                                        <NavLink
+                                            to={`/update-product/${product.id}`}
+                                            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                        >
+                                            Actualizar
+                                        </NavLink>
+									</div>
+									{isSuccess && (
+                                        <div className="text-green-500">
+                                            Producto eliminado correctamente
+                                        </div>
+                                    )}
+                                    <div className="flex justify-end mt-4">
+                                        <button
+                                            onClick={() =>
+                                                handleDelete(
+                                                    product.name,
+                                                    product.id,
+                                                )
+                                            }
+                                            disabled={isPending}
+                                            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                        >
+                                            {isPending
+                                                ? 'Borrando...'
+                                                : 'Eliminar'}
+                                        </button>
+                                    </div>
+                                </>
                             )}
                         </div>
                     </div>
