@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import CarouselBackground from '../components/Carrousel'
+import { Link } from 'react-router'
 
 export default function Hero() {
     return (
@@ -33,7 +34,7 @@ export default function Hero() {
                         }}
                         className="w-[125px] h-9 rounded-3xl font-[Ageo] text-xs bg-zorvanz-red text-zorvanz-beige border-0 mt-8 ml-8 cursor-pointer lg:mt-80 lg:mr-24  lg:w-64 lg:h-16 lg:text-2xl"
                     >
-                        Comprar Ahora
+                        <Link to={'/product-catalog'}>Comprar Ahora</Link>
                     </motion.button>
                 </div>
             </CarouselBackground>
