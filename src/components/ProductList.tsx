@@ -6,7 +6,8 @@ import { useFetchProducts } from '../hooks/useProducts'
 import { useAuthStore } from '../store/auth'
 
 export default function ProductList() {
-	const { data, isLoading, isError } = useFetchProducts()
+	const pageSize = 12
+	const { data, isLoading, isError } = useFetchProducts(pageSize)
 	const profile = useAuthStore((state) => state.profile)
 	const isAdmin = profile?.role === 'Admin'
     const { filterProducts } = useFilters()
@@ -38,7 +39,7 @@ export default function ProductList() {
                                 transition={{ duration: 0.3 }}
                                 src={product.imageUrl || '/default-image.jpg'}
                                 alt={product.name || 'Producto'}
-                                className="aspect-[4/3] w-[350px] h-auto pt-4 pb-0 px-0 rounded-[25px]"
+                                className="aspect-[4/3] w-80 h-80 pt-4 pb-0 px-0 rounded-2xl"
                             />
                             <div className="px-4 py-0">
                                 <h3 className="text-[1.65rem] mt-0 mb-4 mx-0">
