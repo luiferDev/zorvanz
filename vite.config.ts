@@ -11,5 +11,11 @@ export default defineConfig({
         environment: 'jsdom',
         setupFiles: './src/setupTests.ts',
         css: true,
-    },
+	},
+	// change alias @ to src
+	resolve: {
+		alias: {
+			'@': '/src',
+		},
+	},
 })
