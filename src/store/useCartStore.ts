@@ -49,10 +49,12 @@ export const useCartStore = create<CartContextType>()(
                         }
                     }
 
-					return {
-						cart: state.cart.filter((item) => item.id !== product.id),}
+                    return {
+                        cart: state.cart.filter(
+                            (item) => item.id !== product.id,
+                        ),
+                    }
                 }),
-
 
             deleteFromCart: (product) =>
                 set((state) => ({

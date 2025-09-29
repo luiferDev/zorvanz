@@ -1,44 +1,9 @@
-import { UUID } from "crypto"
-
-export interface Product {
-    id: UUID
-    name: string
-    description: string
-    price: number
-    category: Category
-    stock: number
-    popularity: number
-    imageUrl: string
-}
-
-export interface Category {
-    categoryId: number
-    categoryName: string
-}
-
-export interface PaginatedResponse {
-	data: Product[]
-	pageNumber: number
-	pageSize: number
-	totalPages: number
-	totalRecords: number
-}
+import { Product, Products } from "../features/products/types/productTypes"
 
 export interface UseFragrancesState {
     fragrances: Product[]
     loading: boolean
     error: string | null
-}
-
-// Define the Product interface, including the quantity property
-export interface Products {
-    category: Category
-    stock: number
-    id: number
-    imageUrl: string
-    price: number
-    name: string
-    quantity?: number
 }
 
 export interface CartContextType {
@@ -67,17 +32,6 @@ export interface FilterContextType {
     >
 }
 
-export interface ProductDefinition {
-    id: UUID
-    name: string
-    imageUrl: string
-    price: number
-    description: string
-    stock: number
-    popularity: number
-    category: Category
-    selectedProduct?: number
-}
 
 export interface State {
     token: string

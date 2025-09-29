@@ -5,8 +5,8 @@ import { Features } from './Features'
 import Footer from './Footer'
 import { motion } from 'framer-motion'
 import Hero from './Hero'
-import { Products } from './Products'
 import { Section } from './Section'
+import { Products } from '../features/products/components/Products'
 
 export default function Home() {
     return (

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { PaginatedResponse, Product, UseFragrancesState } from '../types/interfaces';
+import {  UseFragrancesState } from '../types/interfaces';
+import { PaginatedResponse, Product } from '../features/products/types/productTypes';
 
 const url = import.meta.env.VITE_API_URL
 
