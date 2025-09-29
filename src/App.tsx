@@ -1,17 +1,17 @@
 import { Route, Routes } from 'react-router'
 import Home from './UI/Home.tsx'
 import About from './about/About.tsx'
-import ProductCatalog from './products/ProductCatalog.tsx'
+import ProductCatalog from './features/products/components/ProductCatalog.tsx'
 import LoginPage from './Auth/LoginPage.tsx'
-import ProductInfo from './products/ProductInfo.tsx'
-import ProducForm from './forms/ProducForm.tsx'
+import ProductInfo from './features/products/components/ProductInfo.tsx'
+import ProducForm from './features/products/UI/ProducForm.tsx'
 import ShoppingCart from './components/ShoppingCart.tsx'
 import ErrorPage from './error-page.tsx'
 import Profile from './Auth/Profile.tsx'
 import Dashboard from './Auth/Dashboard.tsx'
 import Register from './Auth/Register.tsx'
 import RegisterAdmin from './Auth/RegisterAdmin.tsx'
-import ProductUpdateForm from './forms/ProductUpdateForm.tsx'
+import ProductUpdateForm from './features/products/UI/UpdateProductForm.tsx'
 
 function App() {
     return (
@@ -25,9 +25,9 @@ function App() {
             <Route path="/add-product" element={<ProducForm />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/dashboard" element={<Dashboard />} />
-			<Route path="/register" element={<Register />} />
-			<Route path="/register-admin" element={<RegisterAdmin />} />
-			<Route path="/update-product/:id" element={<ProductUpdateForm />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/register-admin" element={<RegisterAdmin />} />
+            <Route path="/update-product/:id" element={<ProductUpdateForm />} />
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     )
