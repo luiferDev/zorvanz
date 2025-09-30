@@ -5,6 +5,7 @@ import { useFetchProductById } from '../hooks/useProducts'
 import { NavBar } from '../../../components/NavBar'
 import { updateProduct } from '../../../api/updateProduct'
 import { Product } from '../types/productTypes'
+import { toast } from 'sonner'
 
 export default function ProductUpdateForm() {
     const { id } = useParams()
@@ -41,10 +42,21 @@ export default function ProductUpdateForm() {
                 data.category?.categoryId || 0,
                 data.popularity || 0,
             )
-            alert('Producto actualizado correctamente')
-            navigate('/product-catalog')
-        } catch (err: any) {
-            alert('Error al actualizar el producto. Intentente de nuevo.')
+
+            // 💡 Lógica de éxito: Mostrar el Toast y navegar
+            toast.success('Producto Actualizado', {
+                description: `El producto "${data.name}" se actualizó exitosamente. Redireccionando...`,
+				duration: 3000, // Mostrar por 2 segundos
+				position: 'top-right', // Posición en la parte superior
+                onAutoClose: () => navigate('/product-catalog'), // Navegar cuando el toast se cierre automáticamente
+            })
+        } catch (err: unknown) {
+            // Lógica de error: Mostrar un Toast de error
+            console.error('Error al actualizar:', err)
+            toast.error('Error al Actualizar', {
+                description:
+                    'Fallo la actualización del producto. Inténtelo de nuevo.',
+            })
         }
     }
 
