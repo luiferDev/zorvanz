@@ -23,6 +23,5 @@ export const updateProduct = async (
         popularity,
     })
     console.log('Producto actualizado:', response.data)
-    alert('Producto actualizado exitosamente!')
     return response.data
 }
