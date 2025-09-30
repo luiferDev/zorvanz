@@ -6,6 +6,7 @@ import { useDeleteProduct, useGetProducts } from '../hooks/useProducts'
 import { useAuthStore } from '../../../store/auth'
 import { createDeleteHandler } from '../utils/delete'
 import SkeletonProducts from './SkeletonProducts'
+import { Modal } from './Modal'
 
 export default function ProductList() {
     const pageSize = 12
@@ -66,38 +67,25 @@ export default function ProductList() {
                         <div className="flex flex-row gap-4 justify-between mt-4 pt-0 pb-8 px-8 items-center">
                             <p className="text-3xl font-bold">
                                 ${product.price}
-							</p>
-							{!isAdmin &&
-								<CartButton product={product} />
-							}
+                            </p>
+                            {!isAdmin && <CartButton product={product} />}
                             {isAdmin && (
                                 <>
-                                    {isSuccess &&
-                                        alert(
-                                            'Producto Eliminado Correctamente',
-                                        )}
-                                    <div className="flex flex-col justify-center gap-2">
+                                    <div className="flex flex-col justify-center items-center gap-2">
                                         <NavLink
                                             to={`/update-product/${product.id}`}
-                                            className="bg-zorvanz-blue hover:bg-blue-800 text-white px-2 py-2 rounded-lg text-[14px]"
+                                            className="bg-zorvanz-blue hover:bg-blue-800 text-white px-4 py-2.5 rounded-lg text-[14px]"
                                         >
                                             Actualizar
                                         </NavLink>
 
-                                        <button
-                                            onClick={() =>
-                                                handleDelete(
-                                                    product.name,
-                                                    product.id,
-                                                )
-                                            }
-                                            disabled={isPending}
-                                            className="bg-zorvanz-red hover:bg-red-800 text-white px-2 py-2 rounded-lg text-[14px]"
-                                        >
-                                            {isPending
-                                                ? 'Borrando...'
-                                                : 'Eliminar'}
-                                        </button>
+                                        <Modal
+                                            productName={product.name}
+                                            id={product.id}
+                                            onMutate={handleDelete}
+											isPending={isPending}
+											onSuccess={isSuccess}
+                                        /> 
                                     </div>
                                 </>
                             )}
