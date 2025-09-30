@@ -1,5 +1,3 @@
-// 📁 ../utils/delete.ts
-
 import { UseMutateFunction } from '@tanstack/react-query'
 
 // Opcional: Definimos la interfaz del objeto que vamos a recibir
@@ -20,12 +18,8 @@ export const createDeleteHandler = (
     const { mutate } = mutationHandlers
 
     // Devolvemos el handler de borrado
-    return (productName: string, productId: string) => {
-        if (
-            window.confirm(
-                `¿Estás seguro de que quieres borrar el producto: "${productName}"?`,
-            )
-        ) {
+    return (productId: string) => {
+        {
             // Aquí 'mutate' está correctamente definida y tipada
             mutate(productId)
         }
