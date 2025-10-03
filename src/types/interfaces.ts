@@ -68,7 +68,7 @@ export interface RegisterFormInputs {
 	role?: Role
 }
 
-export interface Role {
-	User: string
-	Admin: string
+export enum Role {
+	User = 'User',
+	Admin = 'Admin'
 }
