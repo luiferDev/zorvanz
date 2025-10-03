@@ -10,14 +10,7 @@ import {
 } from '../../../components/ui/drawer'
 import { Button } from '../../../components/ui/button'
 import { useEffect, useState } from 'react'
-
-interface ModalProps {
-    productName: string
-    id: string
-    onMutate: (productId: string) => void // Función para ejecutar la mutación (mutate)
-    isPending: boolean // Estado de carga (isPending)
-    onSuccess: boolean // Función para manejar el éxito de la mutación (onSuccess)
-}
+import { ModalProps } from '../types/productsProps'
 
 export function Modal({
     productName,
@@ -31,9 +24,7 @@ export function Modal({
     useEffect(() => {
         // Ejecutamos la lógica de cierre SOLAMENTE cuando isSuccess es true
         if (onSuccess) {
-            setOpen(false) // Cierra el Drawer programáticamente
-            // Opcional: Aquí puedes poner el alert si deseas que aparezca justo al cerrarse.
-            // alert('Producto Eliminado Correctamente');
+			setOpen(false) 
         }
     }, [onSuccess]) // Depende únicamente del estado de éxito de la mutación
 
