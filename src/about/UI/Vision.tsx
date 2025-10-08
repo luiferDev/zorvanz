@@ -4,13 +4,7 @@ export default function Vision() {
             <header className="lg:w-1/2 lg:p-8 flex flex-col lg:ml-12 text-start gap-4 lg:m-4">
                 <h2 className="text-5xl text-start!">Visión</h2>
                 <p className="text-xl w-[25ch] lg:w-[50ch]">
-                    Queremos ser un líder global en fragancias, exportando
-                    nuestros productos al extranjero. En el año 2030, deseamos
-                    mantenersnos fiel a nuestros valores de innovación,
-                    integridad, transparencia, honestidad, enfoque en el cliente
-                    y calidad. La visión es ser reconocidos internacionalmente
-                    por priorizar el bienestar, la seguridad, la comodidad y la
-                    satisfacción de nuestros clientes.
+En Zorvanz nos dedicamos a fabricar y comercializar velas y ambientadores personalizados que transforman los espacios en lugares agradables, y que representan la esencia de cada uno de nuestros clientes. Nos esforzamos por crear productos con fragancias únicas, elaborados con ingredientes amigables y respetuosos con quienes los usan.
                 </p>
             </header>
 
