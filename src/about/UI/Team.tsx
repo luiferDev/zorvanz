@@ -15,7 +15,7 @@ export default function Team() {
                     >
                         <div
                             className="h-full w-[25ch] flex flex-col items-center rounded-xl
-				border shadow-2xl shadow-[rgba(0,0,0,0.25)] backdrop-blur-[10px] p-4 border-solid border-[rgba(255,255,255,0.1)] bg-gradient-to-b from-white to-transparent"
+				border shadow-2xl shadow-[rgba(0,0,0,0.25)] backdrop-blur-[10px] border-solid border-[rgba(255,255,255,0.1)] bg-gradient-to-b from-white to-transparent"
                         >
                             <img
                                 className="w-3/4 aspect-square rounded-full"
