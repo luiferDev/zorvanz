@@ -20,8 +20,8 @@ export default function About() {
                 <Vision />
                 <Values />
                 <Testimonials />
-                <Team />
                 <CTA />
+                <Team />
             </main>
 			<Footer />
         </>
