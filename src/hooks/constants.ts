@@ -102,7 +102,7 @@ export const values = [
     },
     {
         id: 2,
-        icon: '/honestyIcon.png',
+        icon: '/integrity.png',
         title: 'Integridad',
         alt: 'la integridad de zorvanz',
         description:
@@ -111,14 +111,14 @@ export const values = [
     {
         id: 3,
         icon: '/honestyIcon.png',
-        title: 'Innovación',
+        title: 'Honestidad',
         alt: 'una cabeza con un bombillo en el medio',
         description:
             'Promovemos la sinceridad en la comunicación interna y externa. Esto garantiza relaciones sanas entre compañeros de trabajo y con los clientes, fortaleciendo el ambiente laboral.',
     },
     {
         id: 4,
-        icon: '/optimismIcon.png',
+        icon: '/support.png',
         title: 'Orientación al cliente',
         alt: 'una cabeza con un sol en la nuca',
         description:
