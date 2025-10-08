@@ -94,35 +94,35 @@ export const owners = [
 export const values = [
     {
         id: 1,
-        icon: '/amorIcon.png',
-        title: 'Amor',
-        alt: 'una mano con un corazon',
+        icon: '/innovationIcon.png',
+        title: 'Innovación',
+        alt: 'un icono de innovación',
         description:
-            'Transmitimos el amor con el que creamos nuestros productos, enfocándonos en satisfacer al cliente y en el progreso de nuestra empresa, con la satisfacción del cliente como objetivo principal.',
+            'Fomentamos la creatividad en el diseño de fragancias y experiencias personalizadas, lo que nos permite diferenciarnos en el mercado. En recursos humanos, impulsamos un entorno que motiva a los colaboradores a proponer nuevas ideas y a crecer profesionalmente.',
     },
     {
         id: 2,
         icon: '/honestyIcon.png',
-        title: 'Honestidad',
-        alt: 'una mano tocando un corazon',
+        title: 'Integridad',
+        alt: 'la integridad de zorvanz',
         description:
-            'Zorvanz venderá productos basados en la honestidad, reflejando lo que promete y priorizando la integridad y el respeto, fundamentales para la reputación de la empresa.',
+            'Actuamos con transparencia y coherencia en todas nuestras decisiones. Para nuestro equipo, significa generar confianza mutua y mantener un ambiente justo.',
     },
     {
         id: 3,
-        icon: '/innovationIcon.png',
+        icon: '/honestyIcon.png',
         title: 'Innovación',
         alt: 'una cabeza con un bombillo en el medio',
         description:
-            'Zorvanz se distingue por su innovación, creando fragancias personalizadas que promueven la comodidad del cliente, diferenciándose de las compañías comunes de ambientadores.',
+            'Promovemos la sinceridad en la comunicación interna y externa. Esto garantiza relaciones sanas entre compañeros de trabajo y con los clientes, fortaleciendo el ambiente laboral.',
     },
     {
         id: 4,
         icon: '/optimismIcon.png',
-        title: 'Optimismo',
+        title: 'Orientación al cliente',
         alt: 'una cabeza con un sol en la nuca',
         description:
-            'Zorvanz se caracterizará por su optimismo, resiliencia y fortaleza, manteniendo una perspectiva positiva y aprendiendo de cada experiencia para asegurar el desarrollo continuo de la empresa.',
+            'Ponemos al consumidor en el centro de nuestras acciones, brindándole atención personalizada y soluciones oportunas. En recursos humanos, esto implica formar un equipo comprometido con ofrecer experiencias memorables y de calidad.',
     },
 ]
 
