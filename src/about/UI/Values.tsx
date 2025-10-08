@@ -10,7 +10,7 @@ export default function Values() {
                 {values.map((value) => (
 					<div className='w-[35ch] text-zorvanz-beige p-4 rounded-3xl lg:h-80
 					border-[1px] border-solid border-bl-[rgba(255_255_255_0.1)] bg-gradient-to-b from-[#fff2] to-transparent shadow-xl shadow-black backdrop-blur-md' key={value.id}>
-                        <img className='w-6 h-6' src={value.icon} alt={value.alt} />
+                        <img className='w-6 h-6 lg:w-12 lg:h-12' src={value.icon} alt={value.alt} />
                         <h2 className='text-2xl pb-4'>{value.title}</h2>
                         <p className='text-base'>{value.description}</p>
                     </div>
