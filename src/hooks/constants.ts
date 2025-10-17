@@ -1,150 +1,150 @@
 export const imagesSmall = [
-    '/cama-small.svg',
-    '/fragancia-small.svg',
-    '/cama2-small.svg',
-    '/fragancia2-small.svg',
+  '/cama-small.svg',
+  '/fragancia-small.svg',
+  '/cama2-small.svg',
+  '/fragancia2-small.svg',
 ]
 
 export const imagesMedium = [
-    '/cama.svg',
-    '/fragancia.svg',
-    '/cama2.svg',
-    '/fragancia2.svg',
+  '/cama.svg',
+  '/fragancia.svg',
+  '/cama2.svg',
+  '/fragancia2.svg',
 ]
 
 export const imagesLarge = [
-    '/cama.svg',
-    '/fragancia.svg',
-    '/cama2.svg',
-    '/fragancia2.svg',
+  '/cama.svg',
+  '/fragancia.svg',
+  '/cama2.svg',
+  '/fragancia2.svg',
 ]
 
 export const images = [
-    {
-        id: 1,
-        src: '/fragancia_con_velas.svg',
-        alt: 'una mesa con una vela y una fragancia',
-        title: 'Aroma Fresco',
-        body: 'Toque de frescura.',
-        class: 'image-large',
-    },
-    {
-        id: 2,
-        src: '/th 17 .svg',
-        alt: 'frasco de perfume azul con rosas azules rodeandolo',
-        title: 'Fragancias Únicas',
-        body: 'Productos exclusivos.',
-        class: '',
-    },
-    {
-        id: 3,
-        src: '/th 1 .svg',
-        alt: ' frasco de perfume amarillo con plantas alrededor',
-        title: 'Personalización',
-        body: 'Tu aroma, tu estilo propio.',
-        class: '',
-    },
-    {
-        id: 4,
-        src: '/velas_flores.svg',
-        alt: 'perfume azul con plantas azules a su alrededor',
-        title: 'Ambiente Acogedor',
-        body: 'Solo lo mejor para tu entorno.',
-        class: 'image-large',
-    },
+  {
+    id: 1,
+    src: '/fragancia_con_velas.svg',
+    alt: 'una mesa con una vela y una fragancia',
+    title: 'Aroma Fresco',
+    body: 'Toque de frescura.',
+    class: 'image-large',
+  },
+  {
+    id: 2,
+    src: '/th 17 .svg',
+    alt: 'frasco de perfume azul con rosas azules rodeandolo',
+    title: 'Fragancias Únicas',
+    body: 'Productos exclusivos.',
+    class: '',
+  },
+  {
+    id: 3,
+    src: '/th 1 .svg',
+    alt: ' frasco de perfume amarillo con plantas alrededor',
+    title: 'Personalización',
+    body: 'Tu aroma, tu estilo propio.',
+    class: '',
+  },
+  {
+    id: 4,
+    src: '/velas_flores.svg',
+    alt: 'perfume azul con plantas azules a su alrededor',
+    title: 'Ambiente Acogedor',
+    body: 'Solo lo mejor para tu entorno.',
+    class: 'image-large',
+  },
 ]
 
 export const owners = [
-    {
-        id: 1,
-        src: '/vanessa.webp',
-        alt: 'imagen de la gerente general',
-        nombre: 'Vanessa Barrera',
-        cargo: 'Gerente General',
-    },
-    {
-        id: 2,
-        src: '/mariangel.webp',
-        alt: 'imagen la directora administrativa de zorvanz',
-        nombre: 'Mariangel Calderón',
-        cargo: 'Directora Administrativa',
-    },
-    {
-        id: 3,
-        src: '/mariana.webp',
-        alt: 'imagen la gerente de recursos humanos de zorvanz',
-        nombre: 'Mariana Calderón',
-        cargo: 'Gerente de RRHH y SST',
-    },
-    {
-        id: 4,
-        src: '/nicolle.webp',
-        alt: 'imagen de la directora de marketing de zorvanz',
-        nombre: 'Nicolle Bedoya',
-        cargo: 'Directora de Marketing y Ventas',
-    },
-    {
-        id: 5,
-        src: '/angelly.webp',
-        alt: 'imagen de la jefa de produccion y logistica de zorvanz',
-        nombre: 'Angelly Cruz',
-        cargo: 'Jefa de Producción y Logística',
-    },
+  {
+    id: 1,
+    src: '/vanessa.webp',
+    alt: 'imagen de la gerente general',
+    nombre: 'Vanessa Barrera',
+    cargo: 'Gerente General',
+  },
+  {
+    id: 2,
+    src: '/mariangel.webp',
+    alt: 'imagen la coordinadora administrativa de zorvanz',
+    nombre: 'Mariangel Calderón',
+    cargo: 'Coordinadora Administrativa',
+  },
+  {
+    id: 3,
+    src: '/mariana.webp',
+    alt: 'imagen la coordinadora de recursos humanos de zorvanz',
+    nombre: 'Mariana Calderón',
+    cargo: 'Coordinadora de RRHH y SST',
+  },
+  {
+    id: 4,
+    src: '/nicolle.webp',
+    alt: 'imagen de la Coordinadora de marketing de zorvanz',
+    nombre: 'Nicolle Bedoya',
+    cargo: 'Coordinadora de Marketing y Ventas',
+  },
+  {
+    id: 5,
+    src: '/angelly.webp',
+    alt: 'imagen de la Coordinadora de produccion y logistica de zorvanz',
+    nombre: 'Angelly Cruz',
+    cargo: 'Coordinadora de Producción y Logística',
+  },
 ]
 export const values = [
-    {
-        id: 1,
-        icon: '/innovationIcon.png',
-        title: 'Innovación',
-        alt: 'un icono de innovación',
-        description:
-            'Fomentamos la creatividad en el diseño de fragancias y experiencias personalizadas, lo que nos permite diferenciarnos en el mercado. En recursos humanos, impulsamos un entorno que motiva a los colaboradores a proponer nuevas ideas y a crecer profesionalmente.',
-    },
-    {
-        id: 2,
-        icon: '/integrity.png',
-        title: 'Integridad',
-        alt: 'la integridad de zorvanz',
-        description:
-            'Actuamos con transparencia y coherencia en todas nuestras decisiones. Para nuestro equipo, significa generar confianza mutua y mantener un ambiente justo.',
-    },
-    {
-        id: 3,
-        icon: '/honestyIcon.png',
-        title: 'Honestidad',
-        alt: 'una cabeza con un bombillo en el medio',
-        description:
-            'Promovemos la sinceridad en la comunicación interna y externa. Esto garantiza relaciones sanas entre compañeros de trabajo y con los clientes, fortaleciendo el ambiente laboral.',
-    },
-    {
-        id: 4,
-        icon: '/support.png',
-        title: 'Orientación al cliente',
-        alt: 'una cabeza con un sol en la nuca',
-        description:
-            'Ponemos al consumidor en el centro de nuestras acciones, brindándole atención personalizada y soluciones oportunas. En recursos humanos, esto implica formar un equipo comprometido con ofrecer experiencias memorables y de calidad.',
-    },
+  {
+    id: 1,
+    icon: '/innovationIcon.png',
+    title: 'Innovación',
+    alt: 'un icono de innovación',
+    description:
+      'Fomentamos la creatividad en el diseño de fragancias y experiencias personalizadas, lo que nos permite diferenciarnos en el mercado. En recursos humanos, impulsamos un entorno que motiva a los colaboradores a proponer nuevas ideas y a crecer profesionalmente.',
+  },
+  {
+    id: 2,
+    icon: '/integrity.png',
+    title: 'Integridad',
+    alt: 'la integridad de zorvanz',
+    description:
+      'Actuamos con transparencia y coherencia en todas nuestras decisiones. Para nuestro equipo, significa generar confianza mutua y mantener un ambiente justo.',
+  },
+  {
+    id: 3,
+    icon: '/honestyIcon.png',
+    title: 'Honestidad',
+    alt: 'una cabeza con un bombillo en el medio',
+    description:
+      'Promovemos la sinceridad en la comunicación interna y externa. Esto garantiza relaciones sanas entre compañeros de trabajo y con los clientes, fortaleciendo el ambiente laboral.',
+  },
+  {
+    id: 4,
+    icon: '/support.png',
+    title: 'Orientación al cliente',
+    alt: 'una cabeza con un sol en la nuca',
+    description:
+      'Ponemos al consumidor en el centro de nuestras acciones, brindándole atención personalizada y soluciones oportunas. En recursos humanos, esto implica formar un equipo comprometido con ofrecer experiencias memorables y de calidad.',
+  },
 ]
 
 export const testimonials = [
-    {
-        id: 1,
-        text: '"Zorvanz no es solo una escencia, es una experiencia olfativa única que me acompaña todos los días."',
-        author: 'Cliente Satisfecho',
-    },
-    {
-        id: 2,
-        text: '"Zorvanz no es solo una fragancia, es una experiencia olfativa única que me acompaña todos los días."',
-        author: 'Cliente Satisfecho',
-    },
-    {
-        id: 3,
-        text: '"Zorvanz no es solo un ambientador, es una experiencia olfativa única que me acompaña todos los días."',
-        author: 'Cliente Satisfecho',
-    },
-    {
-        id: 4,
-        text: '"Zorvanz no es solo unas velas aromáticas, es una experiencia olfativa única que me acompaña todos los días."',
-        author: 'Cliente Satisfecho',
-    },
+  {
+    id: 1,
+    text: '"Zorvanz no es solo una escencia, es una experiencia olfativa única que me acompaña todos los días."',
+    author: 'Cliente Satisfecho',
+  },
+  {
+    id: 2,
+    text: '"Zorvanz no es solo una fragancia, es una experiencia olfativa única que me acompaña todos los días."',
+    author: 'Cliente Satisfecho',
+  },
+  {
+    id: 3,
+    text: '"Zorvanz no es solo un ambientador, es una experiencia olfativa única que me acompaña todos los días."',
+    author: 'Cliente Satisfecho',
+  },
+  {
+    id: 4,
+    text: '"Zorvanz no es solo unas velas aromáticas, es una experiencia olfativa única que me acompaña todos los días."',
+    author: 'Cliente Satisfecho',
+  },
 ]
