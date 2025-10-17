@@ -16,6 +16,7 @@ import SuccessEmailVerified from './SuccessEmailVerified.tsx'
 import { ProtectedRoute } from './UI/ProtectedRoute.tsx'
 import { useAuthStore } from './store/auth'
 import { Role } from './types/interfaces'
+import CustomFragrance from './features/products/components/CustomFragrances.tsx'
 
 function App() {
     const user = useAuthStore((state) => state.profile)
@@ -41,6 +42,7 @@ function App() {
                     </ProtectedRoute>
                 }
             />
+            <Route path="/custom" element={<CustomFragrance />} />
             <Route
                 path="/dashboard"
                 element={
