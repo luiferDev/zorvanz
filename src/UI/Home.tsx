@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import Hero from './Hero'
 import { Section } from './Section'
 import { Products } from '../features/products/components/Products'
+import { Link } from 'react-router'
 
 export default function Home() {
     return (
@@ -28,7 +29,7 @@ export default function Home() {
                 <Texts
                     styles="flex flex-col justify-center text-start items-start text-zorvanz-beige ml-12"
                     subtitle="Crea Tu Fragancia Ahora"
-                    body="Únete a nuestra comunidad de amantes de las fragancias personalizadas. Comienza hoy mismo."
+                    body="¿No estás conforme con los productos de nuestra marca? ¡Crea tu fragancia personalizada!. Comienza hoy mismo."
                     titleStyles="mt-20 mb-4 text-4xl lg:text-6xl"
                     bodyStyles="mb-8 text-base w-[30ch] lg:text-2xl lg:w-[50ch]"
                 />
@@ -37,12 +38,12 @@ export default function Home() {
                     transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                     className="ml-12"
                 >
-                    <a
-                        href="#"
-                        className="py-2.5 px-6 rounded-3xl text-xs bg-zorvanz-red text-zorvanz-beige mt-8 cursor-pointer lg:relative lg:bottom-24 lg:left-2/3 lg:py-6 lg:px-20 lg:text-2xl"
+                    <Link
+                        to="/custom"
+                        className="py-2.5 px-6 rounded-3xl text-xs bg-zorvanz-red text-zorvanz-beige mt-8 cursor-pointer lg:relative lg:bottom-24 lg:left-2/3 lg:py-6 lg:px-20 lg:text-xl"
                     >
-                        Contáctanos
-                    </a>
+                        ¡Comienza Ahora!
+                    </Link>
                 </motion.div>
             </Section>
             <ContactSection />
